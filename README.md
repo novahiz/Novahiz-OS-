@@ -3,7 +3,7 @@
   <p><strong>Multi-Agent Orchestration System for AI Development</strong></p>
   <p>
     <a href="https://github.com/novahiz/Novahiz-OS-">
-      <img src="https://img.shields.io/badge/version-6.0.0-blue?style=flat-square" alt="Version">
+      <img src="https://img.shields.io/badge/version-6.1.0-blue?style=flat-square" alt="Version">
     </a>
     <a href="https://github.com/novahiz/Novahiz-OS-/blob/main/LICENSE">
       <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/status-production%20ready-success?style=flat-square" alt="Status">
     <img src="https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey?style=flat-square" alt="Platform">
     <img src="https://img.shields.io/badge/agents-24-orange?style=flat-square" alt="Agents">
-    <img src="https://img.shields.io/badge/skills-64-purple?style=flat-square" alt="Skills">
+    <img src="https://img.shields.io/badge/skills-76-purple?style=flat-square" alt="Skills">
   </p>
 </div>
 
@@ -20,22 +20,19 @@
 ## ⚡ One-Line Install
 
 ```bash
-# Linux / macOS
-curl -fsSL https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.sh | bash
-```
-
-```powershell
-# Windows (PowerShell as Administrator)
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Invoke-RestMethod 'https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1'))"
+# Clone and install
+git clone https://github.com/novahiz/Novahiz-OS- ~/.opencode && ~/.opencode/installers/01-install-deps.sh
 ```
 
 > Detects your OS, installs prerequisites (Python 3.10+, Node.js 18+, Git), clones the system, patches paths, and runs the interactive config wizard.
+>
+> Note: The `curl | bash` one-liner is for published releases. For local development, use `git clone` or copy the `installers/` directory.
 
 ---
 
 ## ✨ Overview
 
-Novahiz OS turns **any AI coding agent** into a coordinated multi-agent workforce. It provides 24 specialized agents, 64 skills, and 7 MCP servers that work together — routing tasks to the right expert agent automatically.
+Novahiz OS turns **any AI coding agent** into a coordinated multi-agent workforce. It provides 24 specialized agents, 76+ skills, and 6 MCP servers that work together — routing tasks to the right expert agent automatically.
 
 ### What makes it different?
 
@@ -43,8 +40,8 @@ Novahiz OS turns **any AI coding agent** into a coordinated multi-agent workforc
 |---------|-------------|
 | **Smart Router** | Routes each task to the optimal agent based on domain, complexity, and budget |
 | **24 Specialized Agents** | From architecture (Arthur) to security (Neo) to design (Luna) |
-| **64 Skills** | Reusable capabilities from brainstorming to deployment |
-| **7 MCP Servers** | Chrome DevTools, TradingView, monitoring, bridge, stitch, task processor |
+| **76+ Skills** | Reusable capabilities from brainstorming to deployment |
+| **6 MCP Servers** | Chrome DevTools, Novahiz OS, Obsidian wiki, Google Stitch, TradingView, Supabase |
 | **Self-Healing** | Auto-detects and fixes engine errors at runtime |
 | **Cross-Platform** | Linux, macOS, Windows — same experience everywhere |
 | **One Command Install** | `curl | bash` or `iex ((Invoke-RestMethod ...))` |

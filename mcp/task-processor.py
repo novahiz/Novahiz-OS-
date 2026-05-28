@@ -9,7 +9,6 @@ import os
 import sys
 import json
 import time
-import subprocess
 from datetime import datetime
 from pathlib import Path
 

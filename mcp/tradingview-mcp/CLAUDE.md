@@ -1,3 +1,5 @@
+> **Note:** This repository is an upstream fork. References to "Claude" and "Anthropic" are legacy from the original project and retained for compatibility.
+
 # TradingView MCP — Claude Instructions
 
 This repository uses a Kerebrom-style version layout.

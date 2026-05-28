@@ -5,15 +5,11 @@ Comprehensive performance analysis: memory, CPU, latency, bottlenecks
 """
 
 import os
-import sys
 import json
 import time
-import subprocess
 import resource
-import threading
 from datetime import datetime
 from pathlib import Path
-from collections import defaultdict
 
 NOVAHIZ_DIR = Path.home() / ".opencode"
 OUTPUT_DIR = NOVAHIZ_DIR / "docs" / "performance"

@@ -5,11 +5,9 @@ Injects faults to test system resilience
 """
 
 import os
-import sys
 import json
 import time
 import signal
-import random
 from datetime import datetime
 from pathlib import Path
 

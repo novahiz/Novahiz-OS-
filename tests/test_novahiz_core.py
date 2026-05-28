@@ -12,10 +12,10 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-# Add runtime to path
-HOME = Path.home()
-NOVAHIZ_DIR = HOME / ".opencode"
-sys.path.insert(0, str(NOVAHIZ_DIR / "runtime"))
+ROOT = Path(__file__).resolve().parent.parent
+_RUNTIME = str(ROOT / "runtime")
+if _RUNTIME not in sys.path:
+    sys.path.insert(0, _RUNTIME)
 
 # =============================================================================
 # TESTS: RATE LIMITER

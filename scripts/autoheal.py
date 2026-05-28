@@ -6,7 +6,6 @@ Monitors and auto-restarts failed services
 
 import subprocess
 import time
-import json
 import os
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -34,7 +33,7 @@ def check_api():
         import urllib.request
         req = urllib.request.urlopen(f"{API_URL}/api/health", timeout=5)
         return req.status == 200
-    except:
+    except Exception:
         return False
 
 def check_chrome():

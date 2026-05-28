@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+[DEPRECATED] Use auto-executor.py instead (more features, same deps).
 OpenCode Auto-Executor — Simple Version (no external deps)
 Poll executions/ directory and trigger real subagent execution
 """
@@ -30,7 +31,7 @@ def log(msg):
     try:
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(line + "\n")
-    except:
+    except Exception:
         pass
 
 # =============================================================================
@@ -45,15 +46,10 @@ def execute_subagent(agent: str, task: str, execution_id: str) -> dict:
     
     # Method 1: Try opencode CLI
     try:
-        # Escape quotes in task
-        safe_task = task.replace('"', '\\"').replace('$', '\\$')
-        cmd = f'opencode task --subagent "{agent}" --prompt "{safe_task}"'
-        
-        log(f"   Running: {cmd}")
+        log(f"   Running: opencode task --subagent {agent}")
         
         result = subprocess.run(
-            cmd,
-            shell=True,
+            ["opencode", "task", "--subagent", agent, "--prompt", task],
             capture_output=True,
             text=True,
             timeout=300,
@@ -239,7 +235,7 @@ def status():
             status = data.get("status", "unknown")
             if status in stats:
                 stats[status] += 1
-        except:
+        except Exception:
             pass
     
     print("OpenCode Auto-Executor Status")

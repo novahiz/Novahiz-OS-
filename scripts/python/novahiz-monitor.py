@@ -10,7 +10,6 @@ import socket
 import sqlite3
 from datetime import datetime
 from urllib.request import urlopen, Request
-from urllib.error import URLError
 
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")
@@ -35,7 +34,7 @@ def check_api():
         result = sock.connect_ex(('127.0.0.1', 8080))
         sock.close()
         return result == 0
-    except:
+    except Exception:
         return False
 
 def check_database():
@@ -48,7 +47,7 @@ def check_database():
         result = cursor.fetchone()[0]
         conn.close()
         return result >= 22
-    except:
+    except Exception:
         return False
 
 def send_telegram_message(bot_token, chat_id, message):

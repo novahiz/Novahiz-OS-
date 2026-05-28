@@ -89,27 +89,44 @@
 
 ---
 
-## [6.1.0] — 2026-05-27 — Production Grade
+## [6.1.0] — 2026-05-28 — Production Grade
 
-### Added
-- Unit tests for MCP modules
-- GitHub Actions CI/CD pipeline
-- Real-time monitoring dashboard
-- Architecture documentation
-- Pre-commit hooks (black, flake8)
-- Config map documentation
+### Security
+- Shell injection vectors eliminated (21x `shell=True` → `shell=False` with `shlex.quote`)
+- All bare `except:` blocks replaced with `except Exception` across the project
+- Claude/Anthropic API key references fully purged (25 files, ~30 replacements)
+- `.bashrc` scrubbed of API keys, credentials moved to `~/.novahiz/.env`
 
-### Changed
-- Code formatted with black (8 files)
-- Error handling improved (bare except → except Exception)
-- MCP HTTP as systemd service
-- Test coverage tracking
+### Architecture
+- `sys.path.insert` raw hacks standardized: 17 occurrences in 10 files replaced with `Path().resolve().parent.parent` + `not in sys.path` guard
+- Centralized path resolution module (`mcp/_path.py`) for all MCP imports
+- `opencode-bridge.py` imports `metrics.metrics.MetricsCollector` directly instead of path hack
+
+### Agents & Naming
+- 6 concept-named agents renamed to human/mythical names:
+  - `cipher-crypto` → **Zia** (Arabic for light/splendor)
+  - `forge-cicd` → **Vulcan** (Roman god of the forge)
+  - `ghost-stealth` → **Kage** (Japanese for shadow)
+  - `nexus-api` → **Mercury** (Roman messenger god)
+  - `pulse-realtime` → **Echo** (Greek nymph of repetition)
+  - `novahiz-router` → **Odin** (Norse all-father)
+- Updated: `AGENTS.md`, `HUMAN_NAMES.md`, `agent-registry.json`, `novahiz-registry.json`, 6 YAML agent files
+
+### Cleanup
+- Root directory: 21 files archived to 13 (8 stale MDs → `docs-archive/`)
+- `docs/` consolidated: 17 files → 4 (13 archived)
+- Dead files deleted: `install-v5.sh`, `novahiz-mcp-ws.py`, `smart-router.py.deprecated`, `fix-error-handling.py`
+- `auto-executor-simple.py` marked DEPRECATED
+- 47 unused imports removed across 26 Python files
+- All shell scripts updated: `novahiz-runtime.py` → `novahiz-unified.py`
 
 ### Fixed
-- Flake8 critical warnings
-- Unit test assertions
-- Config documentation
+- TradingView MCP: `command` + `args` string format → `command: [...]` array (incompatible with OpenCode)
+- `novahiz-mcp.py`: raw `sys.path.insert` → standard path pattern with proper engine import
+- Pre-commit hook: added `check-bare-except` and `check-claude-refs` enforcers
 
-### Score
-- **100/100** 🎯
+### Tests
+- All unit tests updated (no more bare `except:`, no more `shell=True`)
+- Test scripts reference `novahiz-unified.py` instead of old runtime
+- Integration tests consistent with new architecture
 

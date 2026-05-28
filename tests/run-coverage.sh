@@ -1,6 +1,6 @@
 #!/bin/bash
 # =============================================================================
-# run-coverage.sh — Test Coverage Report v6.0.1
+# run-coverage.sh — Test Coverage Report v6.1.0
 # Note: Current tests are integration tests (CLI/config), not unit tests
 # Coverage will be low because tests don't import MCP/runtime modules directly
 # =============================================================================
@@ -10,7 +10,7 @@ TESTS_DIR="$NOVAHIZ_DIR/tests"
 COVERAGE=~/.local/bin/coverage
 
 echo "═══════════════════════════════════════════════════════════"
-echo "  NOVAHIZ OS — TEST COVERAGE v6.0.1"
+echo "  NOVAHIZ OS — TEST COVERAGE v6.1.0"
 echo "═══════════════════════════════════════════════════════════"
 echo ""
 

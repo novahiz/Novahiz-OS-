@@ -1,8 +1,8 @@
 name: pulse-realtime
-role: Pulse - Real-time Systems Specialist
+role: Echo - Real-time Systems Specialist
 type: simulated
 modelTier: flash
-model: opencode/qwen3.5-plus
+model: openrouter/qwen/qwen3.5-9b
 domain: realtime
 score: 88
 

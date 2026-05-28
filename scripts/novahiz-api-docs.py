@@ -6,7 +6,6 @@ Generates OpenAPI 3.0 specification for the API server
 
 import json
 import os
-from datetime import datetime
 
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")

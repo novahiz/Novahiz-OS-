@@ -23,7 +23,7 @@ class MetricsCollector:
         if METRICS_FILE.exists():
             try:
                 return json.load(open(METRICS_FILE))
-            except:
+            except Exception:
                 pass
         return {"version": "5.4.0", "started": datetime.now().isoformat(), "total_executions": 0, "successful_executions": 0, "failed_executions": 0, "total_tokens": 0, "total_cost_usd": 0.0, "by_agent": {}, "by_provider": {}, "by_model": {}, "by_tier": {}, "daily": {}, "hourly": {}, "errors": [], "last_updated": datetime.now().isoformat()}
     

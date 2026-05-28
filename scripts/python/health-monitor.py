@@ -5,7 +5,6 @@ Continuous monitoring + auto-healing + alerts
 """
 import sys, os, json, time, threading, subprocess
 from datetime import datetime
-from pathlib import Path
 
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")
@@ -79,9 +78,9 @@ def check_api_server():
         result = s.connect_ex(('127.0.0.1', MONITOR_CONFIG["api_port"]))
         s.close()
         return result == 0
-    except:
+    except Exception:
         return False
-
+    
 def check_chrome_mcp():
     """Check if Chrome MCP is running"""
     try:
@@ -90,9 +89,9 @@ def check_chrome_mcp():
             capture_output=True, text=True, timeout=5
         )
         return len(result.stdout.strip()) > 0
-    except:
+    except Exception:
         return False
-
+    
 def check_memory_nexus():
     """Check if Nexus memory is valid"""
     nexus_path = os.path.join(NOVAHIZ_DIR, "memory", "nexus.json")
@@ -102,9 +101,9 @@ def check_memory_nexus():
         with open(nexus_path, encoding='utf-8') as f:
             data = json.load(f)
         return "nodes" in data and len(data["nodes"]) > 0
-    except:
+    except Exception:
         return False
-
+    
 def check_registry():
     """Check if registry is valid"""
     reg_path = os.path.join(NOVAHIZ_DIR, "registry", "novahiz-registry.json")
@@ -114,9 +113,9 @@ def check_registry():
         with open(reg_path, encoding='utf-8') as f:
             data = json.load(f)
         return "agents" in data and len(data["agents"]) > 0
-    except:
+    except Exception:
         return False
-
+    
 def check_skills():
     """Check if skills directory exists and has content"""
     skills_dir = os.path.join(NOVAHIZ_DIR, "skills")
@@ -125,9 +124,9 @@ def check_skills():
     try:
         count = len([d for d in os.listdir(skills_dir) if os.path.isdir(os.path.join(skills_dir, d))])
         return count > 0
-    except:
+    except Exception:
         return False
-
+    
 def check_model_router():
     """Check if model router script exists and is valid"""
     router_path = os.path.join(NOVAHIZ_DIR, "scripts", "python", "model-router.py")
@@ -139,9 +138,9 @@ def check_model_router():
             capture_output=True, text=True, timeout=5
         )
         return result.returncode == 0
-    except:
+    except Exception:
         return False
-
+    
 CHECKS = {
     "api_server": check_api_server,
     "chrome_mcp": check_chrome_mcp,
@@ -299,7 +298,7 @@ def cmd_start():
             os.kill(int(pid), 0)
             print(f"Health monitor already running (PID: {pid})")
             return
-        except:
+        except Exception:
             pass
     
     # Start in background
@@ -324,7 +323,7 @@ def cmd_stop():
             os.kill(int(pid), 9)
             os.remove(pid_file)
             print(f"Health monitor stopped (PID: {pid})")
-        except:
+        except Exception:
             print("Failed to stop monitor")
     else:
         print("Health monitor not running")

@@ -37,6 +37,7 @@ class Executor:
             "status": "pending",
             "created": timestamp,
             "updated": timestamp,
+            "t_start": t_start,
         }
 
         # Sauvegarde le fichier d'exécution
@@ -57,16 +58,8 @@ class Executor:
                     "callback": os.path.join(EXEC_DIR, "current_response.json"),
                 }, f, indent=2)
 
-        t_elapsed = time.time() - t_start
-
-        # Enregistre dans le scoreboard (pending pour l'instant)
-        self.scoreboard.record_execution(
-            agent_id=agent_id,
-            task=task,
-            success=True,  # optimiste: marqué comme succès au lancement
-            duration=t_elapsed,
-            metadata={"execution_id": execution_id, "mode": mode, "status": "pending"},
-        )
+        # Le vrai résultat sera enregistré dans le scoreboard
+        # quand complete() sera appelé plus tard.
 
         return {
             "success": True,
@@ -82,7 +75,7 @@ class Executor:
         }
 
     def complete(self, execution_id: str, success: bool, duration: float | None = None):
-        """Marque une exécution comme terminée."""
+        """Marque une exécution comme terminée et met à jour le scoreboard avec le vrai résultat."""
         file_path = os.path.join(EXEC_DIR, f"{execution_id}.json")
         try:
             with open(file_path, encoding="utf-8") as f:
@@ -90,10 +83,28 @@ class Executor:
             execution["status"] = "completed" if success else "failed"
             execution["success"] = success
             execution["updated"] = datetime.now().isoformat()
-            if duration:
-                execution["duration"] = duration
+
+            # Calcul de la durée réelle
+            t_start = execution.get("t_start")
+            if duration is not None:
+                real_duration = duration
+            elif t_start:
+                real_duration = time.time() - t_start
+            else:
+                real_duration = 0.0
+            execution["duration"] = round(real_duration, 2)
+
             with open(file_path, "w", encoding="utf-8") as f:
                 json.dump(execution, f, indent=2)
+
+            # Mise à jour du scoreboard avec le vrai résultat
+            self.scoreboard.record_execution(
+                agent_id=execution.get("agent", "unknown"),
+                task=execution.get("task", ""),
+                success=success,
+                duration=real_duration,
+                metadata={"execution_id": execution_id, "status": execution["status"]},
+            )
         except (FileNotFoundError, json.JSONDecodeError):
             pass
 

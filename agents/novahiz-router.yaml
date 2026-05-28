@@ -1,8 +1,8 @@
 name: novahiz-router
-role: NovaHiz OS Sovereign Orchestration Layer
+role: Odin - Sovereign Orchestration Layer
 type: primary
 modelTier: smart
-model: anthropic/claude-3-5-sonnet
+model: opencode/qwen3.5-plus
 
 system: |
   # ============================================================

@@ -4,7 +4,6 @@ Source unique de vérité : ~/.opencode/config/agent-registry.json
 """
 import json
 import os
-from typing import Any
 
 REGISTRY_PATH = os.path.expanduser("~/.opencode/config/agent-registry.json")
 

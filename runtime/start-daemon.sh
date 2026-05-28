@@ -22,14 +22,14 @@ if [ -z "$OPENROUTER_API_KEY" ]; then
 fi
 
 # Kill existing daemon
-pkill -f "novahiz-runtime.py daemon" 2>/dev/null || true
+pkill -f "novahiz-unified.py daemon" 2>/dev/null || true
 sleep 1
 
 # Start daemon with environment
 export PYTHONUNBUFFERED=1
 export NOVAHIZ_MODE=production
 
-nohup python3 "$NOVAHIZ_DIR/runtime/novahiz-runtime.py" daemon 2 > "$LOGS_DIR/runtime-daemon.log" 2>&1 &
+nohup python3 "$NOVAHIZ_DIR/runtime/novahiz-unified.py" daemon 2 > "$LOGS_DIR/runtime-daemon.log" 2>&1 &
 PID=$!
 echo $PID > "$PIDS_DIR/runtime.pid"
 

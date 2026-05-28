@@ -135,7 +135,7 @@ class NovahizAPI(BaseHTTPRequestHandler):
             try:
                 task_id = int(path.split('/')[-1])
                 self.handle_get_task(task_id)
-            except:
+            except Exception:
                 self.send_error(400, "Invalid task ID")
         elif path == '/api/openapi.json' or path == '/api/docs':
             self.handle_openapi_spec()
@@ -155,7 +155,7 @@ class NovahizAPI(BaseHTTPRequestHandler):
         
         try:
             data = json.loads(body) if body else {}
-        except:
+        except Exception:
             data = {}
         
         if path == '/api/agents/search':

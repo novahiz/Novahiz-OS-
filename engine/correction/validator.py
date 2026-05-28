@@ -3,13 +3,11 @@
 Novahiz Correction Validator — Validate corrections before/after application.
 """
 import json
-import os
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict
 
-import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from engine._path import ensure as _; _()
 
 from engine.database_manager import get_db
 

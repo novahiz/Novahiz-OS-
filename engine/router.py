@@ -1,6 +1,7 @@
 """
 Router — Moteur de routage intelligent.
 Utilise : matching keywords + priorité + score → confidence score.
+Score dynamique depuis scoreboard.json (feedback loop).
 
 Flow:
   1. Classifie la complexité (SIMPLE / MEDIUM / COMPLEX)
@@ -14,9 +15,11 @@ from __future__ import annotations
 import json
 import os
 import re
-from typing import Any
+import time
 
 from .registry import AgentRegistry
+
+SCOREBOARD_PATH = os.path.expanduser("~/.opencode/config/scoreboard.json")
 
 # Poids de scoring par défaut (surchargés par routing-rules.json)
 DEFAULT_WEIGHTS = {"keyword_match_weight": 0.6, "priority_weight": 0.3, "score_weight": 0.1}
@@ -33,7 +36,7 @@ ROUTING_RULES_PATH = os.path.expanduser("~/.opencode/config/routing-rules.json")
 
 
 def _load_routing_config() -> dict:
-    """Charge la configuration externalisée depuis routing-rules.json."""
+    """Charge la configuration depuis routing-rules.json (pas de cache — appel unique par init)."""
     try:
         with open(ROUTING_RULES_PATH, encoding="utf-8") as f:
             return json.load(f)
@@ -41,10 +44,7 @@ def _load_routing_config() -> dict:
         return {}
 
 
-def _get_complexity_keywords() -> dict:
-    """Retourne les keywords de complexité (config externes ou defaults)."""
-    cfg = _load_routing_config()
-    return cfg.get("complexity_keywords", DEFAULT_COMPLEXITY_KEYWORDS)
+_routing_config_cache: dict | None = None
 
 
 class RouteResult:
@@ -85,26 +85,51 @@ class Router:
         self.min_confidence = rules.get("min_confidence_threshold", MIN_CONFIDENCE)
         self.multi_threshold = rules.get("multi_agent_threshold", MULTI_AGENT_THRESHOLD)
 
+        # Cache : charge routing-rules.json UNE fois dans __init__
+        global _routing_config_cache
+        if _routing_config_cache is None:
+            _routing_config_cache = _load_routing_config()
+        self._routing_cfg = _routing_config_cache
+        self._complexity_keywords = self._routing_cfg.get("complexity_keywords", DEFAULT_COMPLEXITY_KEYWORDS)
+
+        # Cache scoreboard avec TTL de 10s
+        self._sb_cache: dict[str, float] | None = None
+        self._sb_ts: float = 0
+        self._sb_ttl = 10.0
+
     # ── Classification ──────────────────────────────────────────
 
     def classify(self, task: str) -> str:
         """Classifie la complexité: SIMPLE / MEDIUM / COMPLEX.
-        Utilise les keywords de routing-rules.json (ou defaults)."""
+        Utilise les keywords chargés une fois dans __init__."""
         t = task.lower()
-        kw = _get_complexity_keywords()
-        # COMPLEX d'abord (plus spécifique)
+        kw = self._complexity_keywords
         complex_score = sum(1 for ckw in kw.get("COMPLEX", []) if ckw in t)
         if complex_score >= 2:
             return "COMPLEX"
-        # SIMPLE
         simple_score = sum(1 for skw in kw.get("SIMPLE", []) if skw in t)
         if simple_score >= 2:
             return "SIMPLE"
-        # MEDIUM
         medium_score = sum(1 for mkw in kw.get("MEDIUM", []) if mkw in t)
         if medium_score >= 1:
             return "MEDIUM"
-        return "MEDIUM"  # default
+        return "MEDIUM"
+
+    # ── Scoreboard dynamique ───────────────────────────────────
+
+    def _load_dynamic_scores(self) -> dict[str, float]:
+        """Charge les scores depuis scoreboard.json avec cache TTL 10s."""
+        now = time.time()
+        if self._sb_cache is not None and (now - self._sb_ts) < self._sb_ttl:
+            return self._sb_cache
+        try:
+            with open(SCOREBOARD_PATH, encoding="utf-8") as f:
+                sb = json.load(f)
+            self._sb_cache = {aid: info.get("score", 0) for aid, info in sb.get("agents", {}).items()}
+            self._sb_ts = now
+            return self._sb_cache
+        except (FileNotFoundError, json.JSONDecodeError):
+            return {}
 
     # ── Keyword matching ────────────────────────────────────────
 
@@ -129,6 +154,7 @@ class Router:
         """
         complexity = self.classify(task)
         agents = self.registry.list()
+        dynamic_scores = self._load_dynamic_scores()
 
         # Filtrer par complexité
         compatible = [a for a in agents if complexity in a.get("complexity", [])]
@@ -143,7 +169,10 @@ class Router:
                 continue  # pas de match keywords → ignore
 
             priority_score = 1.0 - (agent.get("priority", 99) - 1) * 0.1  # prio 1 → 1.0, prio 2 → 0.9
-            score_val = agent.get("score", 0) / 100.0
+            # Score dynamique depuis scoreboard.json (feedback loop), fallback statique
+            agent_id = agent["id"]
+            dyn_score = dynamic_scores.get(agent_id)
+            score_val = (dyn_score if dyn_score is not None else agent.get("score", 0)) / 100.0
 
             confidence = (
                 kw_score * self.weights["keyword_match"]

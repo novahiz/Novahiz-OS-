@@ -6,11 +6,13 @@ Couvre : registry, router, scoring, executor.
 import sys
 import os
 import json
-import time
 import tempfile
 import unittest
+from pathlib import Path
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".."))
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 
 from engine import AgentRegistry, Router, Scoreboard, Executor
 from engine.plugin import PluginManager

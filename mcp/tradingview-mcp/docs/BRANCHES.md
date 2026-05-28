@@ -1,3 +1,5 @@
+> **Note:** This repository is an upstream fork. References to "Claude" and "Anthropic" are legacy from the original project and retained for compatibility.
+
 # Repository History
 
 TradingView MCP keeps active product work on version-named branches and under `versions/vN/`, matching the structure used in Proyecto Kerebrom.

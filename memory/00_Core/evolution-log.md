@@ -38,7 +38,7 @@
 - **Name**: Athena - Project Initialization & Documentation Expert
 - **Role**: Council Sage
 - **Domain**: Initialization, Technical Documentation
-- **Model**: anthropic/claude-3-5-sonnet
+- **Model**: opencode/qwen3.5-plus
 - **Score**: 95/100
 
 #### New Command: `novahiz initialize`

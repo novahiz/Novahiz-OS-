@@ -30,7 +30,7 @@ def log(msg):
     try:
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(line + "\n")
-    except:
+    except Exception:
         pass
 
 # =============================================================================
@@ -74,11 +74,9 @@ async def execute_subagent_via_opencode(agent: str, task: str, execution_id: str
             log("   OpenCode task tool not imported, trying CLI...")
             
             import subprocess
-            cmd = f"opencode task --subagent {agent} --prompt \"{task.replace('"', '\\"')}\""
             
             result = subprocess.run(
-                cmd,
-                shell=True,
+                ["opencode", "task", "--subagent", agent, "--prompt", task],
                 capture_output=True,
                 text=True,
                 timeout=300
@@ -223,7 +221,7 @@ def process_pending():
             if data.get("status") == "pending":
                 pending += 1
                 log(f"   Found pending: {exec_file.stem}")
-        except:
+        except Exception:
             pass
     
     log(f"   {pending} pending executions found")

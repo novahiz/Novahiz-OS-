@@ -3,14 +3,12 @@
 Novahiz Log Analyzer — Analyze structured logs for patterns.
 """
 import json
-import os
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List
 from collections import defaultdict
 
-import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from engine._path import ensure as _; _()
 
 
 class LogAnalyzer:

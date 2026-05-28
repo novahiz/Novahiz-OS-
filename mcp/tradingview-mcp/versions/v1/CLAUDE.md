@@ -1,3 +1,5 @@
+> **Note:** This repository is an upstream fork. References to "Claude" and "Anthropic" are legacy from the original project and retained for compatibility.
+
 # TradingView MCP — Claude Instructions
 
 100+ tools for reading and controlling a live TradingView Desktop chart via CDP (port 9222).

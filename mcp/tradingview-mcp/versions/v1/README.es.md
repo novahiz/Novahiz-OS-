@@ -1,3 +1,5 @@
+> **Nota:** Este repositorio es un fork upstream. Las referencias a "Claude" y "Anthropic" son legado del proyecto original y se mantienen por compatibilidad.
+
 # TradingView MCP
 
 Servidor MCP para TradingView Desktop — 100+ herramientas para leer, controlar y automatizar charts via Chrome DevTools Protocol. Funciona con **Claude Code**, **Codex** y **Claude Desktop**.

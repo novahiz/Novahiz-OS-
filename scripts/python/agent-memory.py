@@ -5,10 +5,8 @@ Tracks agent utilization and provides context retrieval
 """
 
 import sqlite3
-import json
 import os
-from datetime import datetime, timedelta
-from collections import defaultdict
+from datetime import datetime
 
 HOME = os.path.expanduser("~")
 DATA_DIR = os.path.join(HOME, ".opencode", "data")

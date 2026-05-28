@@ -39,7 +39,7 @@ def get_execution_stats():
             status = data.get("status", "unknown")
             if status in stats:
                 stats[status] += 1
-        except:
+        except Exception:
             pass
     
     return stats
@@ -61,7 +61,7 @@ def get_daemon_status():
         bridge = "✅ Running" if result.returncode == 0 else "❌ Stopped"
         
         return runtime, bridge
-    except:
+    except Exception:
         return "❌ Unknown", "❌ Unknown"
 
 def get_recent_errors():
@@ -78,7 +78,7 @@ def get_recent_errors():
                     for line in lines:
                         if "ERROR" in line or "error" in line:
                             errors.append(line.strip()[:80])
-            except:
+            except Exception:
                 pass
     
     return errors[:5]  # Return max 5 errors

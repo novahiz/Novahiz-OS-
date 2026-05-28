@@ -23,7 +23,7 @@ def b(t): return f"{B}{t}{Z}"
 
 TOOL_PATHS = {
     "opencode": Path.home() / ".opencode" / ".agents" / "skills",
-    "claude":   Path.home() / ".claude" / "skills",
+    # "claude": supprimé — legacy, plus utilisé
     "hermes":   Path.home() / ".hermes" / "skills",
     "codex":    Path.home() / ".codex" / "skills",
     "cursor":   Path.home() / ".cursor" / "skills",

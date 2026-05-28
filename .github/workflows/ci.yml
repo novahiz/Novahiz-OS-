@@ -30,8 +30,7 @@ jobs:
       - name: Run tests with coverage
         run: |
           cd tests
-          python -m pytest test_novahiz.py -v --cov=. --cov-report=xml || true
-        continue-on-error: true
+          python -m pytest test_novahiz.py -v --cov=. --cov-report=xml
 
   # =============================================================================
   # SAST - Static Application Security Testing
@@ -180,12 +179,30 @@ jobs:
           pip install flake8 black pylint
 
       - name: Run black (format check)
-        run: black --check runtime/ mcp/ || true
-        continue-on-error: true
+        run: black --check runtime/ mcp/ engine/ scripts/ api/ plugins/ tests/
 
       - name: Run flake8
-        run: flake8 runtime/ mcp/ --max-line-length=120 --ignore=E501,W503,E402 || true
-        continue-on-error: true
+        run: flake8 runtime/ mcp/ engine/ scripts/ api/ plugins/ tests/ --max-line-length=120 --ignore=E501,W503,E402
+
+      - name: Check for bare except clauses
+        run: |
+          found=$(grep -rn '^\s*except\s*:' --include='*.py' scripts/ engine/ api/ mcp/ runtime/ plugins/ tests/ || true)
+          if [ -n "$found" ]; then
+            echo "❌ Bare except clauses found:"
+            echo "$found"
+            exit 1
+          fi
+          echo "✅ No bare except clauses"
+
+      - name: Check for stale Claude/Anthropic references
+        run: |
+          found=$(grep -rn 'claude\|anthropic' --include='*.py' --include='*.json' --include='*.yaml' --include='*.yml' --include='*.sh' scripts/ engine/ api/ mcp/ runtime/ plugins/ config/ || true)
+          if [ -n "$found" ]; then
+            echo "⚠️ Claude/Anthropic references found (non-blocking):"
+            echo "$found"
+          else
+            echo "✅ No Claude references"
+          fi
 
   # =============================================================================
   # SUMMARY

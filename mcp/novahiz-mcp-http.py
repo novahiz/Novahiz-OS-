@@ -7,7 +7,6 @@ Standalone server accessible via HTTP REST API
 import sys
 import os
 import json
-import threading
 import http.server
 import socketserver
 import urllib.parse

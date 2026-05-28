@@ -1,3 +1,5 @@
+> **Note:** This repository is an upstream fork. References to "Claude" and "Anthropic" are legacy from the original project and retained for compatibility.
+
 # Security Policy
 
 ## Reporting a Vulnerability

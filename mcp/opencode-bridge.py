@@ -12,11 +12,9 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-HOME = os.path.expanduser("~")
-NOVAHIZ_DIR = os.path.join(HOME, ".opencode")
+NOVAHIZ_DIR = os.path.join(Path.home(), ".opencode")
 EXECUTION_DIR = os.path.join(NOVAHIZ_DIR, "executions")
 LOGS_DIR = os.path.join(NOVAHIZ_DIR, "logs")
-RUNTIME_DIR = os.path.join(NOVAHIZ_DIR, "runtime")
 
 os.makedirs(EXECUTION_DIR, exist_ok=True)
 os.makedirs(LOGS_DIR, exist_ok=True)
@@ -24,9 +22,13 @@ os.makedirs(LOGS_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOGS_DIR, "opencode-bridge.log")
 
 # Import runtime LLM executor and metrics
-sys.path.insert(0, RUNTIME_DIR)
-sys.path.insert(0, os.path.join(NOVAHIZ_DIR, "metrics"))
-from novahiz_unified import LLMExecutor, load_config, select_model
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+from runtime.novahiz_unified import LLMExecutor, load_config
+_METRICS = str(Path(__file__).resolve().parent.parent / "metrics")
+if _METRICS not in sys.path:
+    sys.path.insert(0, _METRICS)
 from metrics import MetricsCollector
 
 metrics = MetricsCollector()

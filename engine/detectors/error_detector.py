@@ -10,15 +10,11 @@ Detects:
 - Stale state
 - Timeout anomalies
 """
-import json
-import hashlib
-from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Tuple
+from datetime import datetime
+from typing import Dict, List
 from collections import defaultdict
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from engine._path import ensure as _; _()
 
 from engine.database_manager import get_db
 

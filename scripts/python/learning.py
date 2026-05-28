@@ -7,9 +7,8 @@ ML-based recommendations using rule-based approach
 
 import sqlite3
 import os
-import json
-from datetime import datetime, timedelta
-from collections import defaultdict, Counter
+from datetime import datetime
+from collections import defaultdict
 
 HOME = os.path.expanduser("~")
 DATA_DIR = os.path.join(HOME, ".opencode", "data")

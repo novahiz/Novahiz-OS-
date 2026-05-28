@@ -21,15 +21,17 @@ import sys
 import json
 import time
 import hashlib
-import signal
-import psutil
+import sqlite3
+import subprocess
+import threading
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Optional
-import threading
+from collections import defaultdict
+from typing import Optional, Dict, List, Any, Tuple
 
-# Add parent directory to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 
 from engine.database_manager import get_db, init_db
 

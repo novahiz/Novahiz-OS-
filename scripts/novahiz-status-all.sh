@@ -61,7 +61,7 @@ TOTAL=0
 
 # Check each service
 for service in \
-    "Novahiz Runtime:novahiz-runtime.py:$PIDS_DIR/runtime.pid" \
+    "Novahiz Runtime:novahiz-unified.py:$PIDS_DIR/runtime.pid" \
     "OpenCode Bridge:opencode-bridge.py:$PIDS_DIR/bridge.pid" \
     "MCP HTTP Server:novahiz-mcp-http.py:$PIDS_DIR/mcp-http.pid" \
     "Task Processor:task-processor.py:$PIDS_DIR/task-processor.pid"
@@ -90,7 +90,7 @@ echo ""
 # Quick runtime status
 echo -e "${CYAN}───────────────────────────────────────────────────────────${NC}"
 echo -e "${CYAN}RUNTIME STATUS:${NC}"
-python3 "$NOVAHIZ_DIR/runtime/novahiz-runtime.py" status 2>/dev/null | grep -E "Active|Models:|Executions" | head -5
+python3 "$NOVAHIZ_DIR/runtime/novahiz-unified.py" status 2>/dev/null | grep -E "Active|Models:|Executions" | head -5
 
 echo ""
 echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"

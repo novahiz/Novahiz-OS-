@@ -49,7 +49,7 @@ test_case "nv health" "timeout 5 nv health" "SYSTEM HEALTH"
 test_case "metrics script" "timeout 5 python3 $NOVAHIZ_DIR/metrics/metrics.py" "USAGE STATISTICS"
 
 # Test 5: Daemons running
-test_case "Runtime daemon" "pgrep -f novahiz-runtime.py" "[0-9]"
+test_case "Runtime daemon" "pgrep -f novahiz-unified.py" "[0-9]"
 
 # Test 6: Bridge daemon
 test_case "Bridge daemon" "pgrep -f opencode-bridge.py" "[0-9]"

@@ -7,14 +7,14 @@ repos:
     hooks:
       - id: black
         name: black (code formatting)
-        files: ^(mcp|runtime)/.*\.py$
+        files: ^(mcp|runtime|engine|scripts|api|plugins|tests)/.*\.py$
 
   - repo: https://github.com/pycqa/flake8
     rev: 7.3.0
     hooks:
       - id: flake8
         name: flake8 (linting)
-        files: ^(mcp|runtime)/.*\.py$
+        files: ^(mcp|runtime|engine|scripts|api|plugins|tests)/.*\.py$
         args: [--max-line-length=120, --ignore=E501,W503,E402,E302,E305]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks

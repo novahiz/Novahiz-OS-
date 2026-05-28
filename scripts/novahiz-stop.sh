@@ -62,11 +62,11 @@ for pidfile in "$PIDS_DIR"/*.pid; do
 done
 
 # Force kill any remaining by pattern
-stop_by_name "novahiz-runtime" "novahiz-runtime.py"
+stop_by_name "novahiz-runtime" "novahiz-unified.py"
 stop_by_name "opencode-bridge" "opencode-bridge.py"
 stop_by_name "novahiz-mcp-http" "novahiz-mcp-http.py"
 stop_by_name "task-processor" "task-processor.py"
-stop_by_name "auto-executor" "auto-executor-simple.py"
+stop_by_name "auto-executor" "auto-executor.py"
 
 # Clean PID files
 rm -f "$PIDS_DIR"/*.pid 2>/dev/null

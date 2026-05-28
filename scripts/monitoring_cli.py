@@ -23,19 +23,31 @@ Commands:
 import json
 import os
 import sys
-import signal
+import json
+import time
+import sqlite3
+import hashlib
 import subprocess
-from datetime import datetime
+import signal
+import atexit
+from datetime import datetime, timedelta
 from pathlib import Path
+from collections import defaultdict
+from typing import Optional, List, Dict, Any, Tuple
 
-# Add parent directory to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 
 from engine.database_manager import get_db, init_db
-from engine.detectors.error_detector import ErrorDetector
 from engine.correction.auto_correct import AutoCorrectEngine
 from engine.learning.suggestor import SuggestionGenerator
-from engine.learning.behavior_tracker import BehaviorTracker
+
+try:
+    import psutil
+    HAS_PSUTIL = True
+except ImportError:
+    HAS_PSUTIL = False
 
 # Configuration
 BASE_DIR = Path.home() / ".opencode"
@@ -107,8 +119,9 @@ def cmd_monitor_stop(args):
 
 def cmd_monitor_status(args):
     """Get monitoring status."""
-    import psutil
-
+    if not HAS_PSUTIL:
+        print("psutil non installé — 'pip install psutil' pour ce mode")
+        return
     status = {"running": False}
 
     if PID_FILE.exists():
@@ -315,10 +328,11 @@ def cmd_agents_improve(args):
 
 def cmd_system_health(args):
     """Get system health."""
-    import psutil
-
     db = ensure_db()
 
+    if not HAS_PSUTIL:
+        print("psutil non installé — 'pip install psutil' pour ce mode")
+        return
     health = {
         'timestamp': datetime.now().isoformat(),
         'monitoring': db.get_system_state('monitoring_enabled'),
@@ -327,7 +341,7 @@ def cmd_system_health(args):
         'system': {
             'cpu_percent': psutil.cpu_percent(interval=0.1),
             'memory_percent': psutil.virtual_memory().percent,
-            'disk_percent': psutil.disk_usage(str(BASE_DIR)).percent
+            'disk_percent': psutil.disk_usage('/').percent,
         },
         'stats': db.get_stats()
     }
@@ -352,14 +366,18 @@ def cmd_system_state(args):
 # ============================================================================
 
 def cmd_db_query(args):
-    """Query database."""
+    """Query database (read-only, SELECT seulement)."""
     if not args:
         print("❌ Usage: nv db query <sql>")
         return
 
-    db = ensure_db()
     query = ' '.join(args)
+    ql = query.strip().lower()
+    if not ql.startswith("select") and not ql.startswith("pragma") and not ql.startswith("explain"):
+        print("❌ Seules les requêtes SELECT sont autorisées (read-only).")
+        return
 
+    db = ensure_db()
     try:
         results = db.run_query(query)
         print_json(results)

@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "novahiz-router",
-  "model": "anthropic/claude-3-5-sonnet",
+  "model": "openrouter/qwen/qwen3.6-plus",
   "small_model": "opencode/qwen3.5-plus",
   "instructions": ["AGENTS.md"],
   "plugin": ["opencode-agent-browser"],
@@ -9,17 +9,21 @@
     "paths": ["~/.opencode/skills", "~/.opencode/.agents/skills"]
   },
   "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--browserUrl=http://127.0.0.1:9222", "--isolated=false", "--experimentalVision=true", "--experimentalMemory=true", "--experimentalScreencast=true", "--experimentalPageIdRouting=true", "--categoryExtensions=true", "--categoryExperimentalThirdParty=true", "--redactNetworkHeaders=true", "--no-usage-statistics"],
+      "enabled": true,
+      "note": "Chrome DevTools MCP — auto-connecte à Chrome 144+ via remote debugging"
+    },
     "novahiz": {
       "type": "local",
-      "command": "python3",
-      "args": ["/home/novahiz/.opencode/mcp/novahiz-mcp.py", "--mcp"],
+      "command": ["python3", "-u", "/home/novahiz/.opencode/mcp/novahiz-mcp.py", "--mcp"],
       "enabled": true
     },
     "obsidian": {
       "type": "local",
-      "command": "npx",
-      "args": ["-y", "@wickedevolutions/mcp-obsidian"],
-      "env": {
+      "command": ["npx", "-y", "@wickedevolutions/mcp-obsidian"],
+      "environment": {
         "OBSIDIAN_VAULT_PATH": "/home/novahiz/Documents/llm-wiki"
       },
       "enabled": true,
@@ -27,22 +31,23 @@
     },
     "tradingview": {
       "type": "local",
-      "command": "node",
-      "args": ["/home/novahiz/.opencode/mcp/tradingview-mcp/versions/v1/src/server.js"],
+      "command": ["node", "/home/novahiz/.opencode/mcp/tradingview-mcp/versions/v1/src/server.js"],
       "enabled": true,
       "note": "Requires TradingView Desktop running with --remote-debugging-port=9222"
     },
-    "stitch": {
+    "google-stitch": {
       "type": "local",
-      "command": "python3",
-      "args": ["/home/novahiz/.opencode/mcp/stitch-mcp-wrapper.py"],
+      "command": ["python3", "-u", "/home/novahiz/.opencode/mcp/stitch-mcp-wrapper.py"],
+      "environment": {
+        "STITCH_API_KEY": "${STITCH_API_KEY}"
+      },
       "enabled": true,
-      "note": "Requires STITCH_API_KEY env var or ~/.novahiz/.env"
+      "note": "Google Stitch MCP — requires STITCH_API_KEY in env"
     },
     "github": {
       "type": "http",
       "url": "https://github-mcp.local",
-      "env": {
+      "environment": {
         "GITHUB_TOKEN": "${GITHUB_TOKEN}"
       },
       "enabled": false,
@@ -50,10 +55,10 @@
     },
     "supabase": {
       "type": "local",
-      "command": "npx",
-      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--project-ref", "nfmsyivyhsjatazhcjgu"],
-      "env": {
-        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
+      "command": ["npx", "-y", "@supabase/mcp-server-supabase@latest", "--project-ref", "nfmsyivyhsjatazhcjgu"],
+      "environment": {
+        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}",
+        "SUPABASE_DB_PASSWORD": "${SUPABASE_DB_PASSWORD}"
       },
       "enabled": true,
       "note": "Supabase MCP for project nfmsyivyhsjatazhcjgu"

@@ -6,12 +6,20 @@ Interactive command-line interface for NovaHiz OS
 
 import sys
 import os
-import json
+import sys
+from pathlib import Path
+
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, SCRIPT_DIR)
-
-from novahiz_cli import NovahizCLI, Colors
+import importlib.util
+spec = importlib.util.spec_from_file_location("novahiz_cli", os.path.join(SCRIPT_DIR, "novahiz-cli.py"))
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
+NovahizCLI = mod.NovahizCLI
+Colors = mod.Colors
 
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")

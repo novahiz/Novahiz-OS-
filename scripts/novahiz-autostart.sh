@@ -47,7 +47,7 @@ log "✓ OPENROUTER_API_KEY loaded"
 # =============================================================================
 # KILL EXISTING
 # =============================================================================
-pkill -f "novahiz-runtime.py" 2>/dev/null
+pkill -f "novahiz-unified.py" 2>/dev/null
 pkill -f "opencode-bridge.py" 2>/dev/null
 pkill -f "novahiz-mcp-http.py" 2>/dev/null
 pkill -f "task-processor.py" 2>/dev/null
@@ -61,7 +61,7 @@ log "  NOVAHIZ OS v6.0 — AUTO-START"
 log "═══════════════════════════════════════════════════════════"
 
 # 1. Runtime Daemon
-python3 "$RUNTIME_DIR/novahiz-runtime.py" daemon 3 > "$LOGS_DIR/runtime-daemon.log" 2>&1 &
+python3 "$RUNTIME_DIR/novahiz-unified.py" daemon 3 > "$LOGS_DIR/runtime-daemon.log" 2>&1 &
 RUNTIME_PID=$!
 echo $RUNTIME_PID > "$PIDS_DIR/runtime.pid"
 log "✓ Runtime started (PID: $RUNTIME_PID)"

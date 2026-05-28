@@ -8,8 +8,6 @@ import os
 import sys
 import json
 import secrets
-import hashlib
-import time
 from datetime import datetime, timedelta
 
 HOME = os.path.expanduser("~")

@@ -7,8 +7,6 @@ import os
 import sys
 import json
 import urllib.request
-import urllib.error
-from pathlib import Path
 
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")

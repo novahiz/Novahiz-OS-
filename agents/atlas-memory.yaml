@@ -2,7 +2,7 @@ name: atlas-memory
 role: Memory Council Expert
 type: subagent
 modelTier: flash
-model: anthropic/claude-3-5-sonnet
+model: openrouter/qwen/qwen3.5-9b
 
 system: |
   Tu es **Atlas**, membre du Council Novahiz, expert en Memory.

@@ -18,21 +18,11 @@ import os
 import sys
 import json
 import signal
-import subprocess
-from datetime import datetime
 from pathlib import Path
 
-# MCP imports
-try:
-    from mcp.server import Server
-    from mcp.server.stdio import stdio_server
-    from mcp.types import Tool, TextContent
-except ImportError:
-    print("❌ MCP library not installed. Install with: pip install mcp")
-    sys.exit(1)
-
-# Add parent directory to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 
 from engine.database_manager import get_db, init_db
 from engine.detectors.error_detector import ErrorDetector
@@ -376,8 +366,7 @@ async def get_agent_metrics(db, args: dict):
 async def trigger_autocorrect(db, args: dict):
     """Trigger auto-correction."""
     # Import auto-correct engine
-    sys.path.insert(0, str(BASE_DIR / "engine" / "correction"))
-    from auto_correct import AutoCorrectEngine
+    from engine.correction.auto_correct import AutoCorrectEngine
 
     engine = AutoCorrectEngine(db)
     detections = engine.get_detections()

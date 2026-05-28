@@ -2,32 +2,32 @@
 
 **Total: 24 agents** (updated 1.8)
 
-| Agent | Domain | Type | Model | Routing keywords |
-|-------|--------|------|-------|------------------|
-| **arthur-architecture** | Architecture | subagent | anthropic/claude-3-5-sonnet | architecture, refactor |
-| **athena-initialization** | Initialization | subagent | anthropic/claude-3-5-sonnet | init, bootstrap |
-| **atlas-memory** | Memory | subagent | anthropic/claude-3-5-sonnet | memory |
-| **cipher-crypto** | General | simulated | openrouter/qwen/qwen3.6-plus | crypto |
-| **elias-marketing** | Marketing | subagent | anthropic/claude-3-5-sonnet | marketing, seo |
-| **forge-cicd** | CI/CD | simulated | opencode/qwen3.5-plus | cicd |
-| **ghost-stealth** | Stealth | simulated | opencode/qwen3.5-plus | — |
-| **kenzo-performance** | Performance | subagent | anthropic/claude-3-5-sonnet | performance |
-| **luna-design** | Design | subagent | anthropic/claude-3-5-sonnet | design, ui, ux |
-| **malik-database** | Database | subagent | anthropic/claude-3-5-sonnet | database, sql |
-| **neo-security** | Security | subagent | anthropic/claude-3-5-sonnet | security, auth |
-| **nexus-api** | API | simulated | opencode/qwen3.5-plus | api |
-| **novahiz-router** | General | primary | anthropic/claude-3-5-sonnet | — |
-| **orion-devops** | DevOps | simulated | opencode/qwen3.5-plus | devops, infra |
-| **phoenix-crisis** | Crisis | simulated | opencode/qwen3.5-plus | crisis, incident |
-| **pulse-realtime** | Realtime | simulated | opencode/qwen3.5-plus | realtime |
-| **ralph-browser** | BrowserAutomation | subagent | anthropic/claude-3-5-sonnet | browser |
-| **ralph-execution** | Execution | subagent | anthropic/claude-3-5-sonnet | backend, execution, build |
-| **ryu-design** | Design | simulated | opencode/qwen3.5-plus | ryu |
-| **samuel-legal** | General | simulated | opencode/qwen3.5-plus | — |
-| **sarah-quality** | Quality | subagent | anthropic/claude-3-5-sonnet | audit, bug, test |
-| **simon-data** | General | simulated | opencode/qwen3.5-plus | data, analytics |
-| **vega-legal** | Legal | simulated | opencode/qwen3.5-plus | legal |
-| **victor-strategy** | Strategy | subagent | anthropic/claude-3-5-sonnet | strategy, plan |
+| Agent | Name | Domain | Type | Model | Routing keywords |
+|-------|------|--------|------|-------|------------------|
+| **arthur-architecture** | Arthur | Architecture | subagent | openrouter/qwen/qwen3.6-plus | architecture, refactor |
+| **athena-initialization** | Athena | Initialization | subagent | opencode/qwen3.5-plus | init, bootstrap |
+| **atlas-memory** | Atlas | Memory | subagent | openrouter/qwen/qwen3.5-9b | memory |
+| **cipher-crypto** | Zia | General | simulated | openrouter/qwen/qwen3.6-plus | crypto |
+| **elias-marketing** | Elias | Marketing | subagent | opencode/qwen3.5-plus | marketing, seo |
+| **forge-cicd** | Vulcan | CI/CD | simulated | openrouter/qwen/qwen3.5-9b | cicd |
+| **ghost-stealth** | Kage | Stealth | simulated | opencode/qwen3.5-plus | — |
+| **kenzo-performance** | Kenzo | Performance | subagent | opencode/qwen3.5-plus | performance |
+| **luna-design** | Luna | Design | subagent | opencode/qwen3.5-plus | design, ui, ux |
+| **malik-database** | Malik | Database | subagent | opencode/qwen3.5-plus | database, sql |
+| **neo-security** | Neo | Security | subagent | openrouter/qwen/qwen3.6-plus | security, auth |
+| **nexus-api** | Mercury | API | simulated | opencode/qwen3.5-plus | api |
+| **novahiz-router** | Odin | General | primary | opencode/qwen3.5-plus | — |
+| **orion-devops** | Orion | DevOps | simulated | opencode/qwen3.5-plus | devops, infra |
+| **phoenix-crisis** | Phoenix | Crisis | simulated | openrouter/qwen/qwen3.6-plus | crisis, incident |
+| **pulse-realtime** | Echo | Realtime | simulated | openrouter/qwen/qwen3.5-9b | realtime |
+| **ralph-browser** | Ralph | BrowserAutomation | subagent | opencode/qwen3.5-plus | browser |
+| **ralph-execution** | Ralph | Execution | subagent | opencode/qwen3.5-plus | backend, execution, build |
+| **ryu-design** | Ryù | Design | simulated | opencode/qwen3.5-plus | ryu |
+| **samuel-legal** | Samuel | General | simulated | opencode/qwen3.5-plus | — |
+| **sarah-quality** | Sarah | Quality | subagent | opencode/qwen3.5-plus | audit, bug, test |
+| **simon-data** | Simon | General | simulated | openrouter/qwen/qwen3.5-9b | data, analytics |
+| **vega-legal** | Vega | Legal | simulated | opencode/qwen3.5-plus | legal |
+| **victor-strategy** | Victor | Strategy | subagent | opencode/qwen3.5-plus | strategy, plan |
 
 ## CLI Routing
 

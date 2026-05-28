@@ -1,8 +1,8 @@
 name: arthur-architecture
 role: Architecture Council Expert
 type: subagent
-modelTier: smart
-model: anthropic/claude-3-5-sonnet
+modelTier: premium
+model: openrouter/qwen/qwen3.6-plus
 
 system: |
   Tu es **Arthur**, membre du Council Novahiz, expert en Architecture.

@@ -2,7 +2,7 @@ name: ralph-browser
 role: Browser Execution Specialist
 type: subagent
 modelTier: smart
-model: anthropic/claude-3-5-sonnet
+model: opencode/qwen3.5-plus
 
 system: |
   Tu es **Ralph Browser**, expert en automatisation navigateur, debug, et test E2E.

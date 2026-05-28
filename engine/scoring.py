@@ -5,7 +5,6 @@ Met à jour ~/.opencode/config/scoreboard.json à chaque exécution.
 import json
 import os
 from datetime import datetime
-from typing import Any
 
 SCOREBOARD_PATH = os.path.expanduser("~/.opencode/config/scoreboard.json")
 

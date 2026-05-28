@@ -10,12 +10,11 @@ import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# Add paths
-HOME = Path.home()
-NOVAHIZ_DIR = HOME / ".opencode"
-sys.path.insert(0, str(NOVAHIZ_DIR / "runtime"))
-sys.path.insert(0, str(NOVAHIZ_DIR / "metrics"))
-sys.path.insert(0, str(NOVAHIZ_DIR / "scripts"))
+ROOT = Path(__file__).resolve().parent.parent
+for sub in ["runtime", "metrics", "scripts"]:
+    p = str(ROOT / sub)
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
 class TestConfig(unittest.TestCase):
     """Test configuration loading and validation"""
@@ -122,7 +121,7 @@ class TestModelSelection(unittest.TestCase):
             from novahiz_runtime import select_model
             tier = select_model("audit this security vulnerability")
             self.assertEqual(tier, "premium")
-        except:
+        except Exception:
             self.skipTest("select_model not available")
     
     def test_select_model_simple(self):
@@ -131,7 +130,7 @@ class TestModelSelection(unittest.TestCase):
             from novahiz_runtime import select_model
             tier = select_model("fix typo")
             self.assertEqual(tier, "flash")
-        except:
+        except Exception:
             self.skipTest("select_model not available")
     
     def test_select_model_default(self):
@@ -140,7 +139,7 @@ class TestModelSelection(unittest.TestCase):
             from novahiz_runtime import select_model
             tier = select_model("build a REST API")
             self.assertEqual(tier, "smart")
-        except:
+        except Exception:
             self.skipTest("select_model not available")
 
 class TestDaemonStatus(unittest.TestCase):
@@ -150,7 +149,7 @@ class TestDaemonStatus(unittest.TestCase):
         """Runtime daemon should be running"""
         import subprocess
         result = subprocess.run(
-            ["pgrep", "-f", "novahiz-runtime.py"],
+            ["pgrep", "-f", "novahiz-unified.py"],
             capture_output=True
         )
         self.assertEqual(result.returncode, 0, "Runtime daemon should be running")

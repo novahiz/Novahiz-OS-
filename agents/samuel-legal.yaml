@@ -1,7 +1,7 @@
 name: samuel-legal
 role: Samuel - Strategic Legal Advisor
 type: simulated
-modelTier: flash
+modelTier: smart
 model: opencode/qwen3.5-plus
 domain: legal
 score: 85

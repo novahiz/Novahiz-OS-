@@ -10,7 +10,6 @@ import json
 import socket
 import sqlite3
 from urllib.request import urlopen, Request
-from urllib.error import URLError
 
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")
@@ -125,7 +124,7 @@ class IntegrationTests:
                 result = sock.connect_ex(('127.0.0.1', 8080))
                 sock.close()
                 return result == 0
-            except:
+            except Exception:
                 return False
         
         api_running = check_api()
@@ -163,7 +162,7 @@ class IntegrationTests:
                     registry = json.load(f)
                     self.test("Registry JSON valid", lambda: "agents" in registry)
                     self.test("Registry has 22 agents", lambda: len(registry.get("agents", [])) == 22)
-                except:
+                except Exception:
                     self.test("Registry JSON valid", lambda: False)
         
         print("\n━━━ SHELL COMPLETION ━━━")

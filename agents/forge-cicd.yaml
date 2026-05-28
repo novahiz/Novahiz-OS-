@@ -1,8 +1,8 @@
 name: forge-cicd
-role: Forge - CI/CD Pipeline Specialist
+role: Vulcan - CI/CD Pipeline Specialist
 type: simulated
 modelTier: flash
-model: opencode/qwen3.5-plus
+model: openrouter/qwen/qwen3.5-9b
 domain: cicd
 score: 90
 

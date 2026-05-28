@@ -2,7 +2,7 @@ name: simon-data
 role: Simon - Data Science Analyst
 type: simulated
 modelTier: flash
-model: opencode/qwen3.5-plus
+model: openrouter/qwen/qwen3.5-9b
 domain: data-science
 score: 88
 

@@ -7,12 +7,19 @@ import sys, os, json, time, threading, subprocess
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 from datetime import datetime
-from pathlib import Path
 
+from pathlib import Path
 HOME = os.path.expanduser("~")
 NOVAHIZ_DIR = os.path.join(HOME, ".opencode")
 CONFIG_DIR = os.path.join(NOVAHIZ_DIR, "config")
 LOGS_DIR = os.path.join(NOVAHIZ_DIR, "logs")
+
+# Accès direct à l'engine (évite subprocess vers smart-router.py)
+_ROOT = str(Path(__file__).resolve().parent.parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+from engine.router import Router
+from engine.scoring import Scoreboard
 
 # === API CONFIGURATION ===
 API_CONFIG = {
@@ -31,7 +38,7 @@ def load_webhooks():
         try:
             with open(WEBHOOKS_FILE, encoding='utf-8') as f:
                 return json.load(f)
-        except:
+        except (json.JSONDecodeError, OSError):
             pass
     return {"subscriptions": []}
 
@@ -80,7 +87,7 @@ def broadcast_sse(event_type, data):
         for client in SSE_CLIENTS[:]:
             try:
                 client.send_sse(event_type, data)
-            except:
+            except (BrokenPipeError, ConnectionResetError, OSError):
                 SSE_CLIENTS.remove(client)
 
 # === LOGGING ===
@@ -142,7 +149,7 @@ class APIHandler(BaseHTTPRequestHandler):
         
         try:
             data = json.loads(body) if body else {}
-        except:
+        except json.JSONDecodeError:
             data = {}
         
         routes = {
@@ -175,7 +182,7 @@ class APIHandler(BaseHTTPRequestHandler):
             self.wfile.write(f"event: {event_type}\n".encode())
             self.wfile.write(f"data: {json.dumps(data)}\n\n".encode())
             self.wfile.flush()
-        except:
+        except (BrokenPipeError, ConnectionResetError, OSError):
             pass
     
     def _get_root(self, query):
@@ -214,7 +221,7 @@ class APIHandler(BaseHTTPRequestHandler):
                 self._set_headers(200 if healthy else 503)
                 self.wfile.write(result.stdout.encode())
                 return
-            except:
+            except (json.JSONDecodeError, ValueError, OSError):
                 pass
         self._set_headers(503)
         self.wfile.write(json.dumps({"healthy": False, "error": "Health check failed"}).encode())
@@ -318,58 +325,41 @@ class APIHandler(BaseHTTPRequestHandler):
             while True:
                 time.sleep(30)
                 self.send_sse("ping", {"timestamp": datetime.now().isoformat()})
-        except:
+        except GeneratorExit:
+            remove_sse_client(self)
+        except Exception:
             remove_sse_client(self)
     
     def _route_task(self, task, query):
-        """Route a task (GET)"""
-        smart_router = os.path.join(NOVAHIZ_DIR, "scripts", "python", "smart-router.py")
-        if os.path.isfile(smart_router):
-            result = subprocess.run(
-                [sys.executable, smart_router, "route", task],
-                capture_output=True, text=True, timeout=10
-            )
-            try:
-                data = json.loads(result.stdout)
-                self._set_headers()
-                self.wfile.write(result.stdout.encode())
-                
-                # Trigger webhook
-                trigger_webhook("task.routed", data)
-                return
-            except:
-                pass
-        
-        self._set_headers(500)
-        self.wfile.write(json.dumps({"error": "Routing failed"}).encode())
+        """Route a task (GET) via engine.Router"""
+        try:
+            router = Router()
+            result = router.route(task)
+            data = {"success": True, "task": task, "primary": result}
+            self._set_headers()
+            self.wfile.write(json.dumps(data).encode())
+            trigger_webhook("task.routed", data)
+        except Exception as e:
+            self._set_headers(500)
+            self.wfile.write(json.dumps({"error": f"Routing failed: {str(e)}"}).encode())
     
     def _post_route(self, data):
-        """Route a task (POST)"""
+        """Route a task (POST) via engine.Router"""
         task = data.get("task", "")
         if not task:
             self._set_headers(400)
             self.wfile.write(json.dumps({"error": "Missing task"}).encode())
             return
         
-        smart_router = os.path.join(NOVAHIZ_DIR, "scripts", "python", "smart-router.py")
-        if os.path.isfile(smart_router):
-            result = subprocess.run(
-                [sys.executable, smart_router, "route", task],
-                capture_output=True, text=True, timeout=10
-            )
-            try:
-                response_data = json.loads(result.stdout)
-                self._set_headers()
-                self.wfile.write(result.stdout.encode())
-                
-                # Trigger webhook
-                trigger_webhook("task.routed", response_data)
-                return
-            except:
-                pass
-        
-        self._set_headers(500)
-        self.wfile.write(json.dumps({"error": "Routing failed"}).encode())
+        try:
+            router = Router()
+            response_data = router.route(task)
+            self._set_headers()
+            self.wfile.write(json.dumps(response_data).encode())
+            trigger_webhook("task.routed", response_data)
+        except Exception as e:
+            self._set_headers(500)
+            self.wfile.write(json.dumps({"error": f"Routing failed: {str(e)}"}).encode())
     
     def _post_execute(self, data):
         """Execute a task with an agent"""
@@ -441,7 +431,7 @@ class APIHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps({"error": "Webhook not found"}).encode())
     
     def _post_scoreboard_update(self, data):
-        """Update agent scoreboard"""
+        """Update agent scoreboard via engine.Scoreboard"""
         agent_id = data.get("agent")
         success = data.get("success", True)
         duration = data.get("duration", 0)
@@ -451,25 +441,17 @@ class APIHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps({"error": "Missing agent"}).encode())
             return
         
-        smart_router = os.path.join(NOVAHIZ_DIR, "scripts", "python", "smart-router.py")
-        if os.path.isfile(smart_router):
-            result = subprocess.run(
-                [sys.executable, smart_router, "update", agent_id, str(success).lower(), str(duration)],
-                capture_output=True, text=True, timeout=5
-            )
-            try:
-                response_data = json.loads(result.stdout)
-                self._set_headers()
-                self.wfile.write(result.stdout.encode())
-                
-                # Trigger webhook
-                trigger_webhook("scoreboard.updated", response_data)
-                return
-            except:
-                pass
-        
-        self._set_headers(500)
-        self.wfile.write(json.dumps({"error": "Update failed"}).encode())
+        try:
+            sb = Scoreboard()
+            sb.record_execution(agent_id, "api", success, duration)
+            stats = sb.get_stats(agent_id)
+            response_data = {"agent": agent_id, **stats}
+            self._set_headers()
+            self.wfile.write(json.dumps(response_data).encode())
+            trigger_webhook("scoreboard.updated", response_data)
+        except Exception as e:
+            self._set_headers(500)
+            self.wfile.write(json.dumps({"error": f"Scoreboard update failed: {str(e)}"}).encode())
     
     def log_message(self, format, *args):
         log_api("INFO", f"{self.address_string()} - {format % args}")
@@ -500,6 +482,9 @@ class APIServer:
 # === CLI ===
 def cmd_start():
     server = APIServer()
+    pidfile = os.path.join(NOVAHIZ_DIR, "api.pid")
+    with open(pidfile, "w") as f:
+        f.write(str(os.getpid()))
     server.start()
     print("Press Ctrl+C to stop...")
     try:
@@ -507,23 +492,44 @@ def cmd_start():
             time.sleep(1)
     except KeyboardInterrupt:
         server.stop()
+    finally:
+        if os.path.isfile(pidfile):
+            os.remove(pidfile)
 
 def cmd_stop():
-    # Find and kill API process
+    """Stop API server via PID file (graceful shutdown)."""
+    pidfile = os.path.join(NOVAHIZ_DIR, "api.pid")
+    if os.path.isfile(pidfile):
+        try:
+            with open(pidfile) as f:
+                pid = int(f.read().strip())
+            os.kill(pid, 15)  # SIGTERM — graceful
+            print(f"API server stopped (PID: {pid})")
+            os.remove(pidfile)
+            return
+        except (ProcessLookupError, OSError):
+            os.remove(pidfile)
+        except Exception as e:
+            print(f"Failed to stop API server: {e}")
+            return
+
+    # Fallback: pgrep (évite de se tuer soi-même)
     try:
         result = subprocess.run(
             ["pgrep", "-f", "novahiz-api.py"],
             capture_output=True, text=True, timeout=5
         )
-        pids = result.stdout.strip().split()
+        pids = [p for p in result.stdout.strip().split() if p and p != str(os.getpid())]
         if pids:
             for pid in pids:
-                os.kill(int(pid), 9)
+                os.kill(int(pid), 15)
             print(f"API server stopped (PIDs: {', '.join(pids)})")
         else:
             print("API server not running")
-    except:
-        print("Failed to stop API server")
+    except FileNotFoundError:
+        print("pgrep not found — cannot stop API server")
+    except Exception as e:
+        print(f"Failed to stop API server: {e}")
 
 def cmd_status():
     import socket

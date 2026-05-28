@@ -5,8 +5,7 @@ Generates visual reports and analytics from usage data
 """
 
 import json
-import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
 

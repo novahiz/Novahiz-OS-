@@ -27,13 +27,13 @@
 
 | ID Technique | Nom Humain | Domaine | Score |
 |--------------|------------|---------|-------|
-| `cipher-crypto` | **Cipher** | Cryptographie | 89 |
-| `forge-cicd` | **Forge** | CI/CD | 90 |
-| `ghost-stealth` | **Ghost** | Sécurité furtive | 86 |
-| `nexus-api` | **Nexus** | Intégration API | 91 |
+| `cipher-crypto` | **Zia** | Cryptographie | 89 |
+| `forge-cicd` | **Vulcan** | CI/CD | 90 |
+| `ghost-stealth` | **Kage** | Sécurité furtive | 86 |
+| `nexus-api` | **Mercury** | Intégration API | 91 |
 | `orion-devops` | **Orion** | DevOps | 92 |
 | `phoenix-crisis` | **Phoenix** | Gestion de crise | 87 |
-| `pulse-realtime` | **Pulse** | Systèmes temps réel | 88 |
+| `pulse-realtime` | **Echo** | Systèmes temps réel | 88 |
 | `ryu-design` | **Ryù** | Design (Japon) | 90 |
 | `simon-data` | **Simon** | Data Science | 88 |
 | `samuel-legal` | **Samuel** | Légal | 85 |
@@ -42,7 +42,7 @@
 
 | ID Technique | Nom Humain | Rôle | Score |
 |--------------|------------|------|-------|
-| `novahiz-router` | **Router** | Orchestration | 100 |
+| `novahiz-router` | **Odin** | Orchestration | 100 |
 | `vega-legal` | **Vega** | Compliance | 85 |
 
 ---

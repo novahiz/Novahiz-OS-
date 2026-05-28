@@ -1,3 +1,5 @@
+> **Note:** This repository is an upstream fork. References to "Claude" and "Anthropic" are legacy from the original project and retained for compatibility.
+
 # Setup Guide for Claude Code
 
 This file is a step-by-step guide for Claude Code (or any LLM agent) to install and configure the TradingView MCP server. If a user asks you to install or set up this project, follow these steps exactly.

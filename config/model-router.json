@@ -1,33 +1,31 @@
 {
-  "v": "1.0",
+  "v": "2.0",
   "enabled": true,
   "tiers": {
     "flash": {
       "primary": "openrouter/qwen/qwen3.5-9b",
       "fallbacks": [
-        "openrouter/qwen/qwen3.5-flash-02-23",
-        "openrouter/stepfun/step-3.5-flash"
+        "openrouter/qwen/qwen3.5-flash-02-23"
       ],
-      "description": "Fast, cheap — Q&A, formatting, search, syntax",
+      "description": "Fast, cheap \u2014 Q&A, formatting, search, syntax",
       "targetRatio": 0.6
     },
     "smart": {
       "primary": "opencode/qwen3.5-plus",
       "fallbacks": [
         "openrouter/qwen/qwen3.6-flash",
-        "openrouter/qwen/qwen3.6-35b-a3b",
-        "openrouter/moonshotai/kimi-k2.5"
+        "openrouter/z-ai/glm-4.7"
       ],
-      "description": "Simulated agents — build, refactor, features, tests",
+      "description": "Balanced \u2014 build, refactor, features, tests",
       "targetRatio": 0.3
     },
     "premium": {
-      "primary": "anthropic/claude-3-5-sonnet",
+      "primary": "openrouter/qwen/qwen3.6-plus",
       "fallbacks": [
-        "openrouter/qwen/qwen3.6-plus",
-        "opencode/qwen3.6-plus"
+        "openrouter/moonshotai/kimi-k2.5",
+        "openrouter/z-ai/glm-5"
       ],
-      "description": "Subagents (Council Sages) — architecture, security, strategy",
+      "description": "Powerful \u2014 architecture, security, strategy, crisis",
       "targetRatio": 0.1
     }
   },
@@ -39,8 +37,8 @@
   "agentOverrides": {
     "neo-security": "premium",
     "cipher-crypto": "premium",
-    "arthur-architecture": "smart",
-    "atlas-memory": "flash",
+    "phoenix-crisis": "premium",
+    "arthur-architecture": "premium",
     "novahiz-router": "smart",
     "athena-initialization": "smart",
     "kenzo-performance": "smart",
@@ -49,23 +47,24 @@
     "sarah-quality": "smart",
     "ralph-execution": "smart",
     "victor-strategy": "smart",
+    "ralph-browser": "smart",
     "nexus-api": "smart",
     "ryu-design": "smart",
-    "forge-cicd": "flash",
     "orion-devops": "smart",
-    "phoenix-crisis": "premium",
-    "pulse-realtime": "flash",
-    "simon-data": "flash",
-    "ralph-browser": "flash",
     "vega-legal": "smart",
-    "ghost-stealth": "smart",
     "elias-marketing": "smart",
-    "samuel-legal": "smart"
+    "samuel-legal": "smart",
+    "ghost-stealth": "smart",
+    "atlas-memory": "flash",
+    "forge-cicd": "flash",
+    "pulse-realtime": "flash",
+    "simon-data": "flash"
   },
   "domainRouting": {
     "security": "premium",
     "cryptography": "premium",
     "architecture": "premium",
+    "crisis": "premium",
     "system-design": "premium",
     "design": "smart",
     "performance": "smart",
@@ -76,11 +75,9 @@
     "marketing": "smart",
     "strategy": "smart",
     "quality": "smart",
-    "memory": "flash",
-    "status": "flash",
-    "metrics": "flash",
-    "health": "flash",
-    "sql": "smart",
+    "legal": "smart",
+    "devops": "smart",
+    "infra": "smart",
     "backend": "smart",
     "auth": "smart",
     "audit": "smart",
@@ -89,23 +86,23 @@
     "refactor": "smart",
     "seo": "smart",
     "plan": "smart",
-    "legal": "smart",
-    "cicd": "flash",
+    "sql": "smart",
     "ui": "smart",
     "ux": "smart",
-    "devops": "smart",
-    "infra": "smart",
-    "crisis": "premium",
+    "init": "smart",
+    "stealth": "smart",
+    "compliance": "smart",
+    "route": "smart",
+    "routing": "smart",
+    "memory": "flash",
+    "status": "flash",
+    "metrics": "flash",
+    "health": "flash",
+    "cicd": "flash",
     "realtime": "flash",
     "data": "flash",
     "analytics": "flash",
-    "init": "smart",
-    "browser": "flash",
-    "stealth": "smart",
-    "ghost": "smart",
-    "compliance": "smart",
-    "route": "smart",
-    "routing": "smart"
+    "browser": "flash"
   },
   "complexityMapping": {
     "SIMPLE": "flash",
@@ -118,5 +115,5 @@
     "architectureAlwaysPremium": true,
     "statusAlwaysFlash": true
   },
-  "lastUpdated": "2026-05-28T15:00:00"
+  "lastUpdated": "2026-05-28T16:00:00"
 }

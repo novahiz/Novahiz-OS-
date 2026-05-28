@@ -48,7 +48,7 @@ Before running a CLI search, check the [skills.sh leaderboard](https://skills.sh
 
 For example, top skills for web development include:
 - `vercel-labs/agent-skills` — React, Next.js, web design (100K+ installs each)
-- `anthropics/skills` — Frontend design, document processing (100K+ installs)
+- `opencode/skills` — Frontend design, document processing (100K+ installs)
 
 ### Step 3: Search for Skills
 
@@ -69,7 +69,7 @@ For example:
 **Do not recommend a skill based solely on search results.** Always verify:
 
 1. **Install count** — Prefer skills with 1K+ installs. Be cautious with anything under 100.
-2. **Source reputation** — Official sources (`vercel-labs`, `anthropics`, `microsoft`) are more trustworthy than unknown authors.
+2. **Source reputation** — Official sources (`vercel-labs`, `opencode`, `microsoft`) are more trustworthy than unknown authors.
 3. **GitHub stars** — Check the source repository. A skill from a repo with <100 stars should be treated with skepticism.
 
 ### Step 5: Present Options to the User
@@ -122,7 +122,7 @@ When searching, consider these common categories:
 
 1. **Use specific keywords**: "react testing" is better than just "testing"
 2. **Try alternative terms**: If "deploy" doesn't work, try "deployment" or "ci-cd"
-3. **Check popular sources**: Many skills come from `vercel-labs/agent-skills` or `ComposioHQ/awesome-claude-skills`
+3. **Check popular sources**: Many skills come from `vercel-labs/agent-skills` or `ComposioHQ/awesome-skills`
 
 ## When No Skills Are Found
 

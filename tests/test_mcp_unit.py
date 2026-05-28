@@ -9,8 +9,12 @@ import sys
 import os
 from pathlib import Path
 
-sys.path.insert(0, str(Path.home() / ".opencode"))
-sys.path.insert(0, str(Path.home() / ".opencode" / "mcp"))
+_ROOT = str(Path(__file__).resolve().parent.parent)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+_MCP = str(Path(__file__).resolve().parent.parent / "mcp")
+if _MCP not in sys.path:
+    sys.path.insert(0, _MCP)
 
 NOVAHIZ_DIR = Path.home() / ".opencode"
 ENGINE_DIR = NOVAHIZ_DIR / "engine"
@@ -65,7 +69,6 @@ class TestEngineModule(unittest.TestCase):
 
     def test_engine_registry_loads(self):
         """Engine registry should load"""
-        sys.path.insert(0, str(NOVAHIZ_DIR))
         from engine import AgentRegistry
         reg = AgentRegistry()
         ok = reg.load()
@@ -110,7 +113,7 @@ class TestRuntime(unittest.TestCase):
 
     def test_runtime_exists(self):
         """Runtime should exist"""
-        runtime = NOVAHIZ_DIR / "runtime" / "novahiz-runtime.py"
+        runtime = NOVAHIZ_DIR / "runtime" / "novahiz-unified.py"
         self.assertTrue(runtime.exists())
 
     def test_runtime_has_health_check(self):
@@ -121,7 +124,7 @@ class TestRuntime(unittest.TestCase):
             NOVAHIZ_DIR / "engine" / "router.py",
             NOVAHIZ_DIR / "engine" / "__init__.py",
         ]
-        runtime_file = NOVAHIZ_DIR / "runtime" / "novahiz-runtime.py"
+        runtime_file = NOVAHIZ_DIR / "runtime" / "novahiz-unified.py"
         
         has_health = False
         for f in engine_files + [runtime_file]:
