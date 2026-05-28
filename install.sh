@@ -180,9 +180,12 @@ case "$OS" in
         ;;
     windows)
         log "Windows detected — prerequisites will be handled by install.ps1"
-        log "Run this in PowerShell as Administrator:"
-        log "  Set-ExecutionPolicy Bypass -Scope Process -Force"
-        log '  iex ((New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1"))'
+        log "Open PowerShell as Administrator and run:"
+        log "  powershell -NoProfile -ExecutionPolicy Bypass -Command \"iex ((Invoke-RestMethod 'https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1'))\""
+        log ""
+        log "Or download and run manually:"
+        log "  curl -fsSL https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1 -o install.ps1"
+        log '  powershell -File install.ps1'
         exit 0
         ;;
 esac

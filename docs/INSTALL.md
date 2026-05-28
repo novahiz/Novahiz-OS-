@@ -105,7 +105,7 @@ On Windows 10/11, run **PowerShell as Administrator**:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force
-iex ((New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1"))
+iex ((Invoke-RestMethod "https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1"))
 ```
 
 ---
