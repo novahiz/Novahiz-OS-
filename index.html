@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novahiz OS v6.1.0 — Multi-Agent Orchestration</title>
+<meta name="description" content="Novahiz OS v6.1.0 — Production Grade. 24 AI agents, 76 skills, 6 MCP servers. Multi-agent orchestration for AI development.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Inter',sans-serif;background:#0a0a0f;color:#e0e0f0;line-height:1.6}
+  .hero{padding:80px 0 60px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#7c5cfc33 0%,transparent 70%)}
+  .hero h1{font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,#7c5cfc,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero .sub{font-size:1.2rem;color:#8888aa;margin-top:12px}
+  .version-box{display:inline-block;margin-top:16px;padding:6px 18px;border:1px solid #7c5cfc;border-radius:20px;color:#7c5cfc;background:#7c5cfc33}
+  .container{max-width:960px;margin:0 auto;padding:0 24px}
+  section{padding:60px 0}
+  section:nth-child(even){background:#12121a}
+  h2{font-size:1.5rem;font-weight:700;margin-bottom:24px;color:#7c5cfc}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  .card{background:#0a0a0f;border:1px solid #1e1e30;border-radius:8px;padding:16px}
+  .card h3{font-size:.95rem;font-weight:600;margin-bottom:4px}
+  .tag{display:inline-block;font-size:.7rem;padding:2px 8px;border-radius:10px;margin-top:6px;border:1px solid}
+  .tag-premium{background:#7c5cfc33;color:#7c5cfc;border-color:#7c5cfc}
+  .tag-smart{background:#60a5fa22;color:#60a5fa;border-color:#60a5fa}
+  .tag-flash{background:#4ade8022;color:#4ade80;border-color:#4ade80}
+  .install-cmd{margin-top:8px;background:#12121a;border:1px solid #1e1e30;border-radius:8px;padding:12px 16px;font-family:'SF Mono','JetBrains Mono',monospace;font-size:.85rem;color:#4ade80;overflow-x:auto}
+  a{color:#60a5fa;text-decoration:none}
+  footer{text-align:center;padding:40px 0;color:#8888aa;font-size:.85rem;border-top:1px solid #1e1e30}
+  .btn{display:inline-block;padding:8px 20px;background:#7c5cfc;color:#fff;border-radius:8px;font-weight:600;margin-top:20px}
+  .commands{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+  .cmd{background:#0a0a0f;border:1px solid #1e1e30;border-radius:8px;padding:12px 16px;font-family:monospace;font-size:.85rem}
+  .cmd .desc{display:block;font-family:sans-serif;font-size:.75rem;color:#8888aa;margin-top:2px}
+  .install-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:600px){.hero h1{font-size:2rem}.grid,.install-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="container">
+    <h1>Novahiz OS</h1>
+    <div class="sub">Multi-Agent Orchestration System for AI Development</div>
+    <p style="margin-top:20px">
+      <img src="https://img.shields.io/badge/version-6.1.0-blue?style=flat-square" alt="Version">
+      <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+      <img src="https://img.shields.io/badge/platform-linux%7Cmacos%7CWSL-orange?style=flat-square" alt="Platform">
+      <img src="https://img.shields.io/badge/runtime-OpenCode%20Only-7c5cfc?style=flat-square" alt="Runtime">
+      <img src="https://img.shields.io/badge/agents-24-ff69b4?style=flat-square" alt="Agents">
+      <img src="https://img.shields.io/badge/skills-76-4ade80?style=flat-square" alt="Skills">
+    </p>
+    <div class="version-box">v6.1.0 — Production Grade</div>
+    <div style="margin-top:20px"><a class="btn" href="https://github.com/novahiz/Novahiz-OS-">View on GitHub →</a></div>
+  </div>
+</div>
+
+<section style="background:#12121a">
+  <div class="container">
+    <h2>⚠️ Requirements</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="card" style="border-left:3px solid #7c5cfc">
+        <h3>🔄 OpenCode Only</h3>
+        <p style="margin-top:8px;font-size:0.9rem">Novahiz OS runs exclusively on the <a href="https://opencode.ai">OpenCode</a> framework. API keys for OpenRouter or other providers required for agent execution.</p>
+      </div>
+      <div class="card" style="border-left:3px solid #f59e0b">
+        <h3>🐧 WSL Required on Windows</h3>
+        <p style="margin-top:8px;font-size:0.9rem">Native Windows is not supported. Install WSL first: <code style="background:#0a0a0f;padding:2px 6px;border-radius:4px">wsl --install</code> then run the Linux installer inside WSL.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>24 Specialized AI Agents</h2>
+    <div class="grid">
+      <div class="card"><h3>🧠 Odin</h3>Orchestration<span class="tag tag-premium">premium</span></div>
+      <div class="card"><h3>📐 Arthur</h3>Architecture<span class="tag tag-premium">premium</span></div>
+      <div class="card"><h3>🎨 Luna</h3>Design<span class="tag tag-premium">premium</span></div>
+      <div class="card"><h3>⚡ Victor</h3>Strategy<span class="tag tag-premium">premium</span></div>
+      <div class="card"><h3>💾 Atlas</h3>Memory<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>📊 Kenzo</h3>Performance<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🌍 Elias</h3>Marketing<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🗃️ Malik</h3>Database<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🛡️ Neo</h3>Security<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🔬 Sarah</h3>Quality<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🎯 Ralph</h3>Execution<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🌩️ Orion</h3>DevOps<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🦅 Phoenix</h3>Crisis Mgt<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>📚 Athena</h3>Docs/Init<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>💹 Simon</h3>Data Science<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🏯 Ryu</h3>Design<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>⚖️ Samuel</h3>Legal<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>⚖️ Vega</h3>Compliance<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🖥️ Ralph</h3>Browser<span class="tag tag-smart">smart</span></div>
+      <div class="card"><h3>🔐 Zia</h3>Cryptography<span class="tag tag-flash">flash</span></div>
+      <div class="card"><h3>🔧 Vulcan</h3>CI/CD<span class="tag tag-flash">flash</span></div>
+      <div class="card"><h3>👻 Kage</h3>Stealth Ops<span class="tag tag-flash">flash</span></div>
+      <div class="card"><h3>📡 Mercury</h3>API Gateway<span class="tag tag-flash">flash</span></div>
+      <div class="card"><h3>🔊 Echo</h3>Real-time<span class="tag tag-flash">flash</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>6 MCP Servers</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+      <div class="card"><h3>🦎 Chrome DevTools</h3>Browser automation</div>
+      <div class="card"><h3>📈 TradingView</h3>Charts, indicators & trading</div>
+      <div class="card"><h3>🏛️ Supabase</h3>Postgres, auth & edge functions</div>
+      <div class="card"><h3>📝 Obsidian</h3>Vault, wikilinks & search</div>
+      <div class="card"><h3>🎨 Google Stitch</h3>UI design & design systems</div>
+      <div class="card"><h3>⚙️ Novahiz</h3>Agent routing, health & metrics</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Install</h2>
+    <div class="install-grid">
+      <div class="card"><h3>🐧 Linux / macOS</h3><div class="install-cmd">curl -fsSL https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.sh | bash</div></div>
+      <div class="card"><h3>🪟 Windows (WSL Required)</h3><div class="install-cmd">powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Invoke-RestMethod 'https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1'))"</div><p style="margin-top:8px;font-size:0.75rem;color:#888">Installs WSL + Novahiz OS automatically</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Quick Start</h2>
+    <div class="commands">
+      <div class="cmd"><strong>nv route</strong><span class="desc">Route task to optimal agent</span></div>
+      <div class="cmd"><strong>nv agents</strong><span class="desc">List all 24 agents</span></div>
+      <div class="cmd"><strong>nv health</strong><span class="desc">System health check</span></div>
+      <div class="cmd"><strong>nv scoreboard</strong><span class="desc">Agent stats</span></div>
+      <div class="cmd"><strong>nv history</strong><span class="desc">Execution history</span></div>
+      <div class="cmd"><strong>nv council</strong><span class="desc">Multi-agent deliberation</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Novahiz OS v6.1.0 — 24 Agents · 76 Skills · 6 MCP Servers</p>
+    <p style="margin-top:8px">
+      <a href="https://github.com/novahiz/Novahiz-OS-/releases/tag/v6.1.0">Release v6.1.0</a> ·
+      <a href="https://github.com/novahiz/Novahiz-OS-/blob/main/CHANGELOG.md">Changelog</a> ·
+      <a href="https://github.com/novahiz/Novahiz-OS-/blob/main/AGENTS.md">Agent Registry</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
