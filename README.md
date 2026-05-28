@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 Novahiz OS v6.0</h1>
+  <h1>🚀 Novahiz OS v6.1</h1>
   <p><strong>Multi-Agent Orchestration System for AI Development</strong></p>
   <p>
     <a href="https://github.com/novahiz/Novahiz-OS-">
@@ -8,8 +8,9 @@
     <a href="https://github.com/novahiz/Novahiz-OS-/blob/main/LICENSE">
       <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
     </a>
-    <img src="https://img.shields.io/badge/status-production%20ready-success?style=flat-square" alt="Status">
-    <img src="https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey?style=flat-square" alt="Platform">
+    <img src="https://img.shields.io/badge/status-production%20grade-success?style=flat-square" alt="Status">
+    <img src="https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20WSL-orange?style=flat-square" alt="Platform">
+    <img src="https://img.shields.io/badge/runtime-OpenCode%20Only-7c5cfc?style=flat-square" alt="Runtime">
     <img src="https://img.shields.io/badge/agents-24-orange?style=flat-square" alt="Agents">
     <img src="https://img.shields.io/badge/skills-76-purple?style=flat-square" alt="Skills">
   </p>
@@ -19,9 +20,30 @@
 
 ## ⚡ One-Line Install
 
+### Linux / macOS
+
 ```bash
 # Clone and install
 git clone https://github.com/novahiz/Novahiz-OS- ~/.opencode && ~/.opencode/installers/01-install-deps.sh
+```
+
+### Windows (WSL Required)
+
+Novahiz OS requires WSL. You have two options:
+
+**Option 1: PowerShell Bootstrap (Recommended)**
+```powershell
+# Run as Administrator — installs WSL + Novahiz OS automatically
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Invoke-RestMethod 'https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1'))"
+```
+
+**Option 2: Manual WSL Setup**
+```powershell
+# 1. Install WSL (restart required)
+wsl --install
+
+# 2. After restart, open WSL and run:
+curl -fsSL https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.sh | bash
 ```
 
 > Detects your OS, installs prerequisites (Python 3.10+, Node.js 18+, Git), clones the system, patches paths, and runs the interactive config wizard.
@@ -33,6 +55,11 @@ git clone https://github.com/novahiz/Novahiz-OS- ~/.opencode && ~/.opencode/inst
 ## ✨ Overview
 
 Novahiz OS turns **any AI coding agent** into a coordinated multi-agent workforce. It provides 24 specialized agents, 76+ skills, and 6 MCP servers that work together — routing tasks to the right expert agent automatically.
+
+> **⚠️ Important Requirements:**
+> - **Runtime:** Novahiz OS is **OpenCode Only** — requires the OpenCode framework
+> - **Windows:** Requires **WSL (Windows Subsystem for Linux)** — native Windows is not supported
+> - **Linux/macOS:** Works natively
 
 ### What makes it different?
 
