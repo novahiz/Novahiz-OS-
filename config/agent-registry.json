@@ -1,0 +1,271 @@
+{
+  "version": "1.0.0",
+  "description": "Novahiz Router - Agent Registry & Routing Configuration",
+  "agents": {
+    "arthur-architecture": {
+      "name": "Arthur",
+      "domain": "Architecture",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["architecture", "refactor", "structure", "design pattern", "monolith", "microservice", "modular", "coupling", "cohesion", "clean architecture", "ddd", "hexagonal"],
+      "priority": 1,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Expert en architecture logicielle, patterns, refactoring"
+    },
+    "athena-initialization": {
+      "name": "Athena",
+      "domain": "Initialization",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["init", "bootstrap", "setup", "create project", "scaffold", "initialize"],
+      "priority": 1,
+      "complexity": ["SIMPLE", "MEDIUM"],
+      "description": "Initialisation de projets, bootstrap, configuration"
+    },
+    "atlas-memory": {
+      "name": "Atlas",
+      "domain": "Memory",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["memory", "context", "retrieve", "remember", "store", "recall"],
+      "priority": 1,
+      "complexity": ["SIMPLE", "MEDIUM"],
+      "description": "Gestion mémoire, contexte, retrieval"
+    },
+    "cipher-crypto": {
+      "name": "Cipher",
+      "domain": "Cryptography",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 90,
+      "keywords": ["crypto", "encryption", "decryption", "hash", "jwt", "token", "security cipher", "aes", "rsa", "bcrypt"],
+      "priority": 2,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Cryptographie, sécurité, chiffrement"
+    },
+    "elias-marketing": {
+      "name": "Elias",
+      "domain": "Marketing",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["marketing", "seo", "growth", "content", "copywriting", "campaign", "audience", "conversion"],
+      "priority": 1,
+      "complexity": ["SIMPLE", "MEDIUM", "COMPLEX"],
+      "description": "Marketing, SEO, growth, content strategy"
+    },
+    "forge-cicd": {
+      "name": "Forge",
+      "domain": "CI/CD",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 90,
+      "keywords": ["cicd", "ci/cd", "pipeline", "github actions", "gitlab ci", "jenkins", "deploy", "build", "automation"],
+      "priority": 2,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "CI/CD, pipelines, déploiement automatique"
+    },
+    "ghost-stealth": {
+      "name": "Ghost",
+      "domain": "Stealth",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 85,
+      "keywords": ["stealth", "audit", "pentest", "vulnerability", "scan"],
+      "priority": 3,
+      "complexity": ["COMPLEX"],
+      "description": "Opérations furtives, audits sécurité"
+    },
+    "kenzo-performance": {
+      "name": "Kenzo",
+      "domain": "Performance",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["performance", "optimization", "speed", "latency", "cache", "cdn", "bundle", "lighthouse", "core web vitals"],
+      "priority": 1,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Performance, optimisation, speed"
+    },
+    "luna-design": {
+      "name": "Luna",
+      "domain": "Design",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["design", "ui", "ux", "figma", "interface", "visual", "color", "typography", "layout", "responsive"],
+      "priority": 1,
+      "complexity": ["SIMPLE", "MEDIUM", "COMPLEX"],
+      "description": "Design UI/UX, Figma, interfaces"
+    },
+    "malik-database": {
+      "name": "Malik",
+      "domain": "Database",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["database", "sql", "postgresql", "mysql", "mongodb", "redis", "schema", "migration", "orm", "query"],
+      "priority": 1,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Bases de données, SQL, architecture data"
+    },
+    "neo-security": {
+      "name": "Neo",
+      "domain": "Security",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 90,
+      "keywords": ["security", "secure", "auth", "authentication", "authorization", "oauth", "vulnerability", "vulnerabilities", "xss", "csrf", "injection", "owasp", "audit security", "penetration", "exploit", "hack"],
+      "priority": 1,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Sécurité, authentification, vulnérabilités"
+    },
+    "nexus-api": {
+      "name": "Nexus",
+      "domain": "API",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 90,
+      "keywords": ["api", "rest", "graphql", "endpoint", "route", "webhook", "integration", "swagger", "openapi"],
+      "priority": 2,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "API REST/GraphQL, intégrations"
+    },
+    "orion-devops": {
+      "name": "Orion",
+      "domain": "DevOps",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 90,
+      "keywords": ["devops", "infra", "docker", "kubernetes", "terraform", "aws", "gcp", "azure", "cloud", "vps"],
+      "priority": 2,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "DevOps, infrastructure, cloud"
+    },
+    "phoenix-crisis": {
+      "name": "Phoenix",
+      "domain": "Crisis",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 85,
+      "keywords": ["crisis", "incident", "emergency", "downtime", "outage", "debug", "fix critical"],
+      "priority": 1,
+      "complexity": ["COMPLEX"],
+      "description": "Gestion de crise, incidents critiques"
+    },
+    "pulse-realtime": {
+      "name": "Pulse",
+      "domain": "Realtime",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 85,
+      "keywords": ["realtime", "websocket", "socket.io", "streaming", "live", "push", "notification"],
+      "priority": 2,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Systèmes temps réel, websockets"
+    },
+    "ralph-browser": {
+      "name": "Ralph",
+      "domain": "Browser Automation",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["browser", "automation", "selenium", "puppeteer", "playwright", "scrape", "crawl", "extract"],
+      "priority": 1,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Automatisation navigateur, scraping"
+    },
+    "ralph-execution": {
+      "name": "Ralph",
+      "domain": "Execution",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["execution", "build", "backend", "implement", "code", "develop", "feature"],
+      "priority": 1,
+      "complexity": ["SIMPLE", "MEDIUM", "COMPLEX"],
+      "description": "Exécution, build, développement backend"
+    },
+    "ryu-design": {
+      "name": "Ryù",
+      "domain": "Design",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 90,
+      "keywords": ["ryu", "japanese design", "zen", "minimalist", "wabi-sabi"],
+      "priority": 3,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Design japonais, innovation UX"
+    },
+    "samuel-legal": {
+      "name": "Samuel",
+      "domain": "Legal",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 85,
+      "keywords": ["legal", "terms", "privacy", "gdpr", "compliance", "contract"],
+      "priority": 3,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Conseil juridique, compliance"
+    },
+    "sarah-quality": {
+      "name": "Sarah",
+      "domain": "Quality",
+      "type": "subagent",
+      "model": "anthropic/claude-3-5-sonnet",
+      "score": 95,
+      "keywords": ["audit", "bug", "test", "quality", "review", "lint", "unit test", "e2e", "coverage"],
+      "priority": 1,
+      "complexity": ["SIMPLE", "MEDIUM", "COMPLEX"],
+      "description": "Qualité code, tests, reviews"
+    },
+    "simon-data": {
+      "name": "Simon",
+      "domain": "Data",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 90,
+      "keywords": ["data", "analytics", "ml", "ai", "pipeline", "etl", "visualization", "dashboard"],
+      "priority": 2,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Data science, analytics, ML"
+    },
+    "vega-legal": {
+      "name": "Vega",
+      "domain": "Legal",
+      "type": "simulated",
+      "model": "opencode/qwen3.5-plus",
+      "score": 85,
+      "keywords": ["legal", "compliance", "regulation", "gdpr", "ccpa", "hipaa"],
+      "priority": 3,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Legal, compliance, régulations"
+    },
+    "victor-strategy": {
+      "name": "Victor",
+      "domain": "Strategy",
+      "type": "subagent",
+      "model": "anthropic/claude-3-sonnet",
+      "score": 95,
+      "keywords": ["strategy", "plan", "roadmap", "decision", "analysis", "business", "kpi", "metric"],
+      "priority": 1,
+      "complexity": ["MEDIUM", "COMPLEX"],
+      "description": "Stratégie, planning, décision"
+    }
+  },
+  "routing_rules": {
+    "keyword_match_weight": 0.6,
+    "priority_weight": 0.3,
+    "score_weight": 0.1,
+    "min_confidence_threshold": 0.4,
+    "multi_agent_threshold": 0.7,
+    "complexity_keywords": {
+      "SIMPLE": ["how", "what", "explain", "simple", "quick", "basic"],
+      "MEDIUM": ["build", "create", "implement", "fix", "optimize", "configure"],
+      "COMPLEX": ["architecture", "system", "design", "scale", "enterprise", "production", "multi"]
+    }
+  }
+}

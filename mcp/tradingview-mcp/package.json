@@ -1,0 +1,20 @@
+{
+  "name": "tradingview-mcp-repo",
+  "private": true,
+  "version": "1.0.2",
+  "description": "Repository wrapper for TradingView MCP versioned product lines",
+  "workspaces": [
+    "versions/v1"
+  ],
+  "scripts": {
+    "start": "npm --prefix versions/v1 start",
+    "tv": "npm --prefix versions/v1 run tv --",
+    "test": "npm --prefix versions/v1 test",
+    "test:unit": "npm --prefix versions/v1 run test:unit",
+    "test:remote": "npm --prefix versions/v1 run test:remote",
+    "test:e2e": "npm --prefix versions/v1 run test:e2e",
+    "test:all": "npm --prefix versions/v1 run test:all",
+    "test:verbose": "npm --prefix versions/v1 run test:verbose",
+    "test:count": "npm --prefix versions/v1 run test:count"
+  }
+}

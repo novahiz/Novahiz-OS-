@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-05-27T17:11:38.687849",
+  "summary": {
+    "total_errors": 11,
+    "unresolved_errors": 11,
+    "agents_tracked": 7,
+    "total_corrections": 0,
+    "successful_corrections": 0,
+    "total_learnings": 0,
+    "active_alerts": 4,
+    "total_routings": 39
+  },
+  "suggestions": {
+    "generated_at": "2026-05-27T17:11:38.688881",
+    "agents": {},
+    "system": [
+      {
+        "type": "error_backlog",
+        "priority": "high",
+        "title": "Clear Error Backlog",
+        "description": "11 unresolved errors",
+        "actions": [
+          "Review and resolve critical errors first",
+          "Enable auto-correction for common issues",
+          "Set up alerts for new critical errors"
+        ],
+        "estimated_impact": "Improved system stability"
+      },
+      {
+        "type": "detection_based",
+        "priority": "medium",
+        "title": "Address: confidence_drop",
+        "description": "Low routing confidence: 5/5 routes below 0.4",
+        "actions": [
+          "Review routing rules",
+          "Check keyword definitions",
+          "Adjust confidence thresholds",
+          "Consider adding new agents"
+        ],
+        "estimated_impact": "Recalibrate routing"
+      }
+    ],
+    "routing": [
+      {
+        "type": "routing_imbalance",
+        "priority": "medium",
+        "title": "Balance Agent Load",
+        "description": "Some agents get 18.0x more tasks",
+        "actions": [
+          "Review keyword distribution",
+          "Adjust agent priorities",
+          "Consider load balancing rules"
+        ],
+        "estimated_impact": "Better resource utilization"
+      },
+      {
+        "type": "low_confidence",
+        "priority": "high",
+        "title": "Improve Routing Confidence",
+        "description": "Avg confidence: 0.00",
+        "actions": [
+          "Review keyword definitions",
+          "Add more specific keywords",
+          "Adjust confidence thresholds",
+          "Consider agent consolidation"
+        ],
+        "estimated_impact": "More accurate routing"
+      },
+      {
+        "type": "confidence_threshold",
+        "priority": "medium",
+        "title": "Adjust Confidence Threshold",
+        "description": "39/39 routes below 0.4 confidence",
+        "actions": [
+          "Raise minimum confidence threshold",
+          "Enable multi-agent deliberation for low confidence",
+          "Add fallback routing rules"
+        ],
+        "estimated_impact": "Better routing decisions"
+      }
+    ]
+  },
+  "active_alerts": [
+    {
+      "id": "alt_20260527171108389999",
+      "alert_type": "error",
+      "severity": "high",
+      "title": "Pattern Detected",
+      "message": "Error pattern detected: failed",
+      "timestamp": "2026-05-27T17:11:08.390032"
+    },
+    {
+      "id": "alt_20260527171108387598",
+      "alert_type": "error",
+      "severity": "high",
+      "title": "Pattern Detected",
+      "message": "Error pattern detected: failed",
+      "timestamp": "2026-05-27T17:11:08.387631"
+    },
+    {
+      "id": "alt_20260527171108384420",
+      "alert_type": "error",
+      "severity": "high",
+      "title": "Pattern Detected",
+      "message": "Error pattern detected: failed",
+      "timestamp": "2026-05-27T17:11:08.384462"
+    },
+    {
+      "id": "alt_20260527171108381920",
+      "alert_type": "error",
+      "severity": "high",
+      "title": "Pattern Detected",
+      "message": "Error pattern detected: failed",
+      "timestamp": "2026-05-27T17:11:08.381958"
+    }
+  ],
+  "recent_corrections": []
+}

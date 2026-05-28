@@ -1,0 +1,12 @@
+[Unit]
+Description=NovaHiz OS Daily Backup Timer
+Documentation=man:systemd.timer(5)
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+RandomizedDelaySec=300
+Unit=novahiz-backup.service
+
+[Install]
+WantedBy=timers.target

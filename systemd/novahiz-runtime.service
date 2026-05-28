@@ -1,0 +1,26 @@
+[Unit]
+Description=Novahiz OS Runtime Daemon
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=novahiz
+Group=novahiz
+EnvironmentFile=/home/novahiz/.novahiz/.env
+WorkingDirectory=/home/novahiz/.opencode
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/runtime/novahiz-runtime.py daemon 3
+ExecStop=/bin/kill -SIGTERM $MAINPID
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/novahiz/.opencode/logs/runtime-daemon.log
+StandardError=append:/home/novahiz/.opencode/logs/runtime-daemon.log
+
+# Security
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/novahiz/.opencode
+
+[Install]
+WantedBy=multi-user.target

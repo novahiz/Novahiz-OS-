@@ -1,0 +1,26 @@
+[Unit]
+Description=Novahiz Runtime v5.0 — Standalone Agent Execution Engine
+Documentation=https://github.com/novahiz/novahiz-os
+After=network.target
+
+[Service]
+Type=simple
+User=novahiz
+Group=novahiz
+WorkingDirectory=/home/novahiz/.opencode
+Environment=PYTHONUNBUFFERED=1
+Environment=NOVAHIZ_MODE=production
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/runtime/novahiz-runtime.py daemon 2
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/novahiz/.opencode/logs/runtime-systemd.log
+StandardError=append:/home/novahiz/.opencode/logs/runtime-systemd.log
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/novahiz/.opencode
+
+[Install]
+WantedBy=multi-user.target

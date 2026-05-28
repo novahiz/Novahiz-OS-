@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "generated": "2026-05-27T13:56:14.982145",
+  "memory": {
+    "timestamp": "2026-05-27T13:56:12.943984",
+    "process_memory": {
+      "max_rss_kb": 13812,
+      "max_rss_mb": 13.49,
+      "shared_kb": 0,
+      "data_kb": 0,
+      "stack_kb": 13812
+    },
+    "recommendations": [],
+    "system_memory": {
+      "total_mb": 15166.91,
+      "available_mb": 9828.27,
+      "used_percent": 35.2
+    }
+  },
+  "cpu": {
+    "timestamp": "2026-05-27T13:56:12.944500",
+    "cpu_count": 16,
+    "load_average": {
+      "1min": 0.32,
+      "5min": 0.54,
+      "15min": 0.73
+    },
+    "recommendations": [],
+    "cpu_time": {
+      "user_sec": 0.080036,
+      "system_sec": 0.02401,
+      "total_sec": 0.1
+    }
+  },
+  "latency": {
+    "timestamp": "2026-05-27T13:56:12.944643",
+    "benchmarks": {
+      "file_io": {
+        "iterations": 100,
+        "avg_latency_ms": 0.179,
+        "total_sec": 0.018
+      },
+      "json_serialization": {
+        "iterations": 1000,
+        "avg_latency_ms": 0.055,
+        "total_sec": 0.055
+      },
+      "http_request": {
+        "endpoint": "openrouter.ai",
+        "latency_ms": 1905.492
+      }
+    },
+    "recommendations": [
+      {
+        "severity": "medium",
+        "issue": "Slow HTTP response (1905.492ms)",
+        "action": "Check network, consider caching, use connection pooling"
+      }
+    ]
+  },
+  "daemon": {
+    "timestamp": "2026-05-27T13:56:14.976602",
+    "execution_stats": {
+      "total_executions": 39,
+      "success_rate": 100.0,
+      "avg_duration_sec": 25.31,
+      "min_duration_sec": 10.74,
+      "max_duration_sec": 101.12
+    },
+    "recommendations": []
+  },
+  "recommendations": [
+    {
+      "severity": "medium",
+      "issue": "Slow HTTP response (1905.492ms)",
+      "action": "Check network, consider caching, use connection pooling"
+    }
+  ]
+}

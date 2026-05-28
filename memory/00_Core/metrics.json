@@ -1,0 +1,214 @@
+{
+  "v": "1.5",
+  "totalDeliberations": 0,
+  "estimatedTokensSaved": 0,
+  "totalSessions": 1,
+  "sessionsRecovered": 0,
+  "lastUpdated": "2026-05-27T12:30:00.000000",
+  "modelUsage": {
+    "flash": 7,
+    "smart": 31,
+    "premium": 5
+  },
+  "premiumBudget": {
+    "daily_limit": 3,
+    "used_today": 3,
+    "last_reset_date": "2026-05-27",
+    "total_used": 8,
+    "blocked_count": 5
+  },
+  "modelHistory": [
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (build a REST API with authentication)",
+      "agent": null,
+      "complexity": "build a REST API with authentication",
+      "timestamp": "2026-05-23T15:22:30.017007"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (build a REST API with authentication)",
+      "agent": null,
+      "complexity": "build a REST API with authentication",
+      "timestamp": "2026-05-23T15:22:30.288024"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (design system architecture for microservices)",
+      "agent": null,
+      "complexity": "design system architecture for microservices",
+      "timestamp": "2026-05-23T15:22:37.199174"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (design system architecture for microservices)",
+      "agent": null,
+      "complexity": "design system architecture for microservices",
+      "timestamp": "2026-05-23T15:22:37.203314"
+    },
+    {
+      "tier": "premium",
+      "model": "openrouter/qwen/qwen3.6-plus",
+      "reason": "complexity mapping (COMPLEX)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:23:58.881470"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (MEDIUM)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:24:09.243504"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (MEDIUM)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:24:09.440716"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "complexity mapping (SIMPLE)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:25:42.991637"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "complexity mapping (SIMPLE)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:25:43.032993"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (MEDIUM)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:25:49.734354"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (MEDIUM)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:25:49.809275"
+    },
+    {
+      "tier": "premium",
+      "model": "openrouter/qwen/qwen3.6-plus",
+      "reason": "complexity mapping (COMPLEX)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:25:57.062881"
+    },
+    {
+      "tier": "premium",
+      "model": "openrouter/qwen/qwen3.6-plus",
+      "reason": "complexity mapping (COMPLEX)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:25:57.096417"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "complexity mapping (SIMPLE)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T15:26:03.960395"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "domain routing (api)",
+      "agent": "test-agent",
+      "complexity": "MEDIUM",
+      "timestamp": "2026-05-23T19:04:12.757487"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "complexity mapping (SIMPLE)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T19:11:42.948499"
+    },
+    {
+      "tier": "premium",
+      "model": "openrouter/qwen/qwen3.6-plus",
+      "reason": "complexity mapping (COMPLEX)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T19:11:42.966770"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "complexity mapping (SIMPLE)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T21:00:37.095229"
+    },
+    {
+      "tier": "premium",
+      "model": "openrouter/qwen/qwen3.6-plus",
+      "reason": "complexity mapping (COMPLEX)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T21:00:39.091317"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (MEDIUM)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T21:37:58.560717"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "complexity mapping (SIMPLE)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T22:00:33.991662"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "complexity mapping (MEDIUM)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T22:06:13.639849"
+    },
+    {
+      "tier": "flash",
+      "model": "openrouter/qwen/qwen3.5-9b",
+      "reason": "manual override to flash (requested flash)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T23:24:35.061419"
+    },
+    {
+      "tier": "smart",
+      "model": "opencode/qwen3.5-plus",
+      "reason": "manual override to smart (requested premium)",
+      "agent": null,
+      "complexity": null,
+      "timestamp": "2026-05-23T23:25:07.496926"
+    }
+  ]
+}

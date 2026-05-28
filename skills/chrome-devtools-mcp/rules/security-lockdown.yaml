@@ -1,0 +1,5 @@
+redact_headers: true
+log_audit: true
+usage_statistics: true
+max_concurrent_sessions: 3
+min_human_approval: false

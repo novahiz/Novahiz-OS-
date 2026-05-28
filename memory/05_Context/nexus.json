@@ -1,0 +1,38 @@
+{
+  "v": "1.8",
+  "branch": "05_Context",
+  "created": "2026-05-23T14:22:16.000939",
+  "updated": "2026-05-23T14:22:16.000943",
+  "nodes": [
+    {
+      "id": "current",
+      "path": "memory/05_Context/current.md",
+      "s": "Current context",
+      "t": [
+        "context",
+        "active"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "hot-topics",
+      "path": "memory/05_Context/hot-topics.md",
+      "s": "Hot topics",
+      "t": [
+        "topics",
+        "active"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "recent-sessions",
+      "path": "memory/05_Context/recent-sessions.md",
+      "s": "Recent sessions",
+      "t": [
+        "sessions",
+        "history"
+      ],
+      "p": "medium"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+/home/novahiz/.opencode/runtime/novahiz-unified.py

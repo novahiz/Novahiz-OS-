@@ -1,0 +1,85 @@
+{
+  "v": "1.8",
+  "branch": "00_Core",
+  "created": "2026-05-22T11:56:55.134027",
+  "updated": "2026-05-23T19:05:00",
+  "nodes": [
+    {
+      "id": "constitution",
+      "path": "skills/novahiz-constitution/SKILL.md",
+      "s": "NovaHiz OS Constitution & Rules",
+      "t": ["system", "rules", "constraints"],
+      "p": "critical"
+    },
+    {
+      "id": "auto-council",
+      "path": "memory/00_Core/auto-council.md",
+      "s": "Auto-Council Entry Point — task classification & routing",
+      "t": ["auto", "entry", "classification", "routing"],
+      "p": "critical"
+    },
+    {
+      "id": "council",
+      "path": "memory/00_Core/council.md",
+      "s": "8-Sage Deliberation Protocol — multi-agent decision making",
+      "t": ["council", "deliberation", "sages"],
+      "p": "critical"
+    },
+    {
+      "id": "selection",
+      "path": "memory/00_Core/selection.md",
+      "s": "Weighted Multi-Agent Selector — intelligent routing",
+      "t": ["routing", "selection", "agent"],
+      "p": "critical"
+    },
+    {
+      "id": "nexus",
+      "path": "memory/00_Core/nexus.md",
+      "s": "NTM Memory Engine — store/recall/search operations",
+      "t": ["memory", "ntm", "nexus"],
+      "p": "critical"
+    },
+    {
+      "id": "evolution",
+      "path": "memory/00_Core/evolution.md",
+      "s": "Self-Healing Engine — drift detection & auto-repair",
+      "t": ["evolution", "heal", "patch"],
+      "p": "high"
+    },
+    {
+      "id": "evolution-log",
+      "path": "memory/00_Core/evolution-log.md",
+      "s": "Evolution auto-patch log — history of all self-healing actions",
+      "t": ["evolution", "log", "patches"],
+      "p": "medium"
+    },
+    {
+      "id": "check",
+      "path": "memory/00_Core/check.md",
+      "s": "System Health Check — skills, memory, agents, constitution",
+      "t": ["health", "check", "diagnostics"],
+      "p": "high"
+    },
+    {
+      "id": "synthesis",
+      "path": "memory/00_Core/synthesis.md",
+      "s": "Agent Synthesis Protocol — autonomous agent creation",
+      "t": ["synthesis", "create", "agent"],
+      "p": "high"
+    },
+    {
+      "id": "system",
+      "path": "memory/00_Core/system.md",
+      "s": "Master system reference — full Novahiz OS overview",
+      "t": ["system", "reference", "architecture"],
+      "p": "critical"
+    },
+    {
+      "id": "worker",
+      "path": "memory/00_Core/worker.md",
+      "s": "Background Task Runner — health check, sync, maintenance",
+      "t": ["worker", "background", "automation"],
+      "p": "medium"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "real_test_20260526_202103",
+  "type": "subagent_execution",
+  "agent": "luna-design",
+  "task": "Create a modern button component with Tailwind CSS. Include hover states, disabled state, and multiple variants (primary, secondary, outline).",
+  "created": "2026-05-26T20:21:03.333904",
+  "status": "executing",
+  "started": "2026-05-26T20:50:07.442219",
+  "model_tier": "smart"
+}

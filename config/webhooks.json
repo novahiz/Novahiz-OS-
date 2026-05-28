@@ -1,0 +1,14 @@
+{
+  "subscriptions": [
+    {
+      "id": "wh_1779810640",
+      "url": "http://localhost:9999/test",
+      "events": [
+        "task.routed",
+        "scoreboard.updated"
+      ],
+      "created": "2026-05-26T16:50:40.732117",
+      "active": true
+    }
+  ]
+}

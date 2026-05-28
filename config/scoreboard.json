@@ -1,0 +1,428 @@
+{
+  "version": "2.0",
+  "agents": {
+    "luna-design": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "ryu-design": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "kenzo-performance": {
+      "tasks": 1,
+      "success": 1,
+      "avg_time": 0.0,
+      "score": 95.5
+    },
+    "malik-database": {
+      "tasks": 1,
+      "success": 1,
+      "avg_time": 0.0,
+      "score": 95.5
+    },
+    "nexus-api": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "neo-security": {
+      "tasks": 17,
+      "success": 17,
+      "avg_time": 0.0,
+      "score": 100
+    },
+    "cipher-crypto": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "sarah-quality": {
+      "tasks": 1,
+      "success": 1,
+      "avg_time": 0.0,
+      "score": 95.5
+    },
+    "arthur-architecture": {
+      "tasks": 1,
+      "success": 1,
+      "avg_time": 0.0,
+      "score": 95.5
+    },
+    "elias-marketing": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "victor-strategy": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "ralph-execution": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "ralph-browser": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "atlas-memory": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "orion-devops": {
+      "tasks": 1,
+      "success": 1,
+      "avg_time": 0.0,
+      "score": 90.5
+    },
+    "forge-cicd": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "phoenix-crisis": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "pulse-realtime": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "simon-data": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 90
+    },
+    "vega-legal": {
+      "tasks": 1,
+      "success": 1,
+      "avg_time": 0.0,
+      "score": 90.5
+    },
+    "samuel-legal": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 85
+    },
+    "athena-initialization": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 95
+    },
+    "ghost-stealth": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 85
+    },
+    "novahiz-router": {
+      "tasks": 0,
+      "success": 0,
+      "avg_time": 0,
+      "score": 100
+    }
+  },
+  "updated": "2026-05-27T12:22:10.856297",
+  "history": [
+    {
+      "agent": "neo-security",
+      "task": "fix sql injection",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:45:05.041786",
+      "metadata": {
+        "execution_id": "exec_20260527_104505_041417",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:51:50.919472",
+      "metadata": {
+        "execution_id": "exec_20260527_105150_918881",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:52:00.657621",
+      "metadata": {
+        "execution_id": "exec_20260527_105200_656961",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:52:00.665722",
+      "metadata": {
+        "execution_id": "exec_20260527_105200_665068",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "malik-database",
+      "task": "optimize database queries",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:52:19.791740",
+      "metadata": {
+        "execution_id": "exec_20260527_105219_790907",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:52:24.853326",
+      "metadata": {
+        "execution_id": "exec_20260527_105224_852464",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:52:24.861003",
+      "metadata": {
+        "execution_id": "exec_20260527_105224_860516",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:53:34.446341",
+      "metadata": {
+        "execution_id": "exec_20260527_105334_445722",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:53:34.455176",
+      "metadata": {
+        "execution_id": "exec_20260527_105334_454472",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:54:00.296764",
+      "metadata": {
+        "execution_id": "exec_20260527_105400_295966",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:54:00.307208",
+      "metadata": {
+        "execution_id": "exec_20260527_105400_306543",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:54:01.158911",
+      "metadata": {
+        "execution_id": "exec_20260527_105401_158287",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:54:01.165370",
+      "metadata": {
+        "execution_id": "exec_20260527_105401_164911",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:55:31.122234",
+      "metadata": {
+        "execution_id": "exec_20260527_105531_121494",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:55:31.130855",
+      "metadata": {
+        "execution_id": "exec_20260527_105531_130362",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "test delegation bridge",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:55:39.231239",
+      "metadata": {
+        "execution_id": "exec_20260527_105539_230496",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "fix security vulnerability",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T10:55:39.238699",
+      "metadata": {
+        "execution_id": "exec_20260527_105539_238242",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "neo-security",
+      "task": "Analyse de sécurité approfondie de Novahiz OS: cherche les failles de sécurité, vulnérabilités, poin",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T12:18:43.872510",
+      "metadata": {
+        "execution_id": "exec_20260527_121843_871965",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "sarah-quality",
+      "task": "Audit qualité code Novahiz OS: cherche les erreurs cachées, bugs potentiels, code dupliqué, mauvaise",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T12:18:43.874137",
+      "metadata": {
+        "execution_id": "exec_20260527_121843_873739",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "arthur-architecture",
+      "task": "Analyse architecture Novahiz OS: cherche les incohérences architecturales, problèmes de design, coup",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T12:18:43.886836",
+      "metadata": {
+        "execution_id": "exec_20260527_121843_886262",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "orion-devops",
+      "task": "Audit infrastructure DevOps Novahiz OS: configuration CI/CD, secrets management, deployment, monitor",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T12:22:10.841053",
+      "metadata": {
+        "execution_id": "exec_20260527_122210_840435",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "vega-legal",
+      "task": "Audit conformité et legal Novahiz OS: licenses, GDPR, data privacy, terms of service, intellectual p",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T12:22:10.845655",
+      "metadata": {
+        "execution_id": "exec_20260527_122210_842746",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    },
+    {
+      "agent": "kenzo-performance",
+      "task": "Audit performance Novahiz OS: goulots d'étranglement, memory leaks, CPU overhead, latence, scalabili",
+      "success": true,
+      "duration": 0.0,
+      "timestamp": "2026-05-27T12:22:10.856278",
+      "metadata": {
+        "execution_id": "exec_20260527_122210_855474",
+        "mode": "opencode",
+        "status": "pending"
+      }
+    }
+  ]
+}

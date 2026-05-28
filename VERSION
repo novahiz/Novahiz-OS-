@@ -1,0 +1,13 @@
+# Novahiz OS — Version Information
+# Single source of truth for version number
+
+VERSION=6.0.0
+CODENAME=Long Term Stability
+RELEASE_DATE=2026-05-27
+PYTHON_VERSION=3.10+
+
+# Components
+RUNTIME_VERSION=6.0.0
+MCP_VERSION=6.0.0
+CLI_VERSION=6.0.0
+METRICS_VERSION=6.0.0

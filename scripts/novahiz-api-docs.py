@@ -1,0 +1,324 @@
+#!/usr/bin/env python3
+"""
+NovaHiz OS v1.7 - OpenAPI Specification Generator
+Generates OpenAPI 3.0 specification for the API server
+"""
+
+import json
+import os
+from datetime import datetime
+
+HOME = os.path.expanduser("~")
+NOVAHIZ_DIR = os.path.join(HOME, ".opencode")
+OUT_DIR = os.path.join(NOVAHIZ_DIR, "api", "docs")
+OUT_FILE = os.path.join(OUT_DIR, "openapi.json")
+
+def generate_spec():
+    spec = {
+        "openapi": "3.0.3",
+        "info": {
+            "title": "NovaHiz OS API",
+            "description": "REST API for NovaHiz OS multi-agent orchestration system",
+            "version": "1.7",
+            "contact": {
+                "name": "NovaHiz OS"
+            }
+        },
+        "servers": [
+            {
+                "url": "http://localhost:8080",
+                "description": "NovaHiz API Server"
+            }
+        ],
+        "paths": {
+            "/api/health": {
+                "get": {
+                    "summary": "Health check",
+                    "description": "Returns the health status of the API server. Always public.",
+                    "operationId": "getHealth",
+                    "tags": ["System"],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {"type": "string"},
+                                            "timestamp": {"type": "string"},
+                                            "version": {"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/stats": {
+                "get": {
+                    "summary": "Global statistics",
+                    "description": "Returns global statistics including agents, skills, and tasks counts",
+                    "operationId": "getStats",
+                    "tags": ["System"],
+                    "security": [{"BearerAuth": []}],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response",
+                            "content": {
+                                "application/json": {
+                                    "schema": {"$ref": "#/components/schemas/Stats"}
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/agents": {
+                "get": {
+                    "summary": "List all agents",
+                    "description": "Returns a list of all agents with optional filtering",
+                    "operationId": "getAgents",
+                    "tags": ["Agents"],
+                    "security": [{"BearerAuth": []}],
+                    "parameters": [
+                        {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 50}},
+                        {"name": "domain", "in": "query", "schema": {"type": "string"}},
+                        {"name": "status", "in": "query", "schema": {"type": "string"}}
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "agents": {"type": "array", "items": {"$ref": "#/components/schemas/Agent"}},
+                                            "count": {"type": "integer"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/agents/stats": {
+                "get": {
+                    "summary": "Agent statistics",
+                    "description": "Returns statistics about agents",
+                    "operationId": "getAgentStats",
+                    "tags": ["Agents"],
+                    "security": [{"BearerAuth": []}],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response",
+                            "content": {
+                                "application/json": {
+                                    "schema": {"$ref": "#/components/schemas/AgentStats"}
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/skills": {
+                "get": {
+                    "summary": "List all skills",
+                    "description": "Returns a list of all skills",
+                    "operationId": "getSkills",
+                    "tags": ["Skills"],
+                    "security": [{"BearerAuth": []}],
+                    "parameters": [
+                        {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 50}},
+                        {"name": "category", "in": "query", "schema": {"type": "string"}}
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "skills": {"type": "array", "items": {"$ref": "#/components/schemas/Skill"}},
+                                            "count": {"type": "integer"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/skills/stats": {
+                "get": {
+                    "summary": "Skills statistics",
+                    "description": "Returns statistics about skills",
+                    "operationId": "getSkillsStats",
+                    "tags": ["Skills"],
+                    "security": [{"BearerAuth": []}],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response",
+                            "content": {
+                                "application/json": {
+                                    "schema": {"$ref": "#/components/schemas/SkillsStats"}
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/tasks": {
+                "get": {
+                    "summary": "List tasks",
+                    "description": "Returns a list of tasks",
+                    "operationId": "getTasks",
+                    "tags": ["Tasks"],
+                    "security": [{"BearerAuth": []}],
+                    "parameters": [
+                        {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 50}},
+                        {"name": "status", "in": "query", "schema": {"type": "string"}}
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response"
+                        }
+                    }
+                },
+                "post": {
+                    "summary": "Create task",
+                    "description": "Creates a new task",
+                    "operationId": "createTask",
+                    "tags": ["Tasks"],
+                    "security": [{"BearerAuth": []}],
+                    "requestBody": {
+                        "required": True,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": ["task_text"],
+                                    "properties": {
+                                        "task_text": {"type": "string"},
+                                        "classification": {"type": "string"},
+                                        "domain": {"type": "string"}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "201": {"description": "Task created"}
+                    }
+                }
+            },
+            "/api/routing/route": {
+                "get": {
+                    "summary": "Route a task",
+                    "description": "Routes a task to the optimal agent",
+                    "operationId": "routeTask",
+                    "tags": ["Routing"],
+                    "security": [{"BearerAuth": []}],
+                    "parameters": [
+                        {"name": "task", "in": "query", "required": True, "schema": {"type": "string"}}
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Routing result"
+                        }
+                    }
+                }
+            },
+            "/api/routing/history": {
+                "get": {
+                    "summary": "Routing history",
+                    "description": "Returns routing history",
+                    "operationId": "getRoutingHistory",
+                    "tags": ["Routing"],
+                    "security": [{"BearerAuth": []}],
+                    "responses": {
+                        "200": {
+                            "description": "Successful response"
+                        }
+                    }
+                }
+            }
+        },
+        "components": {
+            "securitySchemes": {
+                "BearerAuth": {
+                    "type": "http",
+                    "scheme": "bearer",
+                    "bearerFormat": "Token",
+                    "description": "API token obtained from `nv api token generate`"
+                }
+            },
+            "schemas": {
+                "Agent": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string"},
+                        "name": {"type": "string"},
+                        "type": {"type": "string"},
+                        "domain": {"type": "string"},
+                        "score": {"type": "integer"},
+                        "status": {"type": "string"},
+                        "specialty": {"type": "array", "items": {"type": "string"}}
+                    }
+                },
+                "AgentStats": {
+                    "type": "object",
+                    "properties": {
+                        "total_agents": {"type": "integer"},
+                        "active": {"type": "integer"},
+                        "simulated": {"type": "integer"},
+                        "avg_score": {"type": "number"}
+                    }
+                },
+                "Skill": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "integer"},
+                        "name": {"type": "string"},
+                        "category": {"type": "string"},
+                        "keywords": {"type": "string"},
+                        "usage_count": {"type": "integer"}
+                    }
+                },
+                "SkillsStats": {
+                    "type": "object",
+                    "properties": {
+                        "total_skills": {"type": "integer"},
+                        "total_usage": {"type": "integer"},
+                        "avg_success_rate": {"type": "number"}
+                    }
+                },
+                "Stats": {
+                    "type": "object",
+                    "properties": {
+                        "version": {"type": "string"},
+                        "agents": {"type": "integer"},
+                        "skills": {"type": "integer"},
+                        "tasks": {"type": "integer"},
+                        "timestamp": {"type": "string"}
+                    }
+                }
+            }
+        }
+    }
+    return spec
+
+def save_spec():
+    os.makedirs(OUT_DIR, exist_ok=True)
+    spec = generate_spec()
+    with open(OUT_FILE, 'w') as f:
+        json.dump(spec, f, indent=2)
+    print(f"✓ OpenAPI spec saved to: {OUT_FILE}")
+    return OUT_FILE
+
+if __name__ == "__main__":
+    save_spec()

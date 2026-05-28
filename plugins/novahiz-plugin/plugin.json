@@ -1,0 +1,8 @@
+{
+  "name": "novahiz-plugin",
+  "version": "1.0.0",
+  "description": "Plugin de base Novahiz OS — enregistre les routes et les exécutions",
+  "author": "Novahiz OS",
+  "entry": "plugin.py",
+  "dependencies": []
+}

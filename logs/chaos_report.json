@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-27T13:44:44.142085",
+  "experiments_run": 2,
+  "results": [
+    {
+      "success": true,
+      "recovery_time_sec": 1.0,
+      "experiment": "kill-daemon"
+    },
+    {
+      "success": false,
+      "error": "Request.__init__() got an unexpected keyword argument 'timeout'",
+      "experiment": "network-latency"
+    }
+  ],
+  "summary": {
+    "successful": 1,
+    "failed": 1
+  }
+}

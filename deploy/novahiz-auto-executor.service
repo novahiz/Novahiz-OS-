@@ -1,0 +1,21 @@
+[Unit]
+Description=Novahiz Auto-Executor (OpenCode Plugin)
+Documentation=https://github.com/novahiz/novahiz-os
+After=network.target novahiz-mcp.service
+
+[Service]
+Type=simple
+User=novahiz
+Group=novahiz
+WorkingDirectory=/home/novahiz/.opencode
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/plugins/auto-executor-simple.py daemon
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/novahiz/.opencode/logs/auto-executor-systemd.log
+StandardError=append:/home/novahiz/.opencode/logs/auto-executor-systemd.log
+
+# Environment
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

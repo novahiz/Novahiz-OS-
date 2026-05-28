@@ -1,0 +1,123 @@
+{
+  "v": "1.0",
+  "enabled": true,
+  "tiers": {
+    "flash": {
+      "primary": "openrouter/qwen/qwen3.5-9b",
+      "fallbacks": [
+        "openrouter/stepfun/step-3.5-flash",
+        "openrouter/qwen/qwen3.5-flash-02-23"
+      ],
+      "description": "Fast, cheap — Q&A, formatting, search, syntax",
+      "targetRatio": 0.6
+    },
+    "smart": {
+      "primary": "opencode/qwen3.5-plus",
+      "fallbacks": [
+        "openrouter/qwen/qwen3.6-flash",
+        "openrouter/qwen/qwen3.6-35b-a3b",
+        "openrouter/z-ai/glm-5",
+        "openrouter/moonshotai/kimi-k2.5"
+      ],
+      "description": "Balanced — build, refactor, features, tests",
+      "targetRatio": 0.3
+    },
+    "premium": {
+      "primary": "openrouter/qwen/qwen3.6-plus",
+      "fallbacks": [
+        "opencode/qwen3.6-plus",
+        "opencode/kimi-k2.6"
+      ],
+      "description": "Maximum capability — architecture, security, complex council",
+      "targetRatio": 0.1
+    }
+  },
+  "budget": {
+    "premiumPerSession": 3,
+    "autoDowngrade": true,
+    "downgradeTo": "smart"
+  },
+  "agentOverrides": {
+    "neo-security": "premium",
+    "cipher-crypto": "premium",
+    "arthur-architecture": "smart",
+    "atlas-memory": "flash",
+    "novahiz-router": "smart",
+    "athena-initialization": "smart",
+    "kenzo-performance": "smart",
+    "luna-design": "smart",
+    "malik-database": "smart",
+    "sarah-quality": "smart",
+    "ralph-execution": "smart",
+    "victor-strategy": "smart",
+    "nexus-api": "smart",
+    "ryu-design": "smart",
+    "forge-cicd": "flash",
+    "orion-devops": "smart",
+    "phoenix-crisis": "premium",
+    "pulse-realtime": "flash",
+    "simon-data": "flash",
+    "ralph-browser": "flash",
+    "vega-legal": "smart",
+    "ghost-stealth": "smart",
+    "elias-marketing": "smart",
+    "samuel-legal": "smart"
+  },
+  "domainRouting": {
+    "security": "premium",
+    "cryptography": "premium",
+    "architecture": "premium",
+    "system-design": "premium",
+    "design": "smart",
+    "performance": "smart",
+    "database": "smart",
+    "api": "smart",
+    "execution": "smart",
+    "build": "smart",
+    "marketing": "smart",
+    "strategy": "smart",
+    "quality": "smart",
+    "memory": "flash",
+    "status": "flash",
+    "metrics": "flash",
+    "health": "flash",
+    "sql": "smart",
+    "backend": "smart",
+    "auth": "smart",
+    "audit": "smart",
+    "test": "smart",
+    "bug": "smart",
+    "refactor": "smart",
+    "seo": "smart",
+    "plan": "smart",
+    "legal": "smart",
+    "cicd": "flash",
+    "ui": "smart",
+    "ux": "smart",
+    "devops": "smart",
+    "infra": "smart",
+    "crisis": "premium",
+    "realtime": "flash",
+    "data": "flash",
+    "analytics": "flash",
+    "init": "smart",
+    "browser": "flash",
+    "stealth": "smart",
+    "ghost": "smart",
+    "compliance": "smart",
+    "route": "smart",
+    "routing": "smart"
+  },
+  "complexityMapping": {
+    "SIMPLE": "flash",
+    "MEDIUM": "smart",
+    "COMPLEX": "premium"
+  },
+  "councilRules": {
+    "minDomainsForPremium": 3,
+    "securityAlwaysPremium": true,
+    "architectureAlwaysPremium": true,
+    "statusAlwaysFlash": true
+  },
+  "lastUpdated": "2026-05-23T14:30:00"
+}

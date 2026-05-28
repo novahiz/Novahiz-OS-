@@ -1,0 +1,1 @@
+& $PSScriptRoot\..\novahiz.ps1 @args

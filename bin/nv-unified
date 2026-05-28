@@ -1,0 +1,189 @@
+#!/bin/bash
+# =============================================================================
+# nv — Wrapper unifié Novahiz (utilise le smart-router Python)
+# =============================================================================
+# Intègre le routage Python + exécution subagent OpenCode
+# =============================================================================
+
+set -e
+
+NOVAHIZ_DIR="$HOME/.opencode"
+PYTHON_ROUTER="$NOVAHIZ_DIR/scripts/novahiz-cli.py"
+SMART_ROUTER="$NOVAHIZ_DIR/scripts/python/smart-router.py"
+
+# Couleurs
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+# =============================================================================
+# USAGE
+# =============================================================================
+usage() {
+    echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+    echo -e "${CYAN}  NOVAHIZ CLI${NC} - Intelligent Agent Orchestration"
+    echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+    echo ""
+    echo "Usage: nv <command> [options]"
+    echo ""
+    echo "Commands:"
+    echo "  route <task>         Route vers l'agent optimal (Python smart-router)"
+    echo "  run <task>           Route + EXÉCUTE avec le subagent"
+    echo "  exec <agent> <task>  Exécute directement avec un agent"
+    echo "  agents               Liste tous les agents"
+    echo "  search <keyword>     Recherche par keyword"
+    echo "  scoreboard           Performance des agents"
+    echo "  status               Status système"
+    echo "  health               Health check"
+    echo ""
+    echo "Examples:"
+    echo "  nv route \"Build a REST API\""
+    echo "  nv run \"Design a dashboard UI\""
+    echo "  nv exec luna-design \"Create modern login page\""
+    echo ""
+}
+
+# =============================================================================
+# EXTRACTION AGENT DEPUIS SORTIE PYTHON
+# =============================================================================
+extract_agent() {
+    local output="$1"
+    echo "$output" | grep "→ Agent:" | sed 's/.*→ Agent: \([^ ]*\).*/\1/'
+}
+
+# =============================================================================
+# EXÉCUTION VIA TASK (OpenCode subagent)
+# =============================================================================
+execute_task() {
+    local agent="$1"
+    local task="$2"
+    
+    echo -e "${GREEN}═══════════════════════════════════════════════════════════${NC}"
+    echo -e "${GREEN}  EXÉCUTION${NC} - Agent: $agent"
+    echo -e "${GREEN}═══════════════════════════════════════════════════════════${NC}"
+    echo ""
+    echo -e "${YELLOW}Tâche:${NC} $task"
+    echo ""
+    echo -e "${CYAN}───────────────────────────────────────────────────────────${NC}"
+    echo -e "${CYAN}  Envoi au subagent...${NC}"
+    echo -e "${CYAN}───────────────────────────────────────────────────────────${NC}"
+    echo ""
+    
+    # Note: Dans un vrai environnement OpenCode, ceci appellerait le tool task
+    # Pour l'instant, on affiche le prompt qui serait envoyé
+    echo -e "${GREEN}[READY TO EXECUTE]${NC}"
+    echo ""
+    echo "Prompt pour le subagent $agent:"
+    echo "─────────────────────────────────────────────────────────────"
+    echo "$task"
+    echo "─────────────────────────────────────────────────────────────"
+    echo ""
+    echo -e "${YELLOW}Dans OpenCode, exécuter:${NC}"
+    echo "  task --subagent $agent --prompt \"$task\""
+    echo ""
+}
+
+# =============================================================================
+# MAIN
+# =============================================================================
+main() {
+    local command="${1:-help}"
+    shift || true
+    
+    case "$command" in
+        route|r)
+            if [ -z "$1" ]; then
+                echo -e "${RED}Task required${NC}"
+                echo "Usage: nv route <task>"
+                exit 1
+            fi
+            python3 "$PYTHON_ROUTER" route "$*"
+            ;;
+        
+        run|auto)
+            # Route + Execute automatiquement
+            if [ -z "$1" ]; then
+                echo -e "${RED}Task required${NC}"
+                echo "Usage: nv run <task>"
+                exit 1
+            fi
+            
+            local task="$*"
+            echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+            echo -e "${CYAN}  NOVAHIZ AUTO-ROUTER + EXECUTE${NC}"
+            echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+            echo ""
+            
+            # 1. Router via Python
+            echo -e "${YELLOW}Étape 1: Routage intelligent...${NC}"
+            local route_output=$(python3 "$PYTHON_ROUTER" route "$task" 2>&1)
+            echo "$route_output" | grep -E "(Agent|Skill|Confidence)" | sed 's/^/  /'
+            echo ""
+            
+            # 2. Extraire l'agent
+            local agent=$(extract_agent "$route_output")
+            if [ -z "$agent" ]; then
+                echo -e "${RED}Erreur: Aucun agent trouvé${NC}"
+                exit 1
+            fi
+            
+            # 3. Exécuter
+            echo -e "${YELLOW}Étape 2: Exécution avec $agent...${NC}"
+            echo ""
+            execute_task "$agent" "$task"
+            ;;
+        
+        exec|e)
+            local agent="$1"
+            shift || true
+            local task="$*"
+            
+            if [ -z "$task" ]; then
+                echo -e "${RED}Task required${NC}"
+                echo "Usage: nv exec <agent> <task>"
+                exit 1
+            fi
+            
+            execute_task "$agent" "$task"
+            ;;
+        
+        agents|list)
+            python3 "$PYTHON_ROUTER" agents
+            ;;
+        
+        search)
+            python3 "$PYTHON_ROUTER" search "$*"
+            ;;
+        
+        scoreboard)
+            python3 "$PYTHON_ROUTER" scoreboard
+            ;;
+        
+        status)
+            python3 "$PYTHON_ROUTER" status
+            ;;
+        
+        health)
+            python3 "$PYTHON_ROUTER" health
+            ;;
+        
+        smart)
+            python3 "$SMART_ROUTER" "$@"
+            ;;
+        
+        help|--help|-h)
+            usage
+            ;;
+        
+        *)
+            echo -e "${RED}Commande inconnue: $command${NC}"
+            echo ""
+            usage
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"

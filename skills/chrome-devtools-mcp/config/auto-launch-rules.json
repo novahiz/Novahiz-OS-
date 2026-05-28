@@ -1,0 +1,12 @@
+{
+  "browser_tasks_enabled": true,
+  "auto_launch_conditions": [
+    {"task_contains": ["debug", "inspect"], "confidence_min": 0.8, "agent": "ralph-browser", "adjacent_agents": ["sarah-audit"]},
+    {"task_contains": ["performance", "lighthouse", "trace"], "confidence_min": 0.9, "agent": "ralph-browser", "adjacent_agents": ["kenzo-optimizer"]},
+    {"task_contains": ["test", "e2e", "automation"], "confidence_min": 0.85, "agent": "ralph-browser", "adjacent_agents": ["cyrus-testing"]},
+    {"task_contains": ["scrap", "extract", "dom"], "confidence_min": 0.8, "agent": "ralph-browser", "adjacent_agents": ["malik-database"]}
+  ],
+  "fallback_agent": "ralph-execution",
+  "cooldown_seconds": 30,
+  "max_concurrent_sessions": 3
+}

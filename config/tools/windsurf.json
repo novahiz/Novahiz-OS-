@@ -1,0 +1,13 @@
+{
+  "id": "windsurf",
+  "name": "Windsurf",
+  "version": "1.9",
+  "description": "All 59 skills, medium context budget, copy method.",
+  "constraints": { "contextBudget": 4, "skillLoadMode": "all", "symlinkNatively": false },
+  "skills": { "include": "all", "exclude": [], "loadPriority": ["novahiz-boot","novahiz-auto","systematic-debugging","frontend-design"], "lazyLoad": [], "summaryMaxChars": 250 },
+  "identity": { "fileName": "global_rules.md", "truncatable": true, "maxChars": 6000 },
+  "memory": { "ntmEnabled": true, "branches": ["00_Core","01_Agents","03_Patterns","05_Context"], "autoSave": false, "pruneEnabled": true, "pruneAfterSessions": 7 },
+  "agentRouting": { "maxPerTask": 3, "hotAgentsEnabled": true, "hotAgentsLimit": 4, "fallbackChain": ["ralph","arthur"] },
+  "novahiz": { "enabled": true, "bootOnStart": false, "systemSkills": ["novahiz-boot","novahiz-auto","novahiz-selection"], "hiddenSkills": [] },
+  "install": { "method": "symlink", "skillsTarget": "skills/", "identityTarget": "memories/global_rules.md", "shellInit": null, "postInstallScript": "novahiz sync --tool=windsurf" }
+}

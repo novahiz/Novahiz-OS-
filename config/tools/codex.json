@@ -1,0 +1,13 @@
+{
+  "id": "codex",
+  "name": "Codex CLI",
+  "version": "1.9",
+  "description": "All 59 skills, compact descriptions for 2% context budget.",
+  "constraints": { "contextBudget": 2, "assumedContextTokens": 100000, "skillLoadMode": "all", "symlinkNatively": true },
+  "skills": { "include": "all", "exclude": [], "loadPriority": ["novahiz-boot","novahiz-auto","systematic-debugging","tdd","brainstorming"], "lazyLoad": [], "summaryMaxChars": 30 },
+  "identity": { "fileName": "AGENTS.md", "truncatable": true, "maxChars": 3000 },
+  "memory": { "ntmEnabled": true, "branches": ["00_Core","03_Patterns","05_Context"], "autoSave": false, "pruneEnabled": true, "pruneAfterSessions": 5 },
+  "agentRouting": { "maxPerTask": 2, "hotAgentsEnabled": true, "hotAgentsLimit": 3, "fallbackChain": ["ralph","sarah"] },
+  "novahiz": { "enabled": true, "bootOnStart": false, "systemSkills": ["novahiz-boot","novahiz-auto","novahiz-selection"], "hiddenSkills": [] },
+  "install": { "method": "symlink", "skillsTarget": "skills/", "identityTarget": "AGENTS.md", "shellInit": null, "postInstallScript": "novahiz sync --tool=codex" }
+}

@@ -1,0 +1,68 @@
+{
+  "v": "1.8",
+  "branch": "06_Workflows",
+  "created": "2026-05-23T14:22:16.001080",
+  "updated": "2026-05-23T14:22:16.001083",
+  "nodes": [
+    {
+      "id": "bug-triage",
+      "path": "memory/06_Workflows/bug-triage.md",
+      "s": "Bug triage workflow",
+      "t": [
+        "workflow",
+        "bugs"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "crisis",
+      "path": "memory/06_Workflows/crisis.md",
+      "s": "Crisis workflow",
+      "t": [
+        "workflow",
+        "crisis"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "data-analysis",
+      "path": "memory/06_Workflows/data-analysis.md",
+      "s": "Data analysis workflow",
+      "t": [
+        "workflow",
+        "data"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "feature-delivery",
+      "path": "memory/06_Workflows/feature-delivery.md",
+      "s": "Feature delivery workflow",
+      "t": [
+        "workflow",
+        "features"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "pr-review",
+      "path": "memory/06_Workflows/pr-review.md",
+      "s": "PR review workflow",
+      "t": [
+        "workflow",
+        "review"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "project-kickoff",
+      "path": "memory/06_Workflows/project-kickoff.md",
+      "s": "Project kickoff workflow",
+      "t": [
+        "workflow",
+        "kickoff"
+      ],
+      "p": "medium"
+    }
+  ]
+}

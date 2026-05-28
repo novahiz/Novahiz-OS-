@@ -1,0 +1,571 @@
+{
+  "v": "1.8",
+  "branch": "global",
+  "created": "2026-05-23T14:22:16.001705",
+  "updated": "2026-05-23T21:30:00",
+  "totalNodes": 50,
+  "nodes": [
+    {
+      "id": "constitution",
+      "path": "skills/novahiz-constitution/SKILL.md",
+      "s": "NovaHiz OS Constitution & Rules",
+      "t": [
+        "system",
+        "rules",
+        "constraints"
+      ],
+      "p": "critical",
+      "branch": "00_Core"
+    },
+    {
+      "id": "auto-council",
+      "path": "memory/00_Core/auto-council.md",
+      "s": "Auto-Council Entry Point — task classification & routing",
+      "t": [
+        "auto",
+        "entry",
+        "classification",
+        "routing"
+      ],
+      "p": "critical",
+      "branch": "00_Core"
+    },
+    {
+      "id": "council",
+      "path": "memory/00_Core/council.md",
+      "s": "8-Sage Deliberation Protocol — multi-agent decision making",
+      "t": [
+        "council",
+        "deliberation",
+        "sages"
+      ],
+      "p": "critical",
+      "branch": "00_Core"
+    },
+    {
+      "id": "selection",
+      "path": "memory/00_Core/selection.md",
+      "s": "Weighted Multi-Agent Selector — intelligent routing",
+      "t": [
+        "routing",
+        "selection",
+        "agent"
+      ],
+      "p": "critical",
+      "branch": "00_Core"
+    },
+    {
+      "id": "nexus",
+      "path": "memory/00_Core/nexus.md",
+      "s": "NTM Memory Engine — store/recall/search tree memory",
+      "t": [
+        "memory",
+        "ntm",
+        "nexus"
+      ],
+      "p": "critical",
+      "branch": "00_Core"
+    },
+    {
+      "id": "evolution",
+      "path": "memory/00_Core/evolution.md",
+      "s": "Self-Healing Engine — drift detection & auto-repair",
+      "t": [
+        "evolution",
+        "heal",
+        "patch"
+      ],
+      "p": "high",
+      "branch": "00_Core"
+    },
+    {
+      "id": "check",
+      "path": "memory/00_Core/check.md",
+      "s": "System Health Check — skills, memory, agents, constitution",
+      "t": [
+        "health",
+        "check",
+        "diagnostics"
+      ],
+      "p": "high",
+      "branch": "00_Core"
+    },
+    {
+      "id": "synthesis",
+      "path": "memory/00_Core/synthesis.md",
+      "s": "Agent Synthesis Protocol — autonomous agent creation",
+      "t": [
+        "synthesis",
+        "create",
+        "agent"
+      ],
+      "p": "high",
+      "branch": "00_Core"
+    },
+    {
+      "id": "worker",
+      "path": "memory/00_Core/worker.md",
+      "s": "Background Task Runner — health check, sync, maintenance",
+      "t": [
+        "worker",
+        "background",
+        "automation"
+      ],
+      "p": "medium",
+      "branch": "00_Core"
+    },
+    {
+      "id": "arthur-architecture",
+      "path": "memory/01_Agents/arthur-architecture.md",
+      "s": "arthur-architecture - Architecture Council Expert",
+      "t": [
+        "Architecture",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "atlas-memory",
+      "path": "memory/01_Agents/atlas-memory.md",
+      "s": "atlas-memory - Memory Council Expert",
+      "t": [
+        "Memory",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "cipher-crypto",
+      "path": "memory/01_Agents/cipher-crypto.md",
+      "s": "cipher-crypto - Cipher - Cryptography & Security Expert",
+      "t": [
+        "General",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "elias-marketing",
+      "path": "memory/01_Agents/elias-marketing.md",
+      "s": "elias-marketing - Marketing Council Expert",
+      "t": [
+        "Marketing",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "forge-cicd",
+      "path": "memory/01_Agents/forge-cicd.md",
+      "s": "forge-cicd - Forge - CI/CD Pipeline Specialist",
+      "t": [
+        "CI/CD",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "ghost-stealth",
+      "path": "memory/01_Agents/ghost-stealth.md",
+      "s": "ghost-stealth - Ghost - Stealth Operations & Security Auditor",
+      "t": [
+        "Stealth",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "kenzo-performance",
+      "path": "memory/01_Agents/kenzo-performance.md",
+      "s": "kenzo-performance - Performance Council Expert",
+      "t": [
+        "Performance",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "luna-design",
+      "path": "memory/01_Agents/luna-design.md",
+      "s": "luna-design - Design Council Expert",
+      "t": [
+        "Design",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "malik-database",
+      "path": "memory/01_Agents/malik-database.md",
+      "s": "malik-database - Database Council Expert",
+      "t": [
+        "Database",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "neo-security",
+      "path": "memory/01_Agents/neo-security.md",
+      "s": "neo-security - Security Council Expert",
+      "t": [
+        "Security",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "nexus-api",
+      "path": "memory/01_Agents/nexus-api.md",
+      "s": "nexus-api - Nexus - API Integration Specialist",
+      "t": [
+        "API",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "novahiz-router",
+      "path": "memory/01_Agents/novahiz-router.md",
+      "s": "novahiz-router - NovaHiz OS Sovereign Orchestration Layer",
+      "t": [
+        "General",
+        "primary"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "orion-devops",
+      "path": "memory/01_Agents/orion-devops.md",
+      "s": "orion-devops - Orion - DevOps Infrastructure Expert",
+      "t": [
+        "DevOps",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "phoenix-crisis",
+      "path": "memory/01_Agents/phoenix-crisis.md",
+      "s": "phoenix-crisis - Phoenix - Crisis Management Specialist",
+      "t": [
+        "Crisis",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "pulse-realtime",
+      "path": "memory/01_Agents/pulse-realtime.md",
+      "s": "pulse-realtime - Pulse - Real-time Systems Specialist",
+      "t": [
+        "Realtime",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "ralph-execution",
+      "path": "memory/01_Agents/ralph-execution.md",
+      "s": "ralph-execution - Execution Council Expert",
+      "t": [
+        "Execution",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "ryu-design",
+      "path": "memory/01_Agents/ryu-design.md",
+      "s": "ryu-design - Ryù - Japanese Design Innovator",
+      "t": [
+        "Design",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "samuel-legal",
+      "path": "memory/01_Agents/samuel-legal.md",
+      "s": "samuel-legal - Samuel - Strategic Legal Advisor",
+      "t": [
+        "General",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "sarah-quality",
+      "path": "memory/01_Agents/sarah-quality.md",
+      "s": "sarah-quality - Quality Council Expert",
+      "t": [
+        "Quality",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "simon-data",
+      "path": "memory/01_Agents/simon-data.md",
+      "s": "simon-data - Simon - Data Science Analyst",
+      "t": [
+        "General",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "vega-legal",
+      "path": "memory/01_Agents/vega-legal.md",
+      "s": "vega-legal - Vega - Legal & Compliance Specialist",
+      "t": [
+        "Legal",
+        "simulated"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "victor-strategy",
+      "path": "memory/01_Agents/victor-strategy.md",
+      "s": "victor-strategy - Strategy Council Expert",
+      "t": [
+        "Strategy",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "athena-initialization",
+      "path": "memory/01_Agents/athena-initialization.md",
+      "s": "athena-initialization - Project Initialization & Documentation Expert",
+      "t": [
+        "Initialization",
+        "subagent"
+      ],
+      "p": "high",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "adr-index",
+      "path": "memory/03_Patterns/adr-index.md",
+      "s": "Architecture Decision Records",
+      "t": [
+        "adr",
+        "decisions"
+      ],
+      "p": "high",
+      "branch": "03_Patterns"
+    },
+    {
+      "id": "skill-proposals",
+      "path": "memory/03_Patterns/skill-proposals.md",
+      "s": "Skill proposals",
+      "t": [
+        "skills",
+        "proposals"
+      ],
+      "p": "medium",
+      "branch": "03_Patterns"
+    },
+    {
+      "id": "skill-conflicts",
+      "path": "memory/03_Patterns/skill-conflicts.md",
+      "s": "Skill conflicts",
+      "t": [
+        "skills",
+        "conflicts"
+      ],
+      "p": "medium",
+      "branch": "03_Patterns"
+    },
+    {
+      "id": "current",
+      "path": "memory/05_Context/current.md",
+      "s": "Current context",
+      "t": [
+        "context",
+        "active"
+      ],
+      "p": "high",
+      "branch": "05_Context"
+    },
+    {
+      "id": "hot-topics",
+      "path": "memory/05_Context/hot-topics.md",
+      "s": "Hot topics",
+      "t": [
+        "topics",
+        "active"
+      ],
+      "p": "medium",
+      "branch": "05_Context"
+    },
+    {
+      "id": "recent-sessions",
+      "path": "memory/05_Context/recent-sessions.md",
+      "s": "Recent sessions",
+      "t": [
+        "sessions",
+        "history"
+      ],
+      "p": "medium",
+      "branch": "05_Context"
+    },
+    {
+      "id": "bug-triage",
+      "path": "memory/06_Workflows/bug-triage.md",
+      "s": "Bug triage workflow",
+      "t": [
+        "workflow",
+        "bugs"
+      ],
+      "p": "high",
+      "branch": "06_Workflows"
+    },
+    {
+      "id": "crisis",
+      "path": "memory/06_Workflows/crisis.md",
+      "s": "Crisis workflow",
+      "t": [
+        "workflow",
+        "crisis"
+      ],
+      "p": "high",
+      "branch": "06_Workflows"
+    },
+    {
+      "id": "data-analysis",
+      "path": "memory/06_Workflows/data-analysis.md",
+      "s": "Data analysis workflow",
+      "t": [
+        "workflow",
+        "data"
+      ],
+      "p": "medium",
+      "branch": "06_Workflows"
+    },
+    {
+      "id": "feature-delivery",
+      "path": "memory/06_Workflows/feature-delivery.md",
+      "s": "Feature delivery workflow",
+      "t": [
+        "workflow",
+        "features"
+      ],
+      "p": "high",
+      "branch": "06_Workflows"
+    },
+    {
+      "id": "pr-review",
+      "path": "memory/06_Workflows/pr-review.md",
+      "s": "PR review workflow",
+      "t": [
+        "workflow",
+        "review"
+      ],
+      "p": "high",
+      "branch": "06_Workflows"
+    },
+    {
+      "id": "project-kickoff",
+      "path": "memory/06_Workflows/project-kickoff.md",
+      "s": "Project kickoff workflow",
+      "t": [
+        "workflow",
+        "kickoff"
+      ],
+      "p": "medium",
+      "branch": "06_Workflows"
+    },
+    {
+      "id": "evolution-log",
+      "path": "memory/00_Core/evolution-log.md",
+      "s": "Evolution auto-patch log — history of all self-healing actions",
+      "t": [
+        "evolution",
+        "log",
+        "patches"
+      ],
+      "p": "medium",
+      "branch": "00_Core"
+    },
+    {
+      "id": "system",
+      "path": "memory/00_Core/system.md",
+      "s": "Master system reference — full Novahiz OS overview",
+      "t": [
+        "system",
+        "reference",
+        "architecture"
+      ],
+      "p": "critical",
+      "branch": "00_Core"
+    },
+    {
+      "id": "ralph-browser",
+      "path": "memory/01_Agents/ralph-browser.md",
+      "s": "ralph-browser - Browser Execution Specialist",
+      "t": [
+        "BrowserAutomation",
+        "subagent"
+      ],
+      "p": "medium",
+      "branch": "01_Agents"
+    },
+    {
+      "id": "project-index",
+      "path": "memory/02_Projects/index.md",
+      "s": "Project index — active projects & status",
+      "t": [
+        "projects",
+        "status"
+      ],
+      "p": "medium",
+      "branch": "02_Projects"
+    },
+    {
+      "id": "project-template",
+      "path": "memory/02_Projects/_template.md",
+      "s": "Project template — new project scaffold",
+      "t": [
+        "template",
+        "projects"
+      ],
+      "p": "low",
+      "branch": "02_Projects"
+    },
+    {
+      "id": "archive-evolution-log",
+      "path": "memory/04_Archives/evolution-log.md",
+      "s": "Archived evolution log — historical auto-patch records",
+      "t": [
+        "evolution",
+        "archive"
+      ],
+      "p": "medium",
+      "branch": "04_Archives"
+    }
+  ]
+}

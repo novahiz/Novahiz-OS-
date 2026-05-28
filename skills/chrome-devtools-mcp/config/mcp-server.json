@@ -1,0 +1,28 @@
+{
+  "mcpServer": {
+    "name": "chrome-devtools",
+    "command": "npx",
+    "args": ["-y", "chrome-devtools-mcp@latest", "--browser-url=http://127.0.0.1:9222", "--autoConnect", "--isolated=false", "--experimentalVision=true", "--experimentalMemory=true", "--experimentalScreencast=true", "--categoryExtensions=true", "--categoryExperimentalThirdParty=true", "--redactNetworkHeaders=true", "--usageStatistics=true"],
+    "env": {"CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "false"},
+    "timeout": 30000,
+    "restart": true
+  },
+  "classification": {
+    "browser_mode": "auto-launch",
+    "trigger_keywords": ["debug", "inspect", "console", "network", "trace", "performance", "lighthouse", "screenshot", "snapshot", "test", "e2e", "automation", "click", "fill", "form", "scrap", "extract", "dom", "element", "page", "navigate", "browser", "devtools"],
+    "exclusion_patterns": ["debug python", "debug server", "debug code", "performance optimization", "performance profiling", "test unitaire", "test integration"]
+  },
+  "security": {
+    "redact_headers": true,
+    "log_audit": true,
+    "usage_statistics": true,
+    "max_session_duration_minutes": 120,
+    "restricted_sites": ["chrome://*", "about:*"]
+  },
+  "browser_context": {
+    "autoConnect": true,
+    "isolated": false,
+    "headless": false,
+    "experimental_flags": {"vision": true, "memory": true, "screencast": true, "extensions": true, "webmcp": false, "page_id_routing": false}
+  }
+}

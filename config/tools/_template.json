@@ -1,0 +1,49 @@
+{
+  "id": "_template",
+  "name": "Tool Profile Template",
+  "version": "1.9",
+  "description": "All 59 skills, full power. Context budget controls description compactness.",
+  "constraints": {
+    "contextBudget": null,
+    "skillLoadMode": "all",
+    "symlinkNatively": true
+  },
+  "skills": {
+    "include": "all",
+    "exclude": [],
+    "loadPriority": ["novahiz-boot", "novahiz-auto", "novahiz-selection", "systematic-debugging", "tdd", "brainstorming", "writing-plans"],
+    "lazyLoad": [],
+    "summaryMaxChars": 600
+  },
+  "identity": {
+    "fileName": "AGENTS.md",
+    "truncatable": true,
+    "maxChars": null
+  },
+  "memory": {
+    "ntmEnabled": true,
+    "branches": ["00_Core", "01_Agents", "02_Projects", "03_Patterns", "04_Archives", "05_Context"],
+    "autoSave": true,
+    "pruneEnabled": true,
+    "pruneAfterSessions": 10
+  },
+  "agentRouting": {
+    "maxPerTask": 3,
+    "hotAgentsEnabled": true,
+    "hotAgentsLimit": 5,
+    "fallbackChain": ["ralph", "sarah", "arthur"]
+  },
+  "novahiz": {
+    "enabled": true,
+    "bootOnStart": true,
+    "systemSkills": ["novahiz-boot", "novahiz-auto", "novahiz-selection"],
+    "hiddenSkills": ["novahiz-metrics", "novahiz-skill-lifecycle", "novahiz-evolution"]
+  },
+  "install": {
+    "method": "symlink",
+    "skillsTarget": "skills/",
+    "identityTarget": "AGENTS.md",
+    "shellInit": null,
+    "postInstallScript": null
+  }
+}

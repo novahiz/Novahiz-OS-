@@ -1,0 +1,232 @@
+{
+  "version": "5.3.0",
+  "started": "2026-05-27T02:43:17.865051",
+  "total_executions": 177,
+  "successful_executions": 141,
+  "failed_executions": 36,
+  "total_tokens": 427529,
+  "total_cost_usd": 0.042752899999999996,
+  "by_agent": {
+    "malik-database": 14,
+    "sarah-quality": 105,
+    "neo-security": 47,
+    "test-agent": 1,
+    "arthur-architecture": 3,
+    "vega-legal": 2,
+    "kenzo-performance": 3,
+    "orion-devops": 2
+  },
+  "by_provider": {
+    "unknown": 36,
+    "openrouter": 141
+  },
+  "by_model": {
+    "unknown": 36,
+    "qwen/qwen3.6-flash": 139,
+    "test-model": 1,
+    "qwen/qwen3.5-plus-20260420": 1
+  },
+  "by_tier": {
+    "smart": 177
+  },
+  "daily": {
+    "2026-05-27": {
+      "executions": 177,
+      "tokens": 427529,
+      "successful": 141,
+      "failed": 36
+    }
+  },
+  "hourly": {
+    "2026-05-27 02:00": 50,
+    "2026-05-27 03:00": 2,
+    "2026-05-27 07:00": 18,
+    "2026-05-27 08:00": 39,
+    "2026-05-27 10:00": 18,
+    "2026-05-27 12:00": 11,
+    "2026-05-27 13:00": 39
+  },
+  "errors": [
+    {
+      "timestamp": "2026-05-27T02:43:17.867394",
+      "agent": "malik-database",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.868605",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.869841",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.870934",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.872130",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.873281",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.874430",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.875624",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:43:17.876887",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:44:11.895750",
+      "agent": "neo-security",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:47:55.977442",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:17.331420",
+      "agent": "malik-database",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:23.457925",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:25.328655",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:30.876504",
+      "agent": "neo-security",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:34.143984",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:36.451411",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:39.304137",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:41.129994",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:43.151721",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:45.096034",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:46.945113",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:49:51.135075",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.968567",
+      "agent": "malik-database",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.970066",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.971493",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.972691",
+      "agent": "neo-security",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.973894",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.975165",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.976488",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.977801",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.979107",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.980392",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.981795",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.983005",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    },
+    {
+      "timestamp": "2026-05-27T02:51:00.984287",
+      "agent": "sarah-quality",
+      "error": "All providers in fallback chain failed"
+    }
+  ],
+  "last_updated": "2026-05-27T13:19:59.170582"
+}

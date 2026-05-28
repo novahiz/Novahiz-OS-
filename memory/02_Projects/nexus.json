@@ -1,0 +1,22 @@
+{
+  "v": "1.8",
+  "branch": "02_Projects",
+  "created": "2026-05-23T14:22:16.000434",
+  "updated": "2026-05-23T14:22:16.000444",
+  "nodes": [
+    {
+      "id": "project-index",
+      "path": "memory/02_Projects/index.md",
+      "s": "Project index — active projects & status",
+      "t": ["projects", "status"],
+      "p": "medium"
+    },
+    {
+      "id": "project-template",
+      "path": "memory/02_Projects/_template.md",
+      "s": "Project template — new project scaffold",
+      "t": ["template", "projects"],
+      "p": "low"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "test_audit_20260526_194457",
+  "type": "subagent_execution",
+  "agent": "luna-design",
+  "task": "Test execution audit",
+  "created": "2026-05-26T19:44:57.582671",
+  "status": "failed",
+  "started": "2026-05-26T20:54:56.110478",
+  "model_tier": "premium",
+  "completed": "2026-05-26T20:55:09.623487",
+  "result": {
+    "success": false,
+    "agent": "luna-design",
+    "error": "All retry attempts failed",
+    "method": "llm_direct"
+  }
+}

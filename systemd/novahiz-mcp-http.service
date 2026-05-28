@@ -1,0 +1,17 @@
+[Unit]
+Description=Novahiz OS MCP HTTP Server
+After=network.target novahiz-runtime.service
+
+[Service]
+Type=simple
+User=novahiz
+WorkingDirectory=/home/novahiz/.opencode
+EnvironmentFile=/home/novahiz/.novahiz/.env
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/mcp/novahiz-mcp-http.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/novahiz/.opencode/logs/mcp-http.log
+StandardError=append:/home/novahiz/.opencode/logs/mcp-http-error.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,961 @@
+{
+  "version": "1.0",
+  "generated": "2026-05-27T12:53:36.377624",
+  "project": "Novahiz OS",
+  "python": {
+    "packages": [
+      {
+        "name": "aptdaemon",
+        "version": "2.0.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "astroid",
+        "version": "4.0.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "attrs",
+        "version": "25.4.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "autocommand",
+        "version": "2.2.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "babel",
+        "version": "2.17.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "bcc",
+        "version": "0.35.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "bcrypt",
+        "version": "5.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "beautifulsoup4",
+        "version": "4.14.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "black",
+        "version": "26.5.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "blinker",
+        "version": "1.9.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "Brlapi",
+        "version": "0.8.6",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "Brotli",
+        "version": "1.2.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "certifi",
+        "version": "2026.1.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "chardet",
+        "version": "5.2.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "click",
+        "version": "8.1.8",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "command-not-found",
+        "version": "0.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "configobj",
+        "version": "5.0.9",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.3.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "coverage",
+        "version": "7.14.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "cryptography",
+        "version": "46.0.5",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "cssselect",
+        "version": "1.4.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "cupshelpers",
+        "version": "1.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "dasbus",
+        "version": "1.7",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "dbus-python",
+        "version": "1.4.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "defer",
+        "version": "1.0.6",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "dill",
+        "version": "0.4.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "distro",
+        "version": "1.9.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "distro-info",
+        "version": "1.15",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "evdev",
+        "version": "1.9.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "flake8",
+        "version": "7.3.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.61.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "gyp-next",
+        "version": "0.16.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "html5lib-modern",
+        "version": "1.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "httplib2",
+        "version": "0.22.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "idna",
+        "version": "3.11",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "inflect",
+        "version": "7.5.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "isort",
+        "version": "8.0.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jaraco.context",
+        "version": "6.0.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jaraco.functools",
+        "version": "4.1.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jaraco.text",
+        "version": "4.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "Jinja2",
+        "version": "3.1.6",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jsonpatch",
+        "version": "1.32",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jsonpointer",
+        "version": "2.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jsonschema",
+        "version": "4.19.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "jsonschema-specifications",
+        "version": "2023.12.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.4.10rc0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "language-selector",
+        "version": "0.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "launchpadlib",
+        "version": "2.1.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "lazr.restfulclient",
+        "version": "0.14.6",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "lazr.uri",
+        "version": "1.0.6",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "libpass",
+        "version": "1.9.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "linkify-it-py",
+        "version": "2.0.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "louis",
+        "version": "3.36.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "lxml",
+        "version": "6.0.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "lz4",
+        "version": "4.4.5+dfsg",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "Mako",
+        "version": "1.3.10.dev0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "markdown-it-py",
+        "version": "3.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "3.0.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.10.7+dfsg1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "mccabe",
+        "version": "0.7.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "mdurl",
+        "version": "0.1.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "more-itertools",
+        "version": "10.8.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "munkres",
+        "version": "1.1.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "mypy_extensions",
+        "version": "1.1.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "netaddr",
+        "version": "1.3.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "numpy",
+        "version": "2.3.5",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "oauthlib",
+        "version": "3.3.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "olefile",
+        "version": "0.47",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "packaging",
+        "version": "26.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pefile",
+        "version": "2024.8.26",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pexpect",
+        "version": "4.9.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pillow",
+        "version": "12.1.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pip",
+        "version": "25.1.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "platformdirs",
+        "version": "4.9.6",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "protobuf",
+        "version": "4.21.12",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "psutil",
+        "version": "7.1.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "ptyprocess",
+        "version": "0.7.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pycairo",
+        "version": "1.27.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pycodestyle",
+        "version": "2.14.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pycups",
+        "version": "2.0.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pyflakes",
+        "version": "3.4.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "Pygments",
+        "version": "2.19.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "PyGObject",
+        "version": "3.56.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "PyJWT",
+        "version": "2.10.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pylint",
+        "version": "4.0.5",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pyserial",
+        "version": "3.5",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "python-apt",
+        "version": "3.1.0+ubuntu1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "python-debian",
+        "version": "1.0.1+ubuntu2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "python-magic",
+        "version": "0.4.27",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pytokens",
+        "version": "0.4.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "pyxdg",
+        "version": "0.28",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "PyYAML",
+        "version": "6.0.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "referencing",
+        "version": "0.36.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "requests",
+        "version": "2.32.5",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "rich",
+        "version": "13.9.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "rpds-py",
+        "version": "0.27.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "setproctitle",
+        "version": "1.3.7",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "setuptools",
+        "version": "78.1.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "soupsieve",
+        "version": "2.8.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "systemd-python",
+        "version": "235",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "typeguard",
+        "version": "4.4.4",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.15.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "ubuntu-drivers-common",
+        "version": "0.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "ubuntu-pro-client",
+        "version": "8001",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "uc-micro-py",
+        "version": "1.0.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "ufoLib2",
+        "version": "0.18.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "ufw",
+        "version": "0.36.2",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "unattended-upgrades",
+        "version": "0.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "unicodedata2",
+        "version": "16.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.6.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "usb-creator",
+        "version": "0.3.16",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "wadllib",
+        "version": "2.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "webencodings",
+        "version": "0.5.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "wheel",
+        "version": "0.46.3",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "xdg",
+        "version": "5",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "xkit",
+        "version": "0.0.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "zipp",
+        "version": "3.23.0",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      },
+      {
+        "name": "zopfli",
+        "version": "0.4.1",
+        "license": "UNKNOWN",
+        "category": "unknown"
+      }
+    ],
+    "summary": {
+      "allowed": 0,
+      "warning": 0,
+      "forbidden": 0,
+      "unknown": 125
+    }
+  },
+  "npm": {
+    "packages": [
+      {
+        "name": "@msgpackr-extract/msgpackr-extract-darwin-arm64",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@msgpackr-extract/msgpackr-extract-darwin-x64",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@msgpackr-extract/msgpackr-extract-linux-arm",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@msgpackr-extract/msgpackr-extract-linux-arm64",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@msgpackr-extract/msgpackr-extract-linux-x64",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@msgpackr-extract/msgpackr-extract-win32-x64",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@opencode-ai/plugin",
+        "version": "1.15.10",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@opencode-ai/sdk",
+        "version": "1.15.10",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "@standard-schema/spec",
+        "version": "1.1.0",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "cross-spawn",
+        "version": "7.0.6",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "detect-libc",
+        "version": "2.1.2",
+        "license": "Apache-2.0",
+        "category": "allowed"
+      },
+      {
+        "name": "effect",
+        "version": "4.0.0-beta.66",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "fast-check",
+        "version": "4.8.0",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "find-my-way-ts",
+        "version": "0.1.6",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "ini",
+        "version": "6.0.0",
+        "license": "ISC",
+        "category": "allowed"
+      },
+      {
+        "name": "isexe",
+        "version": "2.0.0",
+        "license": "ISC",
+        "category": "allowed"
+      },
+      {
+        "name": "kubernetes-types",
+        "version": "1.30.0",
+        "license": "Apache-2.0",
+        "category": "allowed"
+      },
+      {
+        "name": "msgpackr",
+        "version": "1.11.12",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "msgpackr-extract",
+        "version": "3.0.3",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "multipasta",
+        "version": "0.2.7",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "node-gyp-build-optional-packages",
+        "version": "5.2.2",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "path-key",
+        "version": "3.1.1",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "pure-rand",
+        "version": "8.4.0",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "shebang-command",
+        "version": "2.0.0",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "shebang-regex",
+        "version": "3.0.0",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "toml",
+        "version": "4.1.1",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "uuid",
+        "version": "13.0.2",
+        "license": "MIT",
+        "category": "allowed"
+      },
+      {
+        "name": "which",
+        "version": "2.0.2",
+        "license": "ISC",
+        "category": "allowed"
+      },
+      {
+        "name": "yaml",
+        "version": "2.9.0",
+        "license": "ISC",
+        "category": "allowed"
+      },
+      {
+        "name": "zod",
+        "version": "4.1.8",
+        "license": "MIT",
+        "category": "allowed"
+      }
+    ],
+    "summary": {
+      "allowed": 30,
+      "warning": 0,
+      "forbidden": 0,
+      "unknown": 0
+    }
+  },
+  "total_summary": {
+    "allowed": 30,
+    "warning": 0,
+    "forbidden": 0,
+    "unknown": 125
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "generated": "2026-05-27T13:51:39.958499",
+  "overview": {
+    "total_executions": 39,
+    "successful": 39,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "model_usage": {
+    "by_model": {
+      "qwen/qwen3.6-flash": 36,
+      "qwen/qwen3.6-plus": 3
+    },
+    "by_tier": {
+      "smart": 19,
+      "flash": 1,
+      "premium": 8,
+      "unknown": 11
+    },
+    "by_provider": {
+      "openrouter": 39
+    },
+    "total_tokens": 120080
+  },
+  "budget": {
+    "daily_limit": 3,
+    "used_today": 3,
+    "total_used": 8,
+    "blocked_count": 5
+  },
+  "trends": {
+    "daily_executions": {
+      "2026-05-27": 39
+    }
+  }
+}

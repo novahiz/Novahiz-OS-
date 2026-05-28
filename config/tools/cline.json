@@ -1,0 +1,13 @@
+{
+  "id": "cline",
+  "name": "Cline",
+  "version": "1.9",
+  "description": "All 59 skills, copy method, light context.",
+  "constraints": { "contextBudget": 3, "skillLoadMode": "all", "symlinkNatively": false },
+  "skills": { "include": "all", "exclude": [], "loadPriority": ["novahiz-boot","novahiz-auto","systematic-debugging","tdd"], "lazyLoad": [], "summaryMaxChars": 200 },
+  "identity": { "fileName": "AGENTS.md", "truncatable": true, "maxChars": 4000 },
+  "memory": { "ntmEnabled": true, "branches": ["00_Core","03_Patterns"], "autoSave": false, "pruneEnabled": true, "pruneAfterSessions": 5 },
+  "agentRouting": { "maxPerTask": 2, "hotAgentsEnabled": false, "hotAgentsLimit": 0, "fallbackChain": ["ralph"] },
+  "novahiz": { "enabled": true, "bootOnStart": false, "systemSkills": ["novahiz-boot","novahiz-auto","novahiz-selection"], "hiddenSkills": [] },
+  "install": { "method": "copy", "skillsTarget": "skills/", "identityTarget": "AGENTS.md", "shellInit": null, "postInstallScript": null }
+}

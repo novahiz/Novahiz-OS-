@@ -1,0 +1,1028 @@
+[
+  {
+    "timestamp": "2026-05-27T12:55:35.742653",
+    "level": "INFO",
+    "message": "[2026-05-26 20:06:52] ============================================================",
+    "raw": "[2026-05-26 20:06:52] ============================================================",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 1
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742701",
+    "level": "INFO",
+    "message": "[2026-05-26 20:06:52] \ud83d\udd0c OpenCode Auto-Executor (Simple)",
+    "raw": "[2026-05-26 20:06:52] \ud83d\udd0c OpenCode Auto-Executor (Simple)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 2
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742708",
+    "level": "INFO",
+    "message": "[2026-05-26 20:06:52] \ud83d\udcc1 Watching: /home/novahiz/.opencode/executions",
+    "raw": "[2026-05-26 20:06:52] \ud83d\udcc1 Watching: /home/novahiz/.opencode/executions",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 3
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742730",
+    "level": "INFO",
+    "message": "[2026-05-26 20:06:52] \u23f1\ufe0f  Poll interval: 2s",
+    "raw": "[2026-05-26 20:06:52] \u23f1\ufe0f  Poll interval: 2s",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 4
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742737",
+    "level": "INFO",
+    "message": "[2026-05-26 20:06:52] ============================================================",
+    "raw": "[2026-05-26 20:06:52] ============================================================",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 5
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742743",
+    "level": "INFO",
+    "message": "[2026-05-27 02:02:47] \ud83d\ude80 EXECUTING: malik-database \u2014 exec_20260526_192509_775072",
+    "raw": "[2026-05-27 02:02:47] \ud83d\ude80 EXECUTING: malik-database \u2014 exec_20260526_192509_775072",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 6
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742748",
+    "level": "INFO",
+    "message": "[2026-05-27 02:02:47]    Task: Create a login form...",
+    "raw": "[2026-05-27 02:02:47]    Task: Create a login form...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 7
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742753",
+    "level": "INFO",
+    "message": "[2026-05-27 02:02:47]    Running: opencode task --subagent \"malik-database\" --prompt \"Create a login form\"",
+    "raw": "[2026-05-27 02:02:47]    Running: opencode task --subagent \"malik-database\" --prompt \"Create a login form\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 8
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742761",
+    "level": "INFO",
+    "message": "[2026-05-27 02:02:49]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:02:49]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 9
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742766",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 10
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742771",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 11
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742776",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 12
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742782",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 14
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742787",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 15
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742793",
+    "level": "INFO",
+    "message": "[2026-05-27 02:02:49]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:02:49]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 16
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742798",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:19]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:03:19]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 17
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742804",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:19]    \ud83d\udcdd Updated: exec_20260526_192509_775072.json",
+    "raw": "[2026-05-27 02:03:19]    \ud83d\udcdd Updated: exec_20260526_192509_775072.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 18
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742809",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:19] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_012717_771975",
+    "raw": "[2026-05-27 02:03:19] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_012717_771975",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 19
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742814",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:19]    Task: Test execution with new smart tier config...",
+    "raw": "[2026-05-27 02:03:19]    Task: Test execution with new smart tier config...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 20
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742819",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:19]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Test execution with new smart tier config\"",
+    "raw": "[2026-05-27 02:03:19]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Test execution with new smart tier config\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 21
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742824",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:20]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:03:20]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 22
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742829",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 23
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742834",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 24
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742839",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 25
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742844",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 27
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742849",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 28
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742855",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:20]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:03:20]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 29
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742860",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:50]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:03:50]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 30
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742866",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:50]    \ud83d\udcdd Updated: exec_20260527_012717_771975.json",
+    "raw": "[2026-05-27 02:03:50]    \ud83d\udcdd Updated: exec_20260527_012717_771975.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 31
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742871",
+    "level": "INFO",
+    "message": "[2026-05-27 02:03:50] \u2705 Processed 2 execution(s)",
+    "raw": "[2026-05-27 02:03:50] \u2705 Processed 2 execution(s)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 32
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742876",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:02] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_012158_651240",
+    "raw": "[2026-05-27 02:04:02] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_012158_651240",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 33
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742881",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:02]    Task: Quick test for fallback check...",
+    "raw": "[2026-05-27 02:04:02]    Task: Quick test for fallback check...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 34
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742886",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:02]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Quick test for fallback check\"",
+    "raw": "[2026-05-27 02:04:02]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Quick test for fallback check\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 35
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742892",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:03]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:04:03]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 36
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742897",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 37
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742901",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 38
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742905",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 39
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742910",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 41
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742915",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 42
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742919",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:03]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:04:03]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 43
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742925",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:33]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:04:33]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 44
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742940",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:33]    \ud83d\udcdd Updated: exec_20260527_012158_651240.json",
+    "raw": "[2026-05-27 02:04:33]    \ud83d\udcdd Updated: exec_20260527_012158_651240.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 45
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742952",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:33] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_020236_480084",
+    "raw": "[2026-05-27 02:04:33] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_020236_480084",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 46
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742957",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:33]    Task: Final test with fixed bridge...",
+    "raw": "[2026-05-27 02:04:33]    Task: Final test with fixed bridge...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 47
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742962",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:33]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Final test with fixed bridge\"",
+    "raw": "[2026-05-27 02:04:33]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Final test with fixed bridge\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 48
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742967",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:35]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:04:35]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 49
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742972",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 50
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742976",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 51
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742981",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 52
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742985",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 54
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742990",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 55
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.742995",
+    "level": "INFO",
+    "message": "[2026-05-27 02:04:35]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:04:35]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 56
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743000",
+    "level": "INFO",
+    "message": "[2026-05-27 02:05:05]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:05:05]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 57
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743006",
+    "level": "INFO",
+    "message": "[2026-05-27 02:05:05]    \ud83d\udcdd Updated: exec_20260527_020236_480084.json",
+    "raw": "[2026-05-27 02:05:05]    \ud83d\udcdd Updated: exec_20260527_020236_480084.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 58
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743011",
+    "level": "INFO",
+    "message": "[2026-05-27 02:05:05] \u2705 Processed 2 execution(s)",
+    "raw": "[2026-05-27 02:05:05] \u2705 Processed 2 execution(s)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 59
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743016",
+    "level": "INFO",
+    "message": "[2026-05-27 02:10:31] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_021030_486406",
+    "raw": "[2026-05-27 02:10:31] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_021030_486406",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 60
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743022",
+    "level": "INFO",
+    "message": "[2026-05-27 02:10:31]    Task: Honn\u00eate test de v\u00e9rification syst\u00e8me...",
+    "raw": "[2026-05-27 02:10:31]    Task: Honn\u00eate test de v\u00e9rification syst\u00e8me...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 61
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743028",
+    "level": "INFO",
+    "message": "[2026-05-27 02:10:31]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Honn\u00eate test de v\u00e9rification syst\u00e8me\"",
+    "raw": "[2026-05-27 02:10:31]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Honn\u00eate test de v\u00e9rification syst\u00e8me\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 62
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743033",
+    "level": "INFO",
+    "message": "[2026-05-27 02:10:32]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:10:32]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 63
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743038",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 64
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743042",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 65
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743046",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 66
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743051",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 68
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743055",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 69
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743061",
+    "level": "INFO",
+    "message": "[2026-05-27 02:10:32]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:10:32]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 70
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743067",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:02]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:11:02]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 71
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743072",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:02]    \ud83d\udcdd Updated: exec_20260527_021030_486406.json",
+    "raw": "[2026-05-27 02:11:02]    \ud83d\udcdd Updated: exec_20260527_021030_486406.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 72
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743077",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:02] \u2705 Processed 1 execution(s)",
+    "raw": "[2026-05-27 02:11:02] \u2705 Processed 1 execution(s)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 73
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743082",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:32] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_021131_141670",
+    "raw": "[2026-05-27 02:11:32] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_021131_141670",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 74
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743087",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:32]    Task: Test apr\u00e8s restart bridge daemon...",
+    "raw": "[2026-05-27 02:11:32]    Task: Test apr\u00e8s restart bridge daemon...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 75
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743092",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:32]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Test apr\u00e8s restart bridge daemon\"",
+    "raw": "[2026-05-27 02:11:32]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Test apr\u00e8s restart bridge daemon\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 76
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743098",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:33]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:11:33]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 77
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743102",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 78
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743107",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 79
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743111",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 80
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743116",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 82
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743121",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 83
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743126",
+    "level": "INFO",
+    "message": "[2026-05-27 02:11:33]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:11:33]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 84
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743131",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:03]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:12:03]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 85
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743142",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:03]    \ud83d\udcdd Updated: exec_20260527_021131_141670.json",
+    "raw": "[2026-05-27 02:12:03]    \ud83d\udcdd Updated: exec_20260527_021131_141670.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 86
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743147",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:03] \u2705 Processed 1 execution(s)",
+    "raw": "[2026-05-27 02:12:03] \u2705 Processed 1 execution(s)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 87
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743155",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:09] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_012143_616351",
+    "raw": "[2026-05-27 02:12:09] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_012143_616351",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 88
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743160",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:09]    Task: Hello test...",
+    "raw": "[2026-05-27 02:12:09]    Task: Hello test...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 89
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743166",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:09]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Hello test\"",
+    "raw": "[2026-05-27 02:12:09]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Hello test\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 90
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743171",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:10]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:12:10]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 91
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743176",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 92
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743181",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 93
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743185",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 94
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743190",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 96
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743195",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 97
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743200",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:10]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:12:10]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 98
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743205",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:40]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:12:40]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 99
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743210",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:40]    \ud83d\udcdd Updated: exec_20260527_012143_616351.json",
+    "raw": "[2026-05-27 02:12:40]    \ud83d\udcdd Updated: exec_20260527_012143_616351.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 100
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743216",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:40] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_015403_594949",
+    "raw": "[2026-05-27 02:12:40] \ud83d\ude80 EXECUTING: sarah-quality \u2014 exec_20260527_015403_594949",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 101
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743221",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:40]    Task: Test with real LLM execution via bridge...",
+    "raw": "[2026-05-27 02:12:40]    Task: Test with real LLM execution via bridge...",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 102
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743226",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:40]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Test with real LLM execution via bridge\"",
+    "raw": "[2026-05-27 02:12:40]    Running: opencode task --subagent \"sarah-quality\" --prompt \"Test with real LLM execution via bridge\"",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 103
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743232",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:42]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "raw": "[2026-05-27 02:12:42]    \u26a0\ufe0f  CLI returned 1: \u2800                                \u2584",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 104
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743237",
+    "level": "INFO",
+    "message": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "raw": "\u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2584 \u2588\u2580\u2580\u2580 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588 \u2588\u2580\u2580\u2588",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 105
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743241",
+    "level": "INFO",
+    "message": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580 \u2588  \u2588 \u2588    \u2588  \u2588 \u2588  \u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 106
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743246",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 107
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743251",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 109
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743255",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 110
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743260",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:42]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:12:42]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 111
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743265",
+    "level": "INFO",
+    "message": "[2026-05-27 02:13:12]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:13:12]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 112
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743270",
+    "level": "INFO",
+    "message": "[2026-05-27 02:13:12]    \ud83d\udcdd Updated: exec_20260527_015403_594949.json",
+    "raw": "[2026-05-27 02:13:12]    \ud83d\udcdd Updated: exec_20260527_015403_594949.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 113
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743275",
+    "level": "INFO",
+    "message": "[2026-05-27 02:13:12] \u2705 Processed 2 execution(s)",
+    "raw": "[2026-05-27 02:13:12] \u2705 Processed 2 execution(s)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 114
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743281",
+    "level": "INFO",
+    "message": "\u2588 \u2588\u2580\u2580\u2580",
+    "raw": "\u2588 \u2588\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 115
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743286",
+    "level": "INFO",
+    "message": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "raw": "\u2580\u2580\u2580\u2580 \u2588\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580  \u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580 \u2580\u2580\u2580\u2580",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 116
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743291",
+    "level": "INFO",
+    "message": "Commands:",
+    "raw": "Commands:",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 118
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743296",
+    "level": "INFO",
+    "message": "opencode completion",
+    "raw": "opencode completion",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 119
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743301",
+    "level": "INFO",
+    "message": "[2026-05-27 02:12:42]    \u2705 Created request file (OpenCode should process)",
+    "raw": "[2026-05-27 02:12:42]    \u2705 Created request file (OpenCode should process)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 120
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743306",
+    "level": "INFO",
+    "message": "[2026-05-27 02:13:12]    \u23f0 Timeout waiting for response",
+    "raw": "[2026-05-27 02:13:12]    \u23f0 Timeout waiting for response",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 121
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743311",
+    "level": "INFO",
+    "message": "[2026-05-27 02:13:12]    \ud83d\udcdd Updated: exec_20260527_015403_594949.json",
+    "raw": "[2026-05-27 02:13:12]    \ud83d\udcdd Updated: exec_20260527_015403_594949.json",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 122
+  },
+  {
+    "timestamp": "2026-05-27T12:55:35.743316",
+    "level": "INFO",
+    "message": "[2026-05-27 02:13:12] \u2705 Processed 2 execution(s)",
+    "raw": "[2026-05-27 02:13:12] \u2705 Processed 2 execution(s)",
+    "unstructured": true,
+    "source": "logs/auto-executor.log",
+    "line": 123
+  }
+]

@@ -1,0 +1,1210 @@
+[
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 10:42:16] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 1
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=1)",
+    "raw": "[2026-05-27 10:42:16] [DEBUG] Request: initialize (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 2
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 10:42:16] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 3
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 10:42:16] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 4
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=2)",
+    "raw": "[2026-05-27 10:42:16] [DEBUG] Request: tools/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 5
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "INFO",
+    "message": "Listed 10 tools",
+    "raw": "[2026-05-27 10:42:16] [INFO] Listed 10 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 6
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "ERROR",
+    "message": "JSON decode error: Expecting value: line 1 column 1 (char 0)",
+    "raw": "[2026-05-27 10:42:16] [ERROR] JSON decode error: Expecting value: line 1 column 1 (char 0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 7
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "INFO",
+    "message": "STDIN closed, shutting down",
+    "raw": "[2026-05-27 10:42:16] [INFO] STDIN closed, shutting down",
+    "source": "logs/mcp-server-v4.log",
+    "line": 8
+  },
+  {
+    "timestamp": "2026-05-27 10:42:16",
+    "level": "INFO",
+    "message": "MCP server stopped",
+    "raw": "[2026-05-27 10:42:16] [INFO] MCP server stopped",
+    "source": "logs/mcp-server-v4.log",
+    "line": 9
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 10:42:28] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 10
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=1)",
+    "raw": "[2026-05-27 10:42:28] [DEBUG] Request: tools/call (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 11
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "INFO",
+    "message": "Routing: refactor monolith to microservices",
+    "raw": "[2026-05-27 10:42:28] [INFO] Routing: refactor monolith to microservices",
+    "source": "logs/mcp-server-v4.log",
+    "line": 12
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "INFO",
+    "message": "Routed to arthur-architecture (0.845)",
+    "raw": "[2026-05-27 10:42:28] [INFO] Routed to arthur-architecture (0.845)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 13
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_route' executed",
+    "raw": "[2026-05-27 10:42:28] [SUCCESS] Tool 'novahiz_route' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 14
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "INFO",
+    "message": "STDIN closed, shutting down",
+    "raw": "[2026-05-27 10:42:28] [INFO] STDIN closed, shutting down",
+    "source": "logs/mcp-server-v4.log",
+    "line": 15
+  },
+  {
+    "timestamp": "2026-05-27 10:42:28",
+    "level": "INFO",
+    "message": "MCP server stopped",
+    "raw": "[2026-05-27 10:42:28] [INFO] MCP server stopped",
+    "source": "logs/mcp-server-v4.log",
+    "line": 16
+  },
+  {
+    "timestamp": "2026-05-27 10:42:30",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 10:42:30] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 17
+  },
+  {
+    "timestamp": "2026-05-27 10:42:30",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=1)",
+    "raw": "[2026-05-27 10:42:30] [DEBUG] Request: tools/call (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 18
+  },
+  {
+    "timestamp": "2026-05-27 10:42:30",
+    "level": "INFO",
+    "message": "Council: build a secure scalable REST API with database",
+    "raw": "[2026-05-27 10:42:30] [INFO] Council: build a secure scalable REST API with database",
+    "source": "logs/mcp-server-v4.log",
+    "line": 19
+  },
+  {
+    "timestamp": "2026-05-27 10:42:30",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_council' executed",
+    "raw": "[2026-05-27 10:42:30] [SUCCESS] Tool 'novahiz_council' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 20
+  },
+  {
+    "timestamp": "2026-05-27 10:42:30",
+    "level": "INFO",
+    "message": "STDIN closed, shutting down",
+    "raw": "[2026-05-27 10:42:30] [INFO] STDIN closed, shutting down",
+    "source": "logs/mcp-server-v4.log",
+    "line": 21
+  },
+  {
+    "timestamp": "2026-05-27 10:42:30",
+    "level": "INFO",
+    "message": "MCP server stopped",
+    "raw": "[2026-05-27 10:42:30] [INFO] MCP server stopped",
+    "source": "logs/mcp-server-v4.log",
+    "line": 22
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 10:45:05] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 23
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=1)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: initialize (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 24
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 10:45:05] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 25
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 26
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=2)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: tools/call (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 27
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Routing: fix sql injection vulnerability",
+    "raw": "[2026-05-27 10:45:05] [INFO] Routing: fix sql injection vulnerability",
+    "source": "logs/mcp-server-v4.log",
+    "line": 28
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Routed to neo-security (0.647)",
+    "raw": "[2026-05-27 10:45:05] [INFO] Routed to neo-security (0.647)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 29
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_route' executed",
+    "raw": "[2026-05-27 10:45:05] [SUCCESS] Tool 'novahiz_route' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 30
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=3)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: tools/call (id=3)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 31
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Council: build a full stack application",
+    "raw": "[2026-05-27 10:45:05] [INFO] Council: build a full stack application",
+    "source": "logs/mcp-server-v4.log",
+    "line": 32
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_council' executed",
+    "raw": "[2026-05-27 10:45:05] [SUCCESS] Tool 'novahiz_council' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 33
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=4)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: tools/call (id=4)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 34
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Health check",
+    "raw": "[2026-05-27 10:45:05] [INFO] Health check",
+    "source": "logs/mcp-server-v4.log",
+    "line": 35
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_health' executed",
+    "raw": "[2026-05-27 10:45:05] [SUCCESS] Tool 'novahiz_health' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 36
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=5)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: tools/call (id=5)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 37
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Listing agents",
+    "raw": "[2026-05-27 10:45:05] [INFO] Listing agents",
+    "source": "logs/mcp-server-v4.log",
+    "line": 38
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_list_agents' executed",
+    "raw": "[2026-05-27 10:45:05] [SUCCESS] Tool 'novahiz_list_agents' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 39
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=6)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: tools/call (id=6)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 40
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "Execute: neo-security \u2192 fix sql injection",
+    "raw": "[2026-05-27 10:45:05] [INFO] Execute: neo-security \u2192 fix sql injection",
+    "source": "logs/mcp-server-v4.log",
+    "line": 41
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute' executed",
+    "raw": "[2026-05-27 10:45:05] [SUCCESS] Tool 'novahiz_execute' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 42
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=7)",
+    "raw": "[2026-05-27 10:45:05] [DEBUG] Request: tools/call (id=7)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 43
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_scoreboard' executed",
+    "raw": "[2026-05-27 10:45:05] [SUCCESS] Tool 'novahiz_scoreboard' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 44
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "ERROR",
+    "message": "JSON decode error: Expecting value: line 1 column 1 (char 0)",
+    "raw": "[2026-05-27 10:45:05] [ERROR] JSON decode error: Expecting value: line 1 column 1 (char 0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 45
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "STDIN closed, shutting down",
+    "raw": "[2026-05-27 10:45:05] [INFO] STDIN closed, shutting down",
+    "source": "logs/mcp-server-v4.log",
+    "line": 46
+  },
+  {
+    "timestamp": "2026-05-27 10:45:05",
+    "level": "INFO",
+    "message": "MCP server stopped",
+    "raw": "[2026-05-27 10:45:05] [INFO] MCP server stopped",
+    "source": "logs/mcp-server-v4.log",
+    "line": 47
+  },
+  {
+    "timestamp": "2026-05-27 10:52:25",
+    "level": "INFO",
+    "message": "Health check",
+    "raw": "[2026-05-27 10:52:25] [INFO] Health check",
+    "source": "logs/mcp-server-v4.log",
+    "line": 48
+  },
+  {
+    "timestamp": "2026-05-27 10:54:12",
+    "level": "INFO",
+    "message": "Health check",
+    "raw": "[2026-05-27 10:54:12] [INFO] Health check",
+    "source": "logs/mcp-server-v4.log",
+    "line": 49
+  },
+  {
+    "timestamp": "2026-05-27 10:54:17",
+    "level": "INFO",
+    "message": "Health check",
+    "raw": "[2026-05-27 10:54:17] [INFO] Health check",
+    "source": "logs/mcp-server-v4.log",
+    "line": 50
+  },
+  {
+    "timestamp": "2026-05-27 10:54:58",
+    "level": "INFO",
+    "message": "Health check",
+    "raw": "[2026-05-27 10:54:58] [INFO] Health check",
+    "source": "logs/mcp-server-v4.log",
+    "line": 51
+  },
+  {
+    "timestamp": "2026-05-27 10:55:08",
+    "level": "INFO",
+    "message": "Health check",
+    "raw": "[2026-05-27 10:55:08] [INFO] Health check",
+    "source": "logs/mcp-server-v4.log",
+    "line": 52
+  },
+  {
+    "timestamp": "2026-05-27 12:11:57",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 12:11:57] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 53
+  },
+  {
+    "timestamp": "2026-05-27 12:11:57",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=0)",
+    "raw": "[2026-05-27 12:11:57] [DEBUG] Request: initialize (id=0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 54
+  },
+  {
+    "timestamp": "2026-05-27 12:11:57",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 12:11:57] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 55
+  },
+  {
+    "timestamp": "2026-05-27 12:11:57",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 12:11:57] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 56
+  },
+  {
+    "timestamp": "2026-05-27 12:11:57",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=1)",
+    "raw": "[2026-05-27 12:11:57] [DEBUG] Request: tools/list (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 57
+  },
+  {
+    "timestamp": "2026-05-27 12:11:57",
+    "level": "INFO",
+    "message": "Listed 12 tools",
+    "raw": "[2026-05-27 12:11:57] [INFO] Listed 12 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 58
+  },
+  {
+    "timestamp": "2026-05-27 12:12:00",
+    "level": "DEBUG",
+    "message": "Request: resources/list (id=2)",
+    "raw": "[2026-05-27 12:12:00] [DEBUG] Request: resources/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 59
+  },
+  {
+    "timestamp": "2026-05-27 12:12:00",
+    "level": "DEBUG",
+    "message": "Request: prompts/list (id=3)",
+    "raw": "[2026-05-27 12:12:00] [DEBUG] Request: prompts/list (id=3)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 60
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=4)",
+    "raw": "[2026-05-27 12:18:43] [DEBUG] Request: tools/call (id=4)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 61
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "INFO",
+    "message": "Execute+Delegate: neo-security \u2192 Analyse de s\u00e9curit\u00e9 approfondie de Novahiz OS: che",
+    "raw": "[2026-05-27 12:18:43] [INFO] Execute+Delegate: neo-security \u2192 Analyse de s\u00e9curit\u00e9 approfondie de Novahiz OS: che",
+    "source": "logs/mcp-server-v4.log",
+    "line": 62
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute_and_delegate' executed",
+    "raw": "[2026-05-27 12:18:43] [SUCCESS] Tool 'novahiz_execute_and_delegate' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 63
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=5)",
+    "raw": "[2026-05-27 12:18:43] [DEBUG] Request: tools/call (id=5)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 64
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "INFO",
+    "message": "Execute+Delegate: sarah-quality \u2192 Audit qualit\u00e9 code Novahiz OS: cherche les erreurs",
+    "raw": "[2026-05-27 12:18:43] [INFO] Execute+Delegate: sarah-quality \u2192 Audit qualit\u00e9 code Novahiz OS: cherche les erreurs",
+    "source": "logs/mcp-server-v4.log",
+    "line": 65
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute_and_delegate' executed",
+    "raw": "[2026-05-27 12:18:43] [SUCCESS] Tool 'novahiz_execute_and_delegate' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 66
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=6)",
+    "raw": "[2026-05-27 12:18:43] [DEBUG] Request: tools/call (id=6)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 67
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "INFO",
+    "message": "Execute+Delegate: arthur-architecture \u2192 Analyse architecture Novahiz OS: cherche les incoh",
+    "raw": "[2026-05-27 12:18:43] [INFO] Execute+Delegate: arthur-architecture \u2192 Analyse architecture Novahiz OS: cherche les incoh",
+    "source": "logs/mcp-server-v4.log",
+    "line": 68
+  },
+  {
+    "timestamp": "2026-05-27 12:18:43",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute_and_delegate' executed",
+    "raw": "[2026-05-27 12:18:43] [SUCCESS] Tool 'novahiz_execute_and_delegate' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 69
+  },
+  {
+    "timestamp": "2026-05-27 12:19:06",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=7)",
+    "raw": "[2026-05-27 12:19:06] [DEBUG] Request: tools/call (id=7)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 70
+  },
+  {
+    "timestamp": "2026-05-27 12:19:06",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:19:06] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 71
+  },
+  {
+    "timestamp": "2026-05-27 12:19:06",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=8)",
+    "raw": "[2026-05-27 12:19:06] [DEBUG] Request: tools/call (id=8)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 72
+  },
+  {
+    "timestamp": "2026-05-27 12:19:06",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:19:06] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 73
+  },
+  {
+    "timestamp": "2026-05-27 12:19:06",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=9)",
+    "raw": "[2026-05-27 12:19:06] [DEBUG] Request: tools/call (id=9)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 74
+  },
+  {
+    "timestamp": "2026-05-27 12:19:06",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:19:06] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 75
+  },
+  {
+    "timestamp": "2026-05-27 12:21:36",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=10)",
+    "raw": "[2026-05-27 12:21:36] [DEBUG] Request: tools/call (id=10)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 76
+  },
+  {
+    "timestamp": "2026-05-27 12:21:36",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:21:36] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 77
+  },
+  {
+    "timestamp": "2026-05-27 12:21:36",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=11)",
+    "raw": "[2026-05-27 12:21:36] [DEBUG] Request: tools/call (id=11)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 78
+  },
+  {
+    "timestamp": "2026-05-27 12:21:36",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:21:36] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 79
+  },
+  {
+    "timestamp": "2026-05-27 12:21:36",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=12)",
+    "raw": "[2026-05-27 12:21:36] [DEBUG] Request: tools/call (id=12)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 80
+  },
+  {
+    "timestamp": "2026-05-27 12:21:36",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:21:36] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 81
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=13)",
+    "raw": "[2026-05-27 12:22:10] [DEBUG] Request: tools/call (id=13)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 82
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "INFO",
+    "message": "Execute+Delegate: orion-devops \u2192 Audit infrastructure DevOps Novahiz OS: configurat",
+    "raw": "[2026-05-27 12:22:10] [INFO] Execute+Delegate: orion-devops \u2192 Audit infrastructure DevOps Novahiz OS: configurat",
+    "source": "logs/mcp-server-v4.log",
+    "line": 83
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute_and_delegate' executed",
+    "raw": "[2026-05-27 12:22:10] [SUCCESS] Tool 'novahiz_execute_and_delegate' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 84
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=14)",
+    "raw": "[2026-05-27 12:22:10] [DEBUG] Request: tools/call (id=14)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 85
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "INFO",
+    "message": "Execute+Delegate: vega-legal \u2192 Audit conformit\u00e9 et legal Novahiz OS: licenses, GD",
+    "raw": "[2026-05-27 12:22:10] [INFO] Execute+Delegate: vega-legal \u2192 Audit conformit\u00e9 et legal Novahiz OS: licenses, GD",
+    "source": "logs/mcp-server-v4.log",
+    "line": 86
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute_and_delegate' executed",
+    "raw": "[2026-05-27 12:22:10] [SUCCESS] Tool 'novahiz_execute_and_delegate' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 87
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=15)",
+    "raw": "[2026-05-27 12:22:10] [DEBUG] Request: tools/call (id=15)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 88
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "INFO",
+    "message": "Execute+Delegate: kenzo-performance \u2192 Audit performance Novahiz OS: goulots d'\u00e9trangleme",
+    "raw": "[2026-05-27 12:22:10] [INFO] Execute+Delegate: kenzo-performance \u2192 Audit performance Novahiz OS: goulots d'\u00e9trangleme",
+    "source": "logs/mcp-server-v4.log",
+    "line": 89
+  },
+  {
+    "timestamp": "2026-05-27 12:22:10",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execute_and_delegate' executed",
+    "raw": "[2026-05-27 12:22:10] [SUCCESS] Tool 'novahiz_execute_and_delegate' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 90
+  },
+  {
+    "timestamp": "2026-05-27 12:22:38",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=16)",
+    "raw": "[2026-05-27 12:22:38] [DEBUG] Request: tools/call (id=16)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 91
+  },
+  {
+    "timestamp": "2026-05-27 12:22:38",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:22:38] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 92
+  },
+  {
+    "timestamp": "2026-05-27 12:22:38",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=17)",
+    "raw": "[2026-05-27 12:22:38] [DEBUG] Request: tools/call (id=17)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 93
+  },
+  {
+    "timestamp": "2026-05-27 12:22:38",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:22:38] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 94
+  },
+  {
+    "timestamp": "2026-05-27 12:22:38",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=18)",
+    "raw": "[2026-05-27 12:22:38] [DEBUG] Request: tools/call (id=18)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 95
+  },
+  {
+    "timestamp": "2026-05-27 12:22:38",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:22:38] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 96
+  },
+  {
+    "timestamp": "2026-05-27 12:23:10",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=19)",
+    "raw": "[2026-05-27 12:23:10] [DEBUG] Request: tools/call (id=19)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 97
+  },
+  {
+    "timestamp": "2026-05-27 12:23:10",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:23:10] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 98
+  },
+  {
+    "timestamp": "2026-05-27 12:23:10",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=20)",
+    "raw": "[2026-05-27 12:23:10] [DEBUG] Request: tools/call (id=20)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 99
+  },
+  {
+    "timestamp": "2026-05-27 12:23:10",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:23:10] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 100
+  },
+  {
+    "timestamp": "2026-05-27 12:23:10",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=21)",
+    "raw": "[2026-05-27 12:23:10] [DEBUG] Request: tools/call (id=21)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 101
+  },
+  {
+    "timestamp": "2026-05-27 12:23:10",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:23:10] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 102
+  },
+  {
+    "timestamp": "2026-05-27 12:23:39",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=22)",
+    "raw": "[2026-05-27 12:23:39] [DEBUG] Request: tools/call (id=22)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 103
+  },
+  {
+    "timestamp": "2026-05-27 12:23:39",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:23:39] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 104
+  },
+  {
+    "timestamp": "2026-05-27 12:23:39",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=23)",
+    "raw": "[2026-05-27 12:23:39] [DEBUG] Request: tools/call (id=23)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 105
+  },
+  {
+    "timestamp": "2026-05-27 12:23:39",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:23:39] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 106
+  },
+  {
+    "timestamp": "2026-05-27 12:24:07",
+    "level": "DEBUG",
+    "message": "Request: tools/call (id=24)",
+    "raw": "[2026-05-27 12:24:07] [DEBUG] Request: tools/call (id=24)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 107
+  },
+  {
+    "timestamp": "2026-05-27 12:24:07",
+    "level": "SUCCESS",
+    "message": "Tool 'novahiz_execution_status' executed",
+    "raw": "[2026-05-27 12:24:07] [SUCCESS] Tool 'novahiz_execution_status' executed",
+    "source": "logs/mcp-server-v4.log",
+    "line": 108
+  },
+  {
+    "timestamp": "2026-05-27 12:46:20",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 12:46:20] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 109
+  },
+  {
+    "timestamp": "2026-05-27 12:46:20",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=0)",
+    "raw": "[2026-05-27 12:46:20] [DEBUG] Request: initialize (id=0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 110
+  },
+  {
+    "timestamp": "2026-05-27 12:46:20",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 12:46:20] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 111
+  },
+  {
+    "timestamp": "2026-05-27 12:46:20",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 12:46:20] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 112
+  },
+  {
+    "timestamp": "2026-05-27 12:46:20",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=1)",
+    "raw": "[2026-05-27 12:46:20] [DEBUG] Request: tools/list (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 113
+  },
+  {
+    "timestamp": "2026-05-27 12:46:20",
+    "level": "INFO",
+    "message": "Listed 12 tools",
+    "raw": "[2026-05-27 12:46:20] [INFO] Listed 12 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 114
+  },
+  {
+    "timestamp": "2026-05-27 12:46:24",
+    "level": "DEBUG",
+    "message": "Request: resources/list (id=2)",
+    "raw": "[2026-05-27 12:46:24] [DEBUG] Request: resources/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 115
+  },
+  {
+    "timestamp": "2026-05-27 12:46:24",
+    "level": "DEBUG",
+    "message": "Request: prompts/list (id=3)",
+    "raw": "[2026-05-27 12:46:24] [DEBUG] Request: prompts/list (id=3)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 116
+  },
+  {
+    "timestamp": "2026-05-27 12:46:44",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 12:46:44] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 117
+  },
+  {
+    "timestamp": "2026-05-27 12:46:44",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=0)",
+    "raw": "[2026-05-27 12:46:44] [DEBUG] Request: initialize (id=0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 118
+  },
+  {
+    "timestamp": "2026-05-27 12:46:44",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 12:46:44] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 119
+  },
+  {
+    "timestamp": "2026-05-27 12:46:44",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 12:46:44] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 120
+  },
+  {
+    "timestamp": "2026-05-27 12:46:44",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=1)",
+    "raw": "[2026-05-27 12:46:44] [DEBUG] Request: tools/list (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 121
+  },
+  {
+    "timestamp": "2026-05-27 12:46:44",
+    "level": "INFO",
+    "message": "Listed 12 tools",
+    "raw": "[2026-05-27 12:46:44] [INFO] Listed 12 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 122
+  },
+  {
+    "timestamp": "2026-05-27 12:46:47",
+    "level": "DEBUG",
+    "message": "Request: resources/list (id=2)",
+    "raw": "[2026-05-27 12:46:47] [DEBUG] Request: resources/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 123
+  },
+  {
+    "timestamp": "2026-05-27 12:46:47",
+    "level": "DEBUG",
+    "message": "Request: prompts/list (id=3)",
+    "raw": "[2026-05-27 12:46:47] [DEBUG] Request: prompts/list (id=3)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 124
+  },
+  {
+    "timestamp": "2026-05-27 12:47:07",
+    "level": "INFO",
+    "message": "STDIN closed, shutting down",
+    "raw": "[2026-05-27 12:47:07] [INFO] STDIN closed, shutting down",
+    "source": "logs/mcp-server-v4.log",
+    "line": 125
+  },
+  {
+    "timestamp": "2026-05-27 12:47:07",
+    "level": "INFO",
+    "message": "MCP server stopped",
+    "raw": "[2026-05-27 12:47:07] [INFO] MCP server stopped",
+    "source": "logs/mcp-server-v4.log",
+    "line": 126
+  },
+  {
+    "timestamp": "2026-05-27 12:47:13",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 12:47:13] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 127
+  },
+  {
+    "timestamp": "2026-05-27 12:47:13",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=0)",
+    "raw": "[2026-05-27 12:47:13] [DEBUG] Request: initialize (id=0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 128
+  },
+  {
+    "timestamp": "2026-05-27 12:47:13",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 12:47:13] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 129
+  },
+  {
+    "timestamp": "2026-05-27 12:47:13",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 12:47:13] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 130
+  },
+  {
+    "timestamp": "2026-05-27 12:47:13",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=1)",
+    "raw": "[2026-05-27 12:47:13] [DEBUG] Request: tools/list (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 131
+  },
+  {
+    "timestamp": "2026-05-27 12:47:13",
+    "level": "INFO",
+    "message": "Listed 12 tools",
+    "raw": "[2026-05-27 12:47:13] [INFO] Listed 12 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 132
+  },
+  {
+    "timestamp": "2026-05-27 12:47:15",
+    "level": "DEBUG",
+    "message": "Request: resources/list (id=2)",
+    "raw": "[2026-05-27 12:47:15] [DEBUG] Request: resources/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 133
+  },
+  {
+    "timestamp": "2026-05-27 12:47:15",
+    "level": "DEBUG",
+    "message": "Request: prompts/list (id=3)",
+    "raw": "[2026-05-27 12:47:15] [DEBUG] Request: prompts/list (id=3)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 134
+  },
+  {
+    "timestamp": "2026-05-27 12:48:09",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 12:48:09] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 135
+  },
+  {
+    "timestamp": "2026-05-27 12:48:09",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=0)",
+    "raw": "[2026-05-27 12:48:09] [DEBUG] Request: initialize (id=0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 136
+  },
+  {
+    "timestamp": "2026-05-27 12:48:09",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 12:48:09] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 137
+  },
+  {
+    "timestamp": "2026-05-27 12:48:09",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 12:48:09] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 138
+  },
+  {
+    "timestamp": "2026-05-27 12:48:09",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=1)",
+    "raw": "[2026-05-27 12:48:09] [DEBUG] Request: tools/list (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 139
+  },
+  {
+    "timestamp": "2026-05-27 12:48:09",
+    "level": "INFO",
+    "message": "Listed 12 tools",
+    "raw": "[2026-05-27 12:48:09] [INFO] Listed 12 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 140
+  },
+  {
+    "timestamp": "2026-05-27 12:48:41",
+    "level": "DEBUG",
+    "message": "Request: resources/list (id=2)",
+    "raw": "[2026-05-27 12:48:41] [DEBUG] Request: resources/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 141
+  },
+  {
+    "timestamp": "2026-05-27 12:48:41",
+    "level": "DEBUG",
+    "message": "Request: prompts/list (id=3)",
+    "raw": "[2026-05-27 12:48:41] [DEBUG] Request: prompts/list (id=3)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 142
+  },
+  {
+    "timestamp": "2026-05-27 12:50:35",
+    "level": "INFO",
+    "message": "Starting Novahiz MCP server v4.0 (stdio)",
+    "raw": "[2026-05-27 12:50:35] [INFO] Starting Novahiz MCP server v4.0 (stdio)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 143
+  },
+  {
+    "timestamp": "2026-05-27 12:50:35",
+    "level": "DEBUG",
+    "message": "Request: initialize (id=0)",
+    "raw": "[2026-05-27 12:50:35] [DEBUG] Request: initialize (id=0)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 144
+  },
+  {
+    "timestamp": "2026-05-27 12:50:35",
+    "level": "INFO",
+    "message": "MCP initialized",
+    "raw": "[2026-05-27 12:50:35] [INFO] MCP initialized",
+    "source": "logs/mcp-server-v4.log",
+    "line": 145
+  },
+  {
+    "timestamp": "2026-05-27 12:50:35",
+    "level": "DEBUG",
+    "message": "Request: notifications/initialized (id=None)",
+    "raw": "[2026-05-27 12:50:35] [DEBUG] Request: notifications/initialized (id=None)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 146
+  },
+  {
+    "timestamp": "2026-05-27 12:50:35",
+    "level": "DEBUG",
+    "message": "Request: tools/list (id=1)",
+    "raw": "[2026-05-27 12:50:35] [DEBUG] Request: tools/list (id=1)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 147
+  },
+  {
+    "timestamp": "2026-05-27 12:50:35",
+    "level": "INFO",
+    "message": "Listed 12 tools",
+    "raw": "[2026-05-27 12:50:35] [INFO] Listed 12 tools",
+    "source": "logs/mcp-server-v4.log",
+    "line": 148
+  },
+  {
+    "timestamp": "2026-05-27 12:50:37",
+    "level": "DEBUG",
+    "message": "Request: prompts/list (id=2)",
+    "raw": "[2026-05-27 12:50:37] [DEBUG] Request: prompts/list (id=2)",
+    "source": "logs/mcp-server-v4.log",
+    "line": 149
+  },
+  {
+    "timestamp": "2026-05-27 12:51:07",
+    "level": "INFO",
+    "message": "STDIN closed, shutting down",
+    "raw": "[2026-05-27 12:51:07] [INFO] STDIN closed, shutting down",
+    "source": "logs/mcp-server-v4.log",
+    "line": 150
+  },
+  {
+    "timestamp": "2026-05-27 12:51:07",
+    "level": "INFO",
+    "message": "MCP server stopped",
+    "raw": "[2026-05-27 12:51:07] [INFO] MCP server stopped",
+    "source": "logs/mcp-server-v4.log",
+    "line": 151
+  }
+]

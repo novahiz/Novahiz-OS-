@@ -1,0 +1,16 @@
+[Unit]
+Description=NovaHiz OS Auto-Heal Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=novahiz
+WorkingDirectory=/home/novahiz/.opencode
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/scripts/autoheal.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/novahiz/.opencode/logs/autoheal.log
+StandardError=append:/home/novahiz/.opencode/logs/autoheal.log
+
+[Install]
+WantedBy=multi-user.target

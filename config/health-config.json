@@ -1,0 +1,28 @@
+{
+  "version": "1.7",
+  "checks": {
+    "api_server": {
+      "endpoint": "http://localhost:8080/api/health",
+      "interval": 30,
+      "timeout": 5,
+      "retries": 3,
+      "auto_restart": true
+    },
+    "chrome_mcp": {
+      "process": "chrome-devtools-mcp",
+      "port": 9222,
+      "interval": 30,
+      "timeout": 5,
+      "retries": 3,
+      "auto_restart": true
+    }
+  },
+  "notifications": {
+    "log": true,
+    "console": false
+  },
+  "healing": {
+    "max_retries_per_hour": 5,
+    "cooldown_seconds": 60
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "name": "novahiz-os",
+  "version": "5.2.0",
+  "displayName": "Novahiz OS",
+  "description": "Multi-agent orchestration system with 22 specialized agents for design, performance, security, architecture, and more",
+  "author": "Novahiz",
+  "license": "MIT",
+  "homepage": "https://github.com/novahiz/os",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novahiz/os.git"
+  },
+  "engines": {
+    "opencode": ">=1.0.0"
+  },
+  "categories": [
+    "AI Agents",
+    "Development Tools",
+    "Productivity"
+  ],
+  "keywords": [
+    "ai",
+    "agents",
+    "multi-agent",
+    "orchestration",
+    "llm",
+    "code-generation",
+    "design",
+    "architecture",
+    "security"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:novahiz.route",
+    "onCommand:novahiz.auto"
+  ],
+  "main": "./index.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "novahiz.route",
+        "title": "Novahiz: Route task to optimal agent",
+        "category": "Novahiz"
+      },
+      {
+        "command": "novahiz.auto",
+        "title": "Novahiz: Auto-route and execute",
+        "category": "Novahiz"
+      },
+      {
+        "command": "novahiz.execute",
+        "title": "Novahiz: Execute with specific agent",
+        "category": "Novahiz"
+      },
+      {
+        "command": "novahiz.agents",
+        "title": "Novahiz: List all agents",
+        "category": "Novahiz"
+      },
+      {
+        "command": "novahiz.search",
+        "title": "Novahiz: Search agents by keyword",
+        "category": "Novahiz"
+      },
+      {
+        "command": "novahiz.health",
+        "title": "Novahiz: System health check",
+        "category": "Novahiz"
+      },
+      {
+        "command": "novahiz.status",
+        "title": "Novahiz: Show service status",
+        "category": "Novahiz"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "novahiz-sidebar",
+          "title": "Novahiz OS",
+          "icon": "./icons/novahiz-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "novahiz-sidebar": [
+        {
+          "id": "novahiz.agents",
+          "name": "Agents",
+          "icon": "./icons/agents.svg"
+        },
+        {
+          "id": "novahiz.executions",
+          "name": "Recent Executions",
+          "icon": "./icons/executions.svg"
+        },
+        {
+          "id": "novahiz.status",
+          "name": "Service Status",
+          "icon": "./icons/status.svg"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Novahiz OS",
+      "properties": {
+        "novahiz.defaultAgent": {
+          "type": "string",
+          "default": "novahiz-router",
+          "description": "Default agent to use for tasks"
+        },
+        "novahiz.autoStart": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-start Novahiz services when OpenCode launches"
+        },
+        "novahiz.logLevel": {
+          "type": "string",
+          "enum": ["debug", "info", "warn", "error"],
+          "default": "info",
+          "description": "Log level for Novahiz services"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

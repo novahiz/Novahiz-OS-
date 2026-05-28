@@ -1,0 +1,38 @@
+# Session Summary — 2026-05-28
+
+## Project
+- Name: Novahiz OS
+- Directory: /home/novahiz
+
+## Work Done
+- Created novahiz-synthesis skill — continuity engine that auto-loads context at boot
+- Updated novahiz-boot — synthesis as step 2 in boot chain
+- Updated novahiz-constitution v1.2 — boot chain, source of truth
+- Updated novahiz-evolution — health check covers all 7 memory branches
+- Refreshed current.md + recent-sessions.md — auto-population templates
+- Updated skills-lock.json — synthesis skill path + hash
+- Updated AGENTS.md — continuity protocol documented
+- Created sessions archive directory
+- Saved first session summary to archive
+
+## Key Decisions
+- Synthesis runs BEFORE nexus in boot chain (load context first, then recover details)
+- File-based persistence instead of Supermemory (no API key needed, works offline)
+- Obsidian wiki is the structured knowledge layer (concepts, entities, summaries)
+- Nexus file system is the session/context tracking layer (current context, sessions)
+- Both layers read at boot = full continuity without external services
+
+## Files Modified
+- .opencode/.agents/skills/novahiz-synthesis/SKILL.md (created)
+- .opencode/skills/novahiz-boot/SKILL.md (updated)
+- .opencode/skills/novahiz-constitution/SKILL.md (updated)
+- .opencode/skills/novahiz-evolution/SKILL.md (updated)
+- .opencode/memory/05_Context/current.md (updated)
+- .opencode/memory/05_Context/recent-sessions.md (updated)
+- .opencode/memory/04_Archives/sessions/2026-05-28_continuity-setup (created)
+- .opencode/skills-lock.json (updated)
+- .opencode/AGENTS.md (updated)
+
+## Next Recommended
+- Test: open a new OpenCode session → verify context loads automatically
+- Add more technologies to the Obsidian wiki

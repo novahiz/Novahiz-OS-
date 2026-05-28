@@ -1,0 +1,19 @@
+{
+  "id": "opencode",
+  "name": "OpenCode",
+  "version": "1.9",
+  "description": "Full power — all 64 skills, unlimited budget — Chrome DevTools MCP",
+  "constraints": { "contextBudget": null, "skillLoadMode": "all", "symlinkNatively": false },
+  "skills": { "include": "all", "exclude": [], "loadPriority": ["novahiz-boot","novahiz-auto","novahiz-selection","systematic-debugging","frontend-design","tdd","brainstorming","writing-plans"], "lazyLoad": [], "summaryMaxChars": 600 },
+  "identity": { "fileName": "AGENTS.md", "truncatable": false, "maxChars": null },
+  "memory": { "ntmEnabled": true, "branches": ["00_Core","01_Agents","02_Projects","03_Patterns","04_Archives","05_Context","06_Workflows"], "autoSave": true, "pruneEnabled": true, "pruneAfterSessions": 10 },
+  "agentRouting": { "maxPerTask": 5, "hotAgentsEnabled": true, "hotAgentsLimit": 5, "fallbackChain": ["ralph-execution","sarah-quality","arthur-architecture"] },
+  "novahiz": { "enabled": true, "bootOnStart": true, "systemSkills": ["novahiz-boot","novahiz-auto","novahiz-selection","novahiz-council","novahiz-nexus","novahiz-check"], "hiddenSkills": [] },
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--browserUrl=http://127.0.0.1:9222", "--isolated=false", "--experimentalVision=true", "--experimentalMemory=true", "--experimentalScreencast=true", "--experimentalPageIdRouting=true", "--categoryExtensions=true", "--categoryExperimentalThirdParty=true", "--redactNetworkHeaders=true", "--no-usage-statistics"]
+    }
+  },
+  "install": { "method": "copy", "skillsTarget": ".agents/skills/", "identityTarget": "AGENTS.md", "shellInit": "[ -f ~/.local/bin/novahiz ] || ln -sf ~/.opencode/scripts/novahiz-cli.py ~/.local/bin/novahiz; alias nv 2>/dev/null || alias nv=novahiz", "postInstallScript": "~/.opencode/scripts/novahiz-cli.py status" }
+}

@@ -1,0 +1,61 @@
+#!/bin/bash
+# NovaHiz OS - Full System Diagnostic
+
+NOVAHIZ_HOME="$HOME/.opencode"
+API_URL="http://localhost:8080"
+
+echo "╔════════════════════════════════════════════╗"
+echo "║      NOVAHIZ OS - System Doctor v1.7      ║"
+echo "╚════════════════════════════════════════════╝"
+echo ""
+
+PASS=0
+FAIL=0
+
+check() {
+    local name="$1"
+    local cmd="$2"
+    if eval "$cmd" > /dev/null 2>&1; then
+        echo "✓ $name"
+        ((PASS++))
+    else
+        echo "✗ $name"
+        ((FAIL++))
+    fi
+}
+
+echo "Core Services:"
+check "API Server" "curl -s $API_URL/api/health | grep -q healthy"
+check "Chrome MCP" "ps aux | grep -q chrome-devtools-mcp"
+
+echo ""
+echo "Filesystem:"
+check "Skills Directory" "test -d $NOVAHIZ_HOME/skills"
+check "Agents Directory" "test -d $NOVAHIZ_HOME/agents"
+check "Config Directory" "test -d $NOVAHIZ_HOME/config"
+check "Logs Directory" "test -d $NOVAHIZ_HOME/logs"
+check "Memory Directory" "test -d $NOVAHIZ_HOME/memory"
+check "Data Directory" "test -d $NOVAHIZ_HOME/data"
+
+echo ""
+echo "CLI Tools:"
+check "nv command" "command -v nv"
+check "monitor.sh" "test -x $NOVAHIZ_HOME/bin/monitor.sh"
+check "start-api.sh" "test -x $NOVAHIZ_HOME/bin/start-api.sh"
+
+echo ""
+echo "Configuration:"
+check "opencode.json" "test -f $NOVAHIZ_HOME/opencode.json"
+check "health-config.json" "test -f $NOVAHIZ_HOME/config/health-config.json"
+check "AGENTS.md" "test -f $NOVAHIZ_HOME/AGENTS.md"
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Results: $PASS passed, $FAIL failed"
+echo ""
+
+if [ $FAIL -eq 0 ]; then
+    echo "✓ System is healthy!"
+else
+    echo "⚠ System has $FAIL issue(s) to address"
+fi

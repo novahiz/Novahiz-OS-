@@ -1,0 +1,23 @@
+# NovaHiz OS - Skills Linkage Configuration Example
+# This file maps agents to their available skills
+
+{
+  "version": "1.7",
+  "lastUpdated": "2026-05-15T00:00:00",
+  "description": "Auto-generated skills to agents mapping based on domain keywords",
+  "mapping": {
+    "luna-design": [
+      "frontend-design",
+      "canvas-design",
+      "extract-design-system",
+      "ui-ux-pro-max",
+      "web-design-guidelines"
+    ],
+    "kenzo-performance": [
+      "vercel-react-best-practices",
+      "improve-codebase-architecture",
+      "next-best-practices",
+      "vercel-composition-patterns"
+    ]
+  }
+}

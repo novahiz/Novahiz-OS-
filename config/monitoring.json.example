@@ -1,0 +1,28 @@
+# NovaHiz OS - Monitoring Configuration Example
+# Copy this file to monitoring.json and configure
+
+{
+  "enabled": false,
+  "checks": {
+    "api": true,
+    "database": true,
+    "agents": false
+  },
+  "interval_minutes": 5,
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_BOT_TOKEN_HERE",
+      "chat_id": "YOUR_CHAT_ID_HERE"
+    },
+    "discord": {
+      "enabled": false,
+      "webhook_url": "YOUR_WEBHOOK_URL_HERE"
+    }
+  },
+  "alerts": {
+    "api_down": true,
+    "db_error": true,
+    "agent_offline": false
+  }
+}

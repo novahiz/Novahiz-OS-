@@ -1,0 +1,16 @@
+[Unit]
+Description=Novahiz OS OpenCode Bridge Daemon
+After=network.target novahiz-runtime.service
+Wants=network.target
+
+[Service]
+Type=simple
+User=novahiz
+EnvironmentFile=/home/novahiz/.novahiz/.env
+WorkingDirectory=/home/novahiz/.opencode
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/mcp/opencode-bridge.py daemon 2
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

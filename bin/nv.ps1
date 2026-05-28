@@ -1,0 +1,1 @@
+& $PSScriptRoot\..\nv.ps1 @args

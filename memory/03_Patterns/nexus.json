@@ -1,0 +1,38 @@
+{
+  "v": "1.8",
+  "branch": "03_Patterns",
+  "created": "2026-05-23T14:22:16.000611",
+  "updated": "2026-05-23T14:22:16.000647",
+  "nodes": [
+    {
+      "id": "adr-index",
+      "path": "memory/03_Patterns/adr-index.md",
+      "s": "Architecture Decision Records",
+      "t": [
+        "adr",
+        "decisions"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "skill-proposals",
+      "path": "memory/03_Patterns/skill-proposals.md",
+      "s": "Skill proposals",
+      "t": [
+        "skills",
+        "proposals"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "skill-conflicts",
+      "path": "memory/03_Patterns/skill-conflicts.md",
+      "s": "Skill conflicts",
+      "t": [
+        "skills",
+        "conflicts"
+      ],
+      "p": "medium"
+    }
+  ]
+}

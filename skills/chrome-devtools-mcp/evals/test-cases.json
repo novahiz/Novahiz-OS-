@@ -1,0 +1,6 @@
+[
+  ["navigate_page", "fill", "get_console_message", "take_screenshot"],
+  ["navigate_page", "performance_start_trace", "performance_analyze_insight", "performance_stop_trace"],
+  ["navigate_page", "take_snapshot", "evaluate_script"],
+  ["navigate_page", "click", "fill", "wait_for", "take_screenshot"]
+]

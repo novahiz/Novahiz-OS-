@@ -1,0 +1,11 @@
+# Active state files (backed up separately)
+00_Core/*.tmp
+00_Core/metrics.json.tmp
+00_Core/nexus.json.tmp
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

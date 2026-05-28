@@ -1,0 +1,1 @@
+[['autoConnect', True], ['isolated', False], ['headless', False], ['experimental', {'vision': True, 'memory': True, 'screencast': True, 'extensions': True, 'webmcp': False}]]

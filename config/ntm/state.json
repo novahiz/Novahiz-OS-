@@ -1,0 +1,294 @@
+{
+  "nodes": {
+    "novahiz-system": {
+      "id": "novahiz-system",
+      "type": "system",
+      "score": 10.0,
+      "accessCount": 1,
+      "deliberationCount": 0,
+      "created": "2026-05-23T19:00:00",
+      "lastAccess": "2026-05-23T19:00:00"
+    },
+    "luna-design": {
+      "id": "luna-design",
+      "type": "agent",
+      "score": 40.2,
+      "accessCount": 1,
+      "deliberationCount": 0,
+      "created": "2026-05-23T19:09:04.851830",
+      "lastAccess": "2026-05-23T19:09:04.851844",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "arthur-architecture": {
+      "id": "arthur-architecture",
+      "type": "agent",
+      "score": 40.2,
+      "accessCount": 1,
+      "deliberationCount": 0,
+      "created": "2026-05-23T19:09:05.205587",
+      "lastAccess": "2026-05-23T19:09:05.205621",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "ralph-execution": {
+      "id": "ralph-execution",
+      "type": "agent",
+      "score": 40.2,
+      "accessCount": 1,
+      "deliberationCount": 0,
+      "created": "2026-05-23T19:09:05.547231",
+      "lastAccess": "2026-05-23T19:09:05.547267",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "sarah-quality": {
+      "id": "sarah-quality",
+      "type": "agent",
+      "score": 40.2,
+      "accessCount": 1,
+      "deliberationCount": 0,
+      "created": "2026-05-23T19:09:05.909120",
+      "lastAccess": "2026-05-23T19:09:05.909156",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "atlas-memory": {
+      "id": "atlas-memory",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470806",
+      "lastAccess": "2026-05-23T21:53:41.470830",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "cipher-crypto": {
+      "id": "cipher-crypto",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470833",
+      "lastAccess": "2026-05-23T21:53:41.470834",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "elias-marketing": {
+      "id": "elias-marketing",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470836",
+      "lastAccess": "2026-05-23T21:53:41.470837",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "forge-cicd": {
+      "id": "forge-cicd",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470839",
+      "lastAccess": "2026-05-23T21:53:41.470840",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "ghost-stealth": {
+      "id": "ghost-stealth",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470841",
+      "lastAccess": "2026-05-23T21:53:41.470842",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "kenzo-performance": {
+      "id": "kenzo-performance",
+      "type": "agent",
+      "score": 20.6,
+      "accessCount": 3,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470844",
+      "lastAccess": "2026-05-23T22:06:51.719414",
+      "prevAccessCount": 3,
+      "prevDeliberationCount": 0,
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "malik-database": {
+      "id": "malik-database",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470846",
+      "lastAccess": "2026-05-23T21:53:41.470847",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "neo-security": {
+      "id": "neo-security",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470848",
+      "lastAccess": "2026-05-23T21:53:41.470849",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "nexus-api": {
+      "id": "nexus-api",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470850",
+      "lastAccess": "2026-05-23T21:53:41.470851",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "novahiz-router": {
+      "id": "novahiz-router",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470852",
+      "lastAccess": "2026-05-23T21:53:41.470853",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "orion-devops": {
+      "id": "orion-devops",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470854",
+      "lastAccess": "2026-05-23T21:53:41.470855",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "phoenix-crisis": {
+      "id": "phoenix-crisis",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470857",
+      "lastAccess": "2026-05-23T21:53:41.470857",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "pulse-realtime": {
+      "id": "pulse-realtime",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470859",
+      "lastAccess": "2026-05-23T21:53:41.470859",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "ryu-design": {
+      "id": "ryu-design",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470861",
+      "lastAccess": "2026-05-23T21:53:41.470862",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "samuel-legal": {
+      "id": "samuel-legal",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470863",
+      "lastAccess": "2026-05-23T21:53:41.470864",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "simon-data": {
+      "id": "simon-data",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470865",
+      "lastAccess": "2026-05-23T21:53:41.470866",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "vega-legal": {
+      "id": "vega-legal",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470867",
+      "lastAccess": "2026-05-23T21:53:41.470868",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "victor-strategy": {
+      "id": "victor-strategy",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470873",
+      "lastAccess": "2026-05-23T21:53:41.470874",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "athena-initialization": {
+      "id": "athena-initialization",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470876",
+      "lastAccess": "2026-05-23T21:53:41.470876",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    },
+    "ralph-browser": {
+      "id": "ralph-browser",
+      "type": "agent",
+      "score": 20.0,
+      "accessCount": 0,
+      "deliberationCount": 0,
+      "created": "2026-05-23T21:53:41.470878",
+      "lastAccess": "2026-05-23T21:53:41.470878",
+      "lastBoost": "2026-05-23T22:06:29.261670"
+    }
+  },
+  "hotAgents": {
+    "kenzo-performance": [
+      "luna-design",
+      "arthur-architecture",
+      "ralph-execution",
+      "sarah-quality",
+      "kenzo-performance"
+    ]
+  },
+  "sessions": 4,
+  "lastPrune": "2026-05-23T21:54:22.654475",
+  "config": {
+    "version": "1.9",
+    "scoring": {
+      "decayRate": 0.05,
+      "boostOnAccess": 2.0,
+      "boostOnDeliberation": 5.0,
+      "minScore": 0.1,
+      "maxScore": 100.0,
+      "scoreHistoryWeight": 0.3
+    },
+    "expiry": {
+      "enabled": true,
+      "maxAgeDays": 30,
+      "pruneBelowScore": 1.0,
+      "pruneDryRun": false,
+      "autoPruneSessions": 10,
+      "keepDeliberations": true,
+      "runtimePrune": true
+    },
+    "hotAgents": {
+      "enabled": true,
+      "maxHot": 5,
+      "boostOnRecentUse": 10.0,
+      "recentThresholdHours": 24,
+      "scoreThreshold": 5.0
+    },
+    "tools": {}
+  }
+}

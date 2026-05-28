@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-05-27T12:55:35.771574",
+    "level": "INFO",
+    "message": "python3: can't open file '/auto-executor-simple.py': [Errno 2] No such file or directory",
+    "raw": "python3: can't open file '/auto-executor-simple.py': [Errno 2] No such file or directory",
+    "unstructured": true,
+    "source": "logs/auto-executor-stdout.log",
+    "line": 1
+  }
+]

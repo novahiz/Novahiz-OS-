@@ -1,0 +1,20 @@
+{
+  "id": "fix_test_20260526_202717",
+  "type": "subagent_execution",
+  "agent": "ralph-execution",
+  "task": "Write a Python function to calculate fibonacci numbers",
+  "created": "2026-05-26T20:27:17.492894",
+  "status": "completed",
+  "started": "2026-05-26T20:49:38.476759",
+  "model_tier": "smart",
+  "completed": "2026-05-26T20:50:07.425524",
+  "result": {
+    "success": true,
+    "agent": "ralph-execution",
+    "model": "qwen/qwen3.7-max",
+    "model_tier": "smart",
+    "content": "Here is the complete, production-ready implementation. \n\nI have provided two solutions: an **iterative function** to get a specific $n$-th number (optimized for $O(n)$ time and $O(1)$ space), and a **generator** to yield a sequence of numbers (optimized for memory efficiency when processing large streams).\n\n### Implementation\n\n```python\nfrom typing import Iterator\n\ndef fibonacci(n: int) -> int:\n    \"\"\"\n    Calculate the nth Fibonacci number.\n    \n    Uses an iterative approach to avoid recursion depth limits \n    and ensure O(n) time complexity with O(1) space complexity.\n    \n    Args:\n        n (int): The position in the Fibonacci sequence (0-indexed).\n        \n    Returns:\n        int: The nth Fibonacci number.\n    \"\"\"\n    if not isinstance(n, int):\n        raise TypeError(\"Input must be an integer.\")\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer.\")\n        \n    if n == 0:\n        return 0\n        \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n        \n    return b\n\ndef fibonacci_sequence(count: int) -> Iterator[int]:\n    \"\"\"\n    Generate a sequence of Fibonacci numbers.\n    \n    Uses a generator to yield numbers one by one, keeping memory \n    footprint at O(1) regardless of the sequence length.\n    \n    Args:\n        count (int): The number of Fibonacci numbers to generate.\n        \n    Yields:\n        int: The next number in the Fibonacci sequence.\n    \"\"\"\n    if not isinstance(count, int):\n        raise TypeError(\"Count must be an integer.\")\n    if count < 0:\n        raise ValueError(\"Count must be a non-negative integer.\")\n        \n    a, b = 0, 1\n    for _ in range(count):\n        yield a\n        a, b = b, a + b\n```\n\n### Usage & Validation\n\n```python\nif __name__ == \"__main__\":\n    # 1. Get a specific Fibonacci number\n    n = 10\n    print(f\"Fibonacci({n}) = {fibonacci(n)}\")  # Output: 55\n    \n    # 2. Handle large numbers efficiently (no RecursionError)\n    large_n = 1000\n    print(f\"Fibonacci({large_n}) has {len(str(fibonacci(large_n)))} digits.\")\n    \n    # 3. Generate a sequence\n    print(f\"First 10 numbers: {list(fibonacci_sequence(10))}\") \n    # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n    \n    # 4. Iterate over a massive sequence without memory spikes\n    # for num in fibonacci_sequence(100000):\n    #     process(num)\n```\n\n### Why this approach?\n1. **No Recursion Limits**: Standard recursive implementations (`fib(n-1) + fib(n-2)`) will hit Python's recursion limit around `n=1000` and suffer from $O(2^n)$ time complexity unless memoized. This iterative approach handles `n=100,000+` natively.\n2. **Memory Efficiency**: The generator (`fibonacci_sequence`) computes values on the fly. Generating 1 million numbers won't consume RAM to store the list unless you explicitly cast it to one.\n3. **Strict Validation**: Type and value checks are enforced at the boundary to prevent silent failures or confusing tracebacks downstream.",
+    "tokens_used": 1658,
+    "method": "llm_direct"
+  }
+}

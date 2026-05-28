@@ -1,0 +1,13 @@
+{
+  "id": "plandex",
+  "name": "Plandex",
+  "version": "1.9",
+  "description": "All 59 skills, copy method, session-focused.",
+  "constraints": { "contextBudget": 5, "skillLoadMode": "all", "symlinkNatively": false },
+  "skills": { "include": "all", "exclude": [], "loadPriority": ["novahiz-boot","novahiz-auto","systematic-debugging","tdd","brainstorming"], "lazyLoad": [], "summaryMaxChars": 300 },
+  "identity": { "fileName": "AGENTS.md", "truncatable": true, "maxChars": 6000 },
+  "memory": { "ntmEnabled": true, "branches": ["00_Core","01_Agents","02_Projects","03_Patterns","05_Context"], "autoSave": true, "pruneEnabled": true, "pruneAfterSessions": 10 },
+  "agentRouting": { "maxPerTask": 3, "hotAgentsEnabled": true, "hotAgentsLimit": 5, "fallbackChain": ["ralph","sarah","arthur"] },
+  "novahiz": { "enabled": true, "bootOnStart": false, "systemSkills": ["novahiz-boot","novahiz-auto","novahiz-selection","novahiz-nexus"], "hiddenSkills": [] },
+  "install": { "method": "copy", "skillsTarget": "skills/", "identityTarget": "AGENTS.md", "shellInit": null, "postInstallScript": null }
+}

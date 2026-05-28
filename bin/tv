@@ -1,0 +1,224 @@
+#!/bin/bash
+# =============================================================================
+# TradingView MCP - Commande raccourcie NovaHiz OS
+# =============================================================================
+# Usage: tv [commande]
+#
+# Exemples:
+#   tv launch      - Lance TradingView avec debug port 9222
+#   tv status      - Vérifie si TradingView + MCP sont actifs
+#   tv test        - Teste la connexion CDP
+#   tv logs        - Affiche les logs du serveur MCP
+#   tv config      - Affiche la configuration MCP
+#   tv help        - Affiche cette aide
+# =============================================================================
+
+NOVAHIZ_DIR="$HOME/.opencode"
+TV_MCP_DIR="$NOVAHIZ_DIR/mcp/tradingview-mcp/versions/v1"
+LAUNCH_SCRIPT="$NOVAHIZ_DIR/bin/launch-tradingview.sh"
+LOG_FILE="$NOVAHIZ_DIR/logs/tradingview-mcp.log"
+CDP_PORT=9222
+
+# Couleurs
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# =============================================================================
+# FONCTIONS
+# =============================================================================
+
+show_help() {
+    echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}TradingView MCP - NovaHiz OS${NC}                      ${BLUE}║${NC}"
+    echo -e "${BLUE}╠════════════════════════════════════════════════════════╣${NC}"
+    echo -e "${BLUE}║${NC}  ${YELLOW}Usage:${NC} tv [commande]                                ${BLUE}║${NC}"
+    echo -e "${BLUE}╠════════════════════════════════════════════════════════╣${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}launch${NC}       - Lance TradingView avec debug port     ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}status${NC}       - Vérifie TradingView + MCP + CDP       ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}test${NC}         - Teste la connexion CDP                ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}logs${NC}         - Affiche les logs MCP                  ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}config${NC}       - Affiche config MCP dans opencode.json ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}tools${NC}        - Liste les 81 outils disponibles       ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}restart${NC}      - Redémarre le serveur MCP              ${BLUE}║${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}help${NC}         - Affiche cette aide                    ${BLUE}║${NC}"
+    echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
+}
+
+check_tv_running() {
+    if pgrep -f "[Tt]rading[Vv]iew" > /dev/null; then
+        echo -e "${GREEN}✓${NC} TradingView Desktop: ${GREEN}EN COURSE${NC}"
+        return 0
+    else
+        echo -e "${RED}✗${NC} TradingView Desktop: ${RED}ARRÊTÉ${NC}"
+        return 1
+    fi
+}
+
+check_cdp() {
+    if curl -s "http://localhost:$CDP_PORT/json/version" > /dev/null 2>&1; then
+        echo -e "${GREEN}✓${NC} CDP Port $CDP_PORT: ${GREEN}ACTIF${NC}"
+        curl -s "http://localhost:$CDP_PORT/json/version" 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'   └─ Version: {d.get(\"Browser\", \"N/A\")}')" 2>/dev/null || true
+        return 0
+    else
+        echo -e "${RED}✗${NC} CDP Port $CDP_PORT: ${RED}INACTIF${NC}"
+        return 1
+    fi
+}
+
+check_mcp() {
+    if pgrep -f "node.*server.js" > /dev/null; then
+        echo -e "${GREEN}✓${NC} MCP Server: ${GREEN}EN COURSE${NC}"
+        return 0
+    else
+        echo -e "${YELLOW}○${NC} MCP Server: ${YELLOW}ARRÊTÉ (normal - lancé par OpenCode)${NC}"
+        return 1
+    fi
+}
+
+cmd_launch() {
+    echo -e "${BLUE}→ Lancement de TradingView avec CDP port $CDP_PORT...${NC}"
+    if [ -x "$LAUNCH_SCRIPT" ]; then
+        "$LAUNCH_SCRIPT"
+    else
+        echo -e "${RED}Erreur:${NC} Script de lancement non trouvé: $LAUNCH_SCRIPT"
+        exit 1
+    fi
+}
+
+cmd_status() {
+    echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}TradingView MCP - Status${NC}                            ${BLUE}║${NC}"
+    echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
+    echo ""
+    check_tv_running
+    check_cdp
+    check_mcp
+    echo ""
+    
+    # Vérifie config
+    if grep -q '"tradingview"' "$NOVAHIZ_DIR/opencode.json" 2>/dev/null; then
+        echo -e "${GREEN}✓${NC} Configuration MCP: ${GREEN}PRÉSENTE${NC}"
+    else
+        echo -e "${RED}✗${NC} Configuration MCP: ${RED}MANQUANTE${NC}"
+    fi
+}
+
+cmd_test() {
+    echo -e "${BLUE}→ Test de la connexion CDP...${NC}"
+    if curl -s "http://localhost:$CDP_PORT/json/version" > /dev/null 2>&1; then
+        echo -e "${GREEN}✓ CDP répond sur http://localhost:$CDP_PORT${NC}"
+        echo ""
+        echo "Informations:"
+        curl -s "http://localhost:$CDP_PORT/json/version" | python3 -m json.tool 2>/dev/null || curl -s "http://localhost:$CDP_PORT/json/version"
+        
+        echo ""
+        echo -e "${GREEN}✓ Connexion MCP prête${NC}"
+    else
+        echo -e "${RED}✗ CDP ne répond pas${NC}"
+        echo ""
+        echo "Solution: Lancez TradingView avec:"
+        echo -e "  ${YELLOW}tv launch${NC}"
+    fi
+}
+
+cmd_logs() {
+    echo -e "${BLUE}→ Logs TradingView MCP (dernières 50 lignes):${NC}"
+    echo ""
+    if [ -f "$LOG_FILE" ]; then
+        tail -50 "$LOG_FILE"
+    elif [ -f "$NOVAHIZ_DIR/logs/mcp-server-v4.log" ]; then
+        grep -i "tradingview\|tv\|cdp" "$NOVAHIZ_DIR/logs/mcp-server-v4.log" | tail -50
+    else
+        echo "Aucun log trouvé."
+    fi
+}
+
+cmd_config() {
+    echo -e "${BLUE}→ Configuration MCP TradingView:${NC}"
+    echo ""
+    grep -A 10 '"tradingview"' "$NOVAHIZ_DIR/opencode.json" 2>/dev/null | python3 -m json.tool 2>/dev/null || \
+    grep -A 10 '"tradingview"' "$NOVAHIZ_DIR/opencode.json" 2>/dev/null
+}
+
+cmd_tools() {
+    echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${BLUE}║${NC}  ${GREEN}TradingView MCP - 81 Outils${NC}                         ${BLUE}║${NC}"
+    echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
+    echo ""
+    echo -e "${YELLOW}Chart Control:${NC}"
+    echo "  chart_save, chart_load, chart_reset, chart_export"
+    echo ""
+    echo -e "${YELLOW}Indicateurs:${NC}"
+    echo "  indicator_add, indicator_remove, indicator_config"
+    echo "  (RSI, MACD, Bollinger, Ichimoku, Stochastic...)"
+    echo ""
+    echo -e "${YELLOW}Symboles:${NC}"
+    echo "  symbol_search, symbol_set, symbol_info"
+    echo ""
+    echo -e "${YELLOW}Pine Script:${NC}"
+    echo "  pine_create, pine_run, pine_compile, pine_save"
+    echo ""
+    echo -e "${YELLOW}Alertes:${NC}"
+    echo "  alert_create, alert_list, alert_delete, alert_modify"
+    echo ""
+    echo -e "${YELLOW}Morning Brief:${NC}"
+    echo "  morning_brief, session_save, session_get"
+    echo ""
+    echo -e "${YELLOW}UI:${NC}"
+    echo "  ui_click, ui_type, ui_open_panel, ui_screenshot"
+    echo ""
+    echo -e "${YELLOW}Screens:${NC}"
+    echo "  screenshot_take, screenshot_save"
+    echo ""
+}
+
+cmd_restart() {
+    echo -e "${BLUE}→ Redémarrage du serveur MCP TradingView...${NC}"
+    pkill -f "node.*server.js" 2>/dev/null
+    sleep 1
+    echo -e "${GREEN}✓ MCP arrêté${NC}"
+    echo ""
+    echo "Le MCP redémarrera automatiquement au prochain lancement d'OpenCode"
+    echo "Ou lancez manuellement:"
+    echo -e "  ${YELLOW}node $TV_MCP_DIR/src/server.js${NC}"
+}
+
+# =============================================================================
+# MAIN
+# =============================================================================
+
+case "${1:-help}" in
+    launch)
+        cmd_launch
+        ;;
+    status)
+        cmd_status
+        ;;
+    test)
+        cmd_test
+        ;;
+    logs)
+        cmd_logs
+        ;;
+    config)
+        cmd_config
+        ;;
+    tools)
+        cmd_tools
+        ;;
+    restart)
+        cmd_restart
+        ;;
+    help|--help|-h)
+        show_help
+        ;;
+    *)
+        echo -e "${RED}Commande inconnue:${NC} $1"
+        echo ""
+        show_help
+        exit 1
+        ;;
+esac

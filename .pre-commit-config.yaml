@@ -1,0 +1,39 @@
+# Pre-commit hooks for Novahiz OS v6.1
+# Install: pip install pre-commit && pre-commit install
+
+repos:
+  - repo: https://github.com/psf/black
+    rev: 26.5.1
+    hooks:
+      - id: black
+        name: black (code formatting)
+        files: ^(mcp|runtime)/.*\.py$
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8
+        name: flake8 (linting)
+        files: ^(mcp|runtime)/.*\.py$
+        args: [--max-line-length=120, --ignore=E501,W503,E402,E302,E305]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        name: Remove trailing whitespace
+      - id: end-of-file-fixer
+        name: Ensure file ends with newline
+      - id: check-yaml
+        name: Validate YAML files
+      - id: check-json
+        name: Validate JSON files
+
+  - repo: local
+    hooks:
+      - id: run-tests
+        name: Run test suite
+        entry: bash -c 'cd ~/.opencode/tests && python3 test_novahiz.py'
+        language: system
+        pass_filenames: false
+        always_run: true

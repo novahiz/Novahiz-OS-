@@ -1,0 +1,326 @@
+{
+  "v": "1.8",
+  "updated": "2026-05-23T14:20:00",
+  "skills": {
+    "agent-browser": {
+      "path": "skills/agent-browser/SKILL.md",
+      "hash": "4e7f30ba7c00ae00",
+      "status": "active"
+    },
+    "brainstorming": {
+      "path": "skills/brainstorming/SKILL.md",
+      "hash": "50f0ed9819dee239",
+      "status": "active"
+    },
+    "browser-use": {
+      "path": "skills/browser-use/SKILL.md",
+      "hash": "97836aa26a3d42d3",
+      "status": "active"
+    },
+    "canvas-design": {
+      "path": "skills/canvas-design/SKILL.md",
+      "hash": "f7d7a175a2e78973",
+      "status": "active"
+    },
+    "caveman": {
+      "path": "skills/caveman/SKILL.md",
+      "hash": "625c74348beb56f0",
+      "status": "active"
+    },
+    "content-strategy": {
+      "path": "skills/content-strategy/SKILL.md",
+      "hash": "d74ee60282652027",
+      "status": "active"
+    },
+    "copywriting": {
+      "path": "skills/copywriting/SKILL.md",
+      "hash": "92d3ac8013d271e9",
+      "status": "active"
+    },
+    "deploy-to-vercel": {
+      "path": "skills/deploy-to-vercel/SKILL.md",
+      "hash": "977c095f83eebbea",
+      "status": "active"
+    },
+    "email-sequence": {
+      "path": "skills/email-sequence/SKILL.md",
+      "hash": "99d22f2126ce0e3a",
+      "status": "active"
+    },
+    "executing-plans": {
+      "path": "skills/executing-plans/SKILL.md",
+      "hash": "91be40fe496fb3a3",
+      "status": "active"
+    },
+    "extract-design-system": {
+      "path": "skills/extract-design-system/SKILL.md",
+      "hash": "8d72d1366be4305b",
+      "status": "active"
+    },
+    "find-skills": {
+      "path": "skills/find-skills/SKILL.md",
+      "hash": "169eb7685d3c518f",
+      "status": "active"
+    },
+    "frontend-design": {
+      "path": "skills/frontend-design/SKILL.md",
+      "hash": "b04e3bedbc627df2",
+      "status": "active"
+    },
+    "github-actions-docs": {
+      "path": "skills/github-actions-docs/SKILL.md",
+      "hash": "7cbf69e60aceaba7",
+      "status": "active"
+    },
+    "grill-me": {
+      "path": "skills/grill-me/SKILL.md",
+      "hash": "5471d0ee4ecb3aab",
+      "status": "active"
+    },
+    "improve-codebase-architecture": {
+      "path": "skills/improve-codebase-architecture/SKILL.md",
+      "hash": "6b910b0b171d3a59",
+      "status": "active"
+    },
+    "launch-strategy": {
+      "path": "skills/launch-strategy/SKILL.md",
+      "hash": "41ffe5e13e59f5bc",
+      "status": "active"
+    },
+    "marketing-ideas": {
+      "path": "skills/marketing-ideas/SKILL.md",
+      "hash": "d0922e5236202774",
+      "status": "active"
+    },
+    "marketing-psychology": {
+      "path": "skills/marketing-psychology/SKILL.md",
+      "hash": "090d1de905ac8dfc",
+      "status": "active"
+    },
+    "next-best-practices": {
+      "path": "skills/next-best-practices/SKILL.md",
+      "hash": "78b89511c7cc726a",
+      "status": "active"
+    },
+    "novahiz-agents": {
+      "path": "skills/novahiz-agents/SKILL.md",
+      "hash": "bbad0115488fc6a9",
+      "status": "active"
+    },
+    "novahiz-auto": {
+      "path": "skills/novahiz-auto/SKILL.md",
+      "hash": "c7267f41cdac3211",
+      "status": "active"
+    },
+    "novahiz-boot": {
+      "path": "skills/novahiz-boot/SKILL.md",
+      "hash": "afe7564456ecc426",
+      "status": "active"
+    },
+    "novahiz-check": {
+      "path": "skills/novahiz-check/SKILL.md",
+      "hash": "c042793b9048d117",
+      "status": "active"
+    },
+    "novahiz-constitution": {
+      "path": "skills/novahiz-constitution/SKILL.md",
+      "hash": "cec4d1b5afbeba71",
+      "status": "active"
+    },
+    "novahiz-council": {
+      "path": "skills/novahiz-council/SKILL.md",
+      "hash": "3368f580709eab59",
+      "status": "active"
+    },
+    "novahiz-evolution": {
+      "path": "skills/novahiz-evolution/SKILL.md",
+      "hash": "56b79c05948f1100",
+      "status": "active"
+    },
+    "novahiz-metrics": {
+      "path": "skills/novahiz-metrics/SKILL.md",
+      "hash": "8e01f76d31feb023",
+      "status": "active"
+    },
+    "novahiz-nexus": {
+      "path": "skills/novahiz-nexus/SKILL.md",
+      "hash": "58404a8a1b46dbf5",
+      "status": "active"
+    },
+    "novahiz-selection": {
+      "path": "skills/novahiz-selection/SKILL.md",
+      "hash": "9b8ef06f229c321e",
+      "status": "active"
+    },
+    "novahiz-skill-lifecycle": {
+      "path": "skills/novahiz-skill-lifecycle/SKILL.md",
+      "hash": "d7f7eb7a752f4eb4",
+      "status": "active"
+    },
+    "novahiz-status": {
+      "path": "skills/novahiz-status/SKILL.md",
+      "hash": "f4a8ce7f6978440a",
+      "status": "active"
+    },
+    "novahiz-synthesis": {
+      "path": ".agents/skills/novahiz-synthesis/SKILL.md",
+      "hash": "e3baad102cbe2ca5",
+      "status": "active"
+    },
+    "page-cro": {
+      "path": "skills/page-cro/SKILL.md",
+      "hash": "321b970261b493f3",
+      "status": "active"
+    },
+    "pdf": {
+      "path": "skills/pdf/SKILL.md",
+      "hash": "318c33bb72d1567f",
+      "status": "active"
+    },
+    "pptx": {
+      "path": "skills/pptx/SKILL.md",
+      "hash": "3c6ac1474e09e7e9",
+      "status": "active"
+    },
+    "pricing-strategy": {
+      "path": "skills/pricing-strategy/SKILL.md",
+      "hash": "e35c70c63b3af7a4",
+      "status": "active"
+    },
+    "programmatic-seo": {
+      "path": "skills/programmatic-seo/SKILL.md",
+      "hash": "3035d7b3f147d87d",
+      "status": "active"
+    },
+    "remotion-best-practices": {
+      "path": "skills/remotion-best-practices/SKILL.md",
+      "hash": "4b658a711a8d43ab",
+      "status": "active"
+    },
+    "requesting-code-review": {
+      "path": "skills/requesting-code-review/SKILL.md",
+      "hash": "c7306902f922e7e2",
+      "status": "active"
+    },
+    "seo-audit": {
+      "path": "skills/seo-audit/SKILL.md",
+      "hash": "d8f2b2b426ca2f65",
+      "status": "active"
+    },
+    "simple": {
+      "path": "skills/simple/SKILL.md",
+      "hash": "5ffcb7352dc5e44c",
+      "status": "active"
+    },
+    "skill-creator": {
+      "path": "skills/skill-creator/SKILL.md",
+      "hash": "76b5697abaea0aa2",
+      "status": "active"
+    },
+    "skills-cli": {
+      "path": "skills/skills-cli/SKILL.md",
+      "hash": "7613822c5a0d8a31",
+      "status": "active"
+    },
+    "social-content": {
+      "path": "skills/social-content/SKILL.md",
+      "hash": "0286f9625b293fcc",
+      "status": "active"
+    },
+    "systematic-debugging": {
+      "path": "skills/systematic-debugging/SKILL.md",
+      "hash": "4d272e066e4a4028",
+      "status": "active"
+    },
+    "tdd": {
+      "path": "skills/tdd/SKILL.md",
+      "hash": "05943b54195dcd10",
+      "status": "active"
+    },
+    "to-issues": {
+      "path": "skills/to-issues/SKILL.md",
+      "hash": "9d73aa2471e0c016",
+      "status": "active"
+    },
+    "to-prd": {
+      "path": "skills/to-prd/SKILL.md",
+      "hash": "5cb54a9d5a626af9",
+      "status": "active"
+    },
+    "ui-ux-pro-max": {
+      "path": "skills/ui-ux-pro-max/SKILL.md",
+      "hash": "2ecd6d87ef34e788",
+      "status": "active"
+    },
+    "using-superpowers": {
+      "path": "skills/using-superpowers/SKILL.md",
+      "hash": "3d62c39269c4b6ff",
+      "status": "active"
+    },
+    "vercel-cli-with-tokens": {
+      "path": "skills/vercel-cli-with-tokens/SKILL.md",
+      "hash": "d8365ba824b83ab9",
+      "status": "active"
+    },
+    "vercel-composition-patterns": {
+      "path": "skills/vercel-composition-patterns/SKILL.md",
+      "hash": "4bc1b50794af6ed2",
+      "status": "active"
+    },
+    "vercel-react-best-practices": {
+      "path": "skills/vercel-react-best-practices/SKILL.md",
+      "hash": "9f2584254ede2254",
+      "status": "active"
+    },
+    "vercel-react-view-transitions": {
+      "path": "skills/vercel-react-view-transitions/SKILL.md",
+      "hash": "76950f476c264172",
+      "status": "active"
+    },
+    "web-design-guidelines": {
+      "path": "skills/web-design-guidelines/SKILL.md",
+      "hash": "1a191fd4c8df8516",
+      "status": "active"
+    },
+    "webapp-testing": {
+      "path": "skills/webapp-testing/SKILL.md",
+      "hash": "fe46aa92322e0c9f",
+      "status": "active"
+    },
+    "writing-plans": {
+      "path": "skills/writing-plans/SKILL.md",
+      "hash": "ec32420dd4b48214",
+      "status": "active"
+    },
+    "xlsx": {
+      "path": "skills/xlsx/SKILL.md",
+      "hash": "17a207b8db437098",
+      "status": "active"
+    },
+    "chrome-devtools-mcp": {
+      "path": "skills/chrome-devtools-mcp/SKILL.md",
+      "hash": "00000000",
+      "status": "active"
+    },
+    "api-design": {
+      "path": "skills/api-design/SKILL.md",
+      "hash": "00000001",
+      "status": "active"
+    },
+    "security-audit": {
+      "path": "skills/security-audit/SKILL.md",
+      "hash": "00000002",
+      "status": "active"
+    },
+    "vulnerability-scan": {
+      "path": "skills/vulnerability-scan/SKILL.md",
+      "hash": "00000003",
+      "status": "active"
+    },
+    "novahiz-model-router": {
+      "path": "skills/novahiz-model-router/SKILL.md",
+      "hash": "495f73339744f64d",
+      "status": "active"
+    }
+  }
+}

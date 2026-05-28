@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "description": "Règles de routage externalisées — modifiables sans toucher au code",
+  "weights": {
+    "keyword_match": 0.6,
+    "priority": 0.3,
+    "score": 0.1
+  },
+  "thresholds": {
+    "min_confidence": 0.4,
+    "multi_agent_ratio": 0.7
+  },
+  "complexity_keywords": {
+    "SIMPLE": ["how", "what", "explain", "simple", "quick", "basic", "define", "show", "tell", "list"],
+    "MEDIUM": ["build", "create", "implement", "fix", "optimize", "configure", "add", "update", "refactor", "install", "setup", "deploy"],
+    "COMPLEX": ["architecture", "system", "design", "scale", "enterprise", "production", "multi", "distributed", "highload", "microservice", "pipeline"]
+  },
+  "agent_overrides": {}
+}

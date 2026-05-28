@@ -1,0 +1,13 @@
+[Unit]
+Description=NovaHiz OS Daily Backup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/scripts/python/auto-backup.py
+WorkingDirectory=/home/novahiz/.opencode
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

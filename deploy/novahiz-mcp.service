@@ -1,0 +1,26 @@
+[Unit]
+Description=Novahiz MCP HTTP Server
+Documentation=https://github.com/novahiz/novahiz-os
+After=network.target
+
+[Service]
+Type=simple
+User=novahiz
+Group=novahiz
+WorkingDirectory=/home/novahiz/.opencode
+ExecStart=/usr/bin/python3 /home/novahiz/.opencode/mcp/novahiz-mcp-http.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/novahiz/.opencode/logs/mcp-systemd.log
+StandardError=append:/home/novahiz/.opencode/logs/mcp-systemd.log
+
+# Environment
+Environment=PYTHONUNBUFFERED=1
+Environment=NOVAHIZ_MODE=production
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

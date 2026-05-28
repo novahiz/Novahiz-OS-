@@ -1,0 +1,434 @@
+{
+  "version": "1.9",
+  "totalAgents": 24,
+  "agents": [
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Architecture",
+      "file": "~/.opencode\\agents\\arthur-architecture.yaml",
+      "invoke": "",
+      "role": "Architecture Council Expert",
+      "name": "arthur-architecture",
+      "description": "Architecture Council Expert",
+      "id": "arthur-architecture",
+      "specialty": [
+        "Architecture"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Memory",
+      "file": "~/.opencode\\agents\\atlas-memory.yaml",
+      "invoke": "",
+      "role": "Memory Council Expert",
+      "name": "atlas-memory",
+      "description": "Memory Council Expert",
+      "id": "atlas-memory",
+      "specialty": [
+        "Memory"
+      ]
+    },
+    {
+      "model": "openrouter/qwen/qwen3.6-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "General",
+      "file": "~/.opencode\\agents\\cipher-crypto.yaml",
+      "invoke": "",
+      "role": "Cipher - Cryptography & Security Expert",
+      "name": "cipher-crypto",
+      "description": "Cipher - Cryptography & Security Expert",
+      "id": "cipher-crypto",
+      "specialty": [
+        "General"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Marketing",
+      "file": "~/.opencode\\agents\\elias-marketing.yaml",
+      "invoke": "",
+      "role": "Marketing Council Expert",
+      "name": "elias-marketing",
+      "description": "Marketing Council Expert",
+      "id": "elias-marketing",
+      "specialty": [
+        "Marketing"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "CI/CD",
+      "file": "~/.opencode\\agents\\forge-cicd.yaml",
+      "invoke": "",
+      "role": "Forge - CI/CD Pipeline Specialist",
+      "name": "forge-cicd",
+      "description": "Forge - CI/CD Pipeline Specialist",
+      "id": "forge-cicd",
+      "specialty": [
+        "CI/CD"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "Stealth",
+      "file": "~/.opencode\\agents\\ghost-stealth.yaml",
+      "invoke": "",
+      "role": "Ghost - Stealth Operations & Security Auditor",
+      "name": "ghost-stealth",
+      "description": "Ghost - Stealth Operations & Security Auditor",
+      "id": "ghost-stealth",
+      "specialty": [
+        "Stealth"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Performance",
+      "file": "~/.opencode\\agents\\kenzo-performance.yaml",
+      "invoke": "",
+      "role": "Performance Council Expert",
+      "name": "kenzo-performance",
+      "description": "Performance Council Expert",
+      "id": "kenzo-performance",
+      "specialty": [
+        "Performance"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Design",
+      "file": "~/.opencode\\agents\\luna-design.yaml",
+      "invoke": "",
+      "role": "Design Council Expert",
+      "name": "luna-design",
+      "description": "Design Council Expert",
+      "id": "luna-design",
+      "specialty": [
+        "Design"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Database",
+      "file": "~/.opencode\\agents\\malik-database.yaml",
+      "invoke": "",
+      "role": "Database Council Expert",
+      "name": "malik-database",
+      "description": "Database Council Expert",
+      "id": "malik-database",
+      "specialty": [
+        "Database"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Security",
+      "file": "~/.opencode\\agents\\neo-security.yaml",
+      "invoke": "",
+      "role": "Security Council Expert",
+      "name": "neo-security",
+      "description": "Security Council Expert",
+      "id": "neo-security",
+      "specialty": [
+        "Security"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "API",
+      "file": "~/.opencode\\agents\\nexus-api.yaml",
+      "invoke": "",
+      "role": "Nexus - API Integration Specialist",
+      "name": "nexus-api",
+      "description": "Nexus - API Integration Specialist",
+      "id": "nexus-api",
+      "specialty": [
+        "API"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "primary",
+      "domain": "General",
+      "file": "~/.opencode\\agents\\novahiz-router.yaml",
+      "invoke": "",
+      "role": "NovaHiz OS Sovereign Orchestration Layer",
+      "name": "novahiz-router",
+      "description": "NovaHiz OS Sovereign Orchestration Layer",
+      "id": "novahiz-router",
+      "specialty": [
+        "General"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "DevOps",
+      "file": "~/.opencode\\agents\\orion-devops.yaml",
+      "invoke": "",
+      "role": "Orion - DevOps Infrastructure Expert",
+      "name": "orion-devops",
+      "description": "Orion - DevOps Infrastructure Expert",
+      "id": "orion-devops",
+      "specialty": [
+        "DevOps"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "Crisis",
+      "file": "~/.opencode\\agents\\phoenix-crisis.yaml",
+      "invoke": "",
+      "role": "Phoenix - Crisis Management Specialist",
+      "name": "phoenix-crisis",
+      "description": "Phoenix - Crisis Management Specialist",
+      "id": "phoenix-crisis",
+      "specialty": [
+        "Crisis"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "Realtime",
+      "file": "~/.opencode\\agents\\pulse-realtime.yaml",
+      "invoke": "",
+      "role": "Pulse - Real-time Systems Specialist",
+      "name": "pulse-realtime",
+      "description": "Pulse - Real-time Systems Specialist",
+      "id": "pulse-realtime",
+      "specialty": [
+        "Realtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Execution",
+      "file": "~/.opencode\\agents\\ralph-execution.yaml",
+      "invoke": "",
+      "role": "Execution Council Expert",
+      "name": "ralph-execution",
+      "description": "Execution Council Expert",
+      "id": "ralph-execution",
+      "specialty": [
+        "Execution"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "Design",
+      "file": "~/.opencode\\agents\\ryu-design.yaml",
+      "invoke": "",
+      "role": "Ry\u00f9 - Japanese Design Innovator",
+      "name": "ryu-design",
+      "description": "Ry\u00f9 - Japanese Design Innovator",
+      "id": "ryu-design",
+      "specialty": [
+        "Design"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "General",
+      "file": "~/.opencode\\agents\\samuel-legal.yaml",
+      "invoke": "",
+      "role": "Samuel - Strategic Legal Advisor",
+      "name": "samuel-legal",
+      "description": "Samuel - Strategic Legal Advisor",
+      "id": "samuel-legal",
+      "specialty": [
+        "General"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Quality",
+      "file": "~/.opencode\\agents\\sarah-quality.yaml",
+      "invoke": "",
+      "role": "Quality Council Expert",
+      "name": "sarah-quality",
+      "description": "Quality Council Expert",
+      "id": "sarah-quality",
+      "specialty": [
+        "Quality"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "General",
+      "file": "~/.opencode\\agents\\simon-data.yaml",
+      "invoke": "",
+      "role": "Simon - Data Science Analyst",
+      "name": "simon-data",
+      "description": "Simon - Data Science Analyst",
+      "id": "simon-data",
+      "specialty": [
+        "General"
+      ]
+    },
+    {
+      "model": "opencode/qwen3.5-plus",
+      "origin": "novahiz",
+      "type": "simulated",
+      "domain": "Legal",
+      "file": "~/.opencode\\agents\\vega-legal.yaml",
+      "invoke": "",
+      "role": "Vega - Legal & Compliance Specialist",
+      "name": "vega-legal",
+      "description": "Vega - Legal & Compliance Specialist",
+      "id": "vega-legal",
+      "specialty": [
+        "Legal"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Strategy",
+      "file": "~/.opencode\\agents\\victor-strategy.yaml",
+      "invoke": "",
+      "role": "Strategy Council Expert",
+      "name": "victor-strategy",
+      "description": "Strategy Council Expert",
+      "id": "victor-strategy",
+      "specialty": [
+        "Strategy"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "Initialization",
+      "file": "~/.opencode\\agents\\athena-initialization.yaml",
+      "invoke": "",
+      "role": "Project Initialization & Documentation Expert",
+      "name": "athena-initialization",
+      "description": "Project Initialization & Documentation Expert",
+      "id": "athena-initialization",
+      "specialty": [
+        "Initialization",
+        "Documentation",
+        "Project Setup"
+      ]
+    },
+    {
+      "model": "anthropic/claude-3-5-sonnet",
+      "origin": "novahiz",
+      "type": "subagent",
+      "domain": "BrowserAutomation",
+      "file": "~/.opencode\\agents\\ralph-browser.yaml",
+      "invoke": "",
+      "role": "Browser Execution Specialist",
+      "name": "ralph-browser",
+      "description": "Browser Execution Specialist",
+      "id": "ralph-browser",
+      "specialty": [
+        "BrowserAutomation"
+      ]
+    }
+  ],
+  "domains": {
+    "General": [
+      "cipher-crypto",
+      "novahiz-router",
+      "samuel-legal",
+      "simon-data"
+    ],
+    "Memory": [
+      "atlas-memory"
+    ],
+    "DevOps": [
+      "orion-devops"
+    ],
+    "Execution": [
+      "ralph-execution"
+    ],
+    "Legal": [
+      "vega-legal"
+    ],
+    "Design": [
+      "luna-design",
+      "ryu-design"
+    ],
+    "Database": [
+      "malik-database"
+    ],
+    "Security": [
+      "neo-security"
+    ],
+    "Stealth": [
+      "ghost-stealth"
+    ],
+    "Strategy": [
+      "victor-strategy"
+    ],
+    "Realtime": [
+      "pulse-realtime"
+    ],
+    "API": [
+      "nexus-api"
+    ],
+    "Quality": [
+      "sarah-quality"
+    ],
+    "CI/CD": [
+      "forge-cicd"
+    ],
+    "Architecture": [
+      "arthur-architecture"
+    ],
+    "Performance": [
+      "kenzo-performance"
+    ],
+    "Marketing": [
+      "elias-marketing"
+    ],
+    "Crisis": [
+      "phoenix-crisis"
+    ],
+    "Initialization": [
+      "athena-initialization"
+    ],
+    "BrowserAutomation": [
+      "ralph-browser"
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "v": "1.8",
+  "branch": "01_Agents",
+  "created": "2026-05-23T14:22:15.999644",
+  "updated": "2026-05-23T19:25:00",
+  "nodes": [
+    {
+      "id": "arthur-architecture",
+      "path": "memory/01_Agents/arthur-architecture.md",
+      "s": "arthur-architecture - Architecture Council Expert",
+      "t": [
+        "Architecture",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "atlas-memory",
+      "path": "memory/01_Agents/atlas-memory.md",
+      "s": "atlas-memory - Memory Council Expert",
+      "t": [
+        "Memory",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "cipher-crypto",
+      "path": "memory/01_Agents/cipher-crypto.md",
+      "s": "cipher-crypto - Cipher - Cryptography & Security Expert",
+      "t": [
+        "General",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "elias-marketing",
+      "path": "memory/01_Agents/elias-marketing.md",
+      "s": "elias-marketing - Marketing Council Expert",
+      "t": [
+        "Marketing",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "forge-cicd",
+      "path": "memory/01_Agents/forge-cicd.md",
+      "s": "forge-cicd - Forge - CI/CD Pipeline Specialist",
+      "t": [
+        "CI/CD",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "ghost-stealth",
+      "path": "memory/01_Agents/ghost-stealth.md",
+      "s": "ghost-stealth - Ghost - Stealth Operations & Security Auditor",
+      "t": [
+        "Stealth",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "kenzo-performance",
+      "path": "memory/01_Agents/kenzo-performance.md",
+      "s": "kenzo-performance - Performance Council Expert",
+      "t": [
+        "Performance",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "luna-design",
+      "path": "memory/01_Agents/luna-design.md",
+      "s": "luna-design - Design Council Expert",
+      "t": [
+        "Design",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "malik-database",
+      "path": "memory/01_Agents/malik-database.md",
+      "s": "malik-database - Database Council Expert",
+      "t": [
+        "Database",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "neo-security",
+      "path": "memory/01_Agents/neo-security.md",
+      "s": "neo-security - Security Council Expert",
+      "t": [
+        "Security",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "nexus-api",
+      "path": "memory/01_Agents/nexus-api.md",
+      "s": "nexus-api - Nexus - API Integration Specialist",
+      "t": [
+        "API",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "novahiz-router",
+      "path": "memory/01_Agents/novahiz-router.md",
+      "s": "novahiz-router - NovaHiz OS Sovereign Orchestration Layer",
+      "t": [
+        "General",
+        "primary"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "orion-devops",
+      "path": "memory/01_Agents/orion-devops.md",
+      "s": "orion-devops - Orion - DevOps Infrastructure Expert",
+      "t": [
+        "DevOps",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "phoenix-crisis",
+      "path": "memory/01_Agents/phoenix-crisis.md",
+      "s": "phoenix-crisis - Phoenix - Crisis Management Specialist",
+      "t": [
+        "Crisis",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "pulse-realtime",
+      "path": "memory/01_Agents/pulse-realtime.md",
+      "s": "pulse-realtime - Pulse - Real-time Systems Specialist",
+      "t": [
+        "Realtime",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "ralph-execution",
+      "path": "memory/01_Agents/ralph-execution.md",
+      "s": "ralph-execution - Execution Council Expert",
+      "t": [
+        "Execution",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "ryu-design",
+      "path": "memory/01_Agents/ryu-design.md",
+      "s": "ryu-design - Ry\u00f9 - Japanese Design Innovator",
+      "t": [
+        "Design",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "sarah-quality",
+      "path": "memory/01_Agents/sarah-quality.md",
+      "s": "sarah-quality - Quality Council Expert",
+      "t": [
+        "Quality",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "vega-legal",
+      "path": "memory/01_Agents/vega-legal.md",
+      "s": "vega-legal - Vega - Legal & Compliance Specialist",
+      "t": [
+        "Legal",
+        "simulated"
+      ],
+      "p": "medium"
+    },
+    {
+      "id": "victor-strategy",
+      "path": "memory/01_Agents/victor-strategy.md",
+      "s": "victor-strategy - Strategy Council Expert",
+      "t": [
+        "Strategy",
+        "subagent"
+      ],
+      "p": "high"
+    },
+    {
+      "id": "samuel-legal",
+      "path": "memory/01_Agents/samuel-legal.md",
+      "s": "samuel-legal - Sage-11 - Strategic Legal Advisor",
+      "t": ["Legal", "simulated"],
+      "p": "medium"
+    },
+    {
+      "id": "simon-data",
+      "path": "memory/01_Agents/simon-data.md",
+      "s": "simon-data - Sage-07 - Data Science Analyst",
+      "t": ["DataScience", "simulated"],
+      "p": "medium"
+    },
+    {
+      "id": "athena-initialization",
+      "path": "memory/01_Agents/athena-initialization.md",
+      "s": "athena-initialization - Project Initialization & Docs",
+      "t": ["Initialization", "subagent"],
+      "p": "high"
+    }
+  ]
+}

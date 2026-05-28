@@ -1,0 +1,13 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "version": "1.9",
+  "description": "All 59 skills, medium context, IDE-based.",
+  "constraints": { "contextBudget": 4, "skillLoadMode": "all", "symlinkNatively": true },
+  "skills": { "include": "all", "exclude": [], "loadPriority": ["novahiz-boot","novahiz-auto","systematic-debugging","frontend-design"], "lazyLoad": [], "summaryMaxChars": 250 },
+  "identity": { "fileName": "CLAUDE.md", "truncatable": false, "maxChars": null },
+  "memory": { "ntmEnabled": true, "branches": ["00_Core","01_Agents","02_Projects","03_Patterns","05_Context"], "autoSave": false, "pruneEnabled": true, "pruneAfterSessions": 7 },
+  "agentRouting": { "maxPerTask": 3, "hotAgentsEnabled": true, "hotAgentsLimit": 4, "fallbackChain": ["sarah","ralph"] },
+  "novahiz": { "enabled": true, "bootOnStart": false, "systemSkills": ["novahiz-boot","novahiz-auto","novahiz-selection"], "hiddenSkills": [] },
+  "install": { "method": "symlink", "skillsTarget": "skills/", "identityTarget": "CLAUDE.md", "shellInit": null, "postInstallScript": "novahiz sync --tool=cursor" }
+}

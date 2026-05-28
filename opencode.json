@@ -1,0 +1,70 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "novahiz-router",
+  "model": "opencode/qwen3.5-plus",
+  "small_model": "opencode/qwen3.5-plus",
+  "instructions": ["AGENTS.md"],
+  "plugin": ["opencode-agent-browser"],
+  "skills": {
+    "paths": ["~/.opencode/skills", "~/.opencode/.agents/skills"]
+  },
+  "mcp": {
+    "novahiz": {
+      "type": "local",
+      "command": "python3",
+      "args": ["/home/novahiz/.opencode/mcp/novahiz-mcp.py", "--mcp"],
+      "enabled": true
+    },
+    "obsidian": {
+      "type": "local",
+      "command": "npx",
+      "args": ["-y", "@wickedevolutions/mcp-obsidian"],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "/home/novahiz/Documents/llm-wiki"
+      },
+      "enabled": true,
+      "note": "Obsidian MCP for wiki access — vault at ~/Documents/llm-wiki"
+    },
+    "tradingview": {
+      "type": "local",
+      "command": "node",
+      "args": ["/home/novahiz/.opencode/mcp/tradingview-mcp/versions/v1/src/server.js"],
+      "enabled": true,
+      "note": "Requires TradingView Desktop running with --remote-debugging-port=9222"
+    },
+    "stitch": {
+      "type": "local",
+      "command": "python3",
+      "args": ["/home/novahiz/.opencode/mcp/stitch-mcp-wrapper.py"],
+      "enabled": true,
+      "note": "Requires STITCH_API_KEY env var or ~/.novahiz/.env"
+    },
+    "github": {
+      "type": "http",
+      "url": "https://github-mcp.local",
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "enabled": false,
+      "note": "Set GITHUB_TOKEN env var and change enabled to true"
+    },
+    "supabase": {
+      "type": "local",
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--project-ref", "nfmsyivyhsjatazhcjgu"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
+      },
+      "enabled": true,
+      "note": "Supabase MCP for project nfmsyivyhsjatazhcjgu"
+    }
+  },
+  "tools": {
+    "novahiz_route": true,
+    "novahiz_auto": true,
+    "novahiz_execute": true,
+    "novahiz_list_agents": true,
+    "novahiz_search": true,
+    "novahiz_health": true
+  }
+}

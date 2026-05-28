@@ -1,0 +1,148 @@
+#!/bin/bash
+# =============================================================================
+# novahiz — Commande unifiée Novahiz OS
+# =============================================================================
+
+NOVAHIZ_DIR="$HOME/.opencode"
+MCP_DIR="$NOVAHIZ_DIR/mcp"
+SCRIPTS_DIR="$NOVAHIZ_DIR/scripts"
+RUNTIME_DIR="$NOVAHIZ_DIR/runtime"
+
+# Couleurs
+CYAN='\033[0;36m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+usage() {
+    echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+    echo -e "${CYAN}  NOVAHIZ OS${NC} - Intelligent Agent Orchestration"
+    echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+    echo ""
+    echo "Usage: novahiz <command> [options]"
+    echo ""
+    echo "Commands:"
+    echo "  route <task>         Route task to optimal agent"
+    echo "  run <task>           Route + execute automatically"
+    echo "  exec <agent> <task>  Execute with specific agent"
+    echo "  agents               List all agents"
+    echo "  search <query>       Search agents by keyword"
+    echo "  scoreboard           Agent performance rankings"
+    echo "  health               System health check"
+    echo "  tasks                Task processor status"
+    echo "  mcp                  MCP server status"
+    echo "  status               Runtime status (providers, models, executions)"
+    echo "  config               Provider/model configuration"
+    echo "  metrics              Usage statistics (add: --today, --week, or hours)"
+    echo "  health               System health check (daemons, API, config)"
+    echo ""
+    echo "Quick:"
+    echo "  nv <command>         Alias for novahiz"
+    echo ""
+}
+
+case "${1:-help}" in
+    route|r)
+        shift
+        python3 "$SCRIPTS_DIR/novahiz-cli.py" route "$*"
+        ;;
+    run|auto|a)
+        shift
+        python3 "$MCP_DIR/novahiz-mcp.py" auto "$*"
+        ;;
+    exec|e)
+        shift
+        agent="$1"
+        shift
+        python3 "$MCP_DIR/novahiz-mcp.py" execute "$agent" "$*"
+        ;;
+    agents|list|ls)
+        python3 "$SCRIPTS_DIR/novahiz-cli.py" agents
+        ;;
+    search)
+        shift
+        python3 "$SCRIPTS_DIR/novahiz-cli.py" search "$*"
+        ;;
+    scoreboard|score)
+        python3 "$SCRIPTS_DIR/novahiz-cli.py" scoreboard
+        ;;
+    health|h)
+        python3 "$MCP_DIR/novahiz-mcp.py" health
+        ;;
+    tasks|t)
+        python3 "$MCP_DIR/task-processor.py" status
+        ;;
+    mcp|m)
+        echo -e "${CYAN}MCP Server Status:${NC}"
+        pgrep -f "novahiz-mcp.py" > /dev/null && echo -e "  Running: ${GREEN}YES${NC}" || echo -e "  Running: ${YELLOW}NO${NC}"
+        echo "  Config: $NOVAHIZ_DIR/opencode.json"
+        echo "  Tools: novahiz_route, novahiz_execute, novahiz_auto, novahiz_list_agents, novahiz_search, novahiz_health"
+        ;;
+    status|s)
+        python3 "$RUNTIME_DIR/novahiz-runtime.py" status
+        ;;
+    config|c)
+        python3 "$SCRIPTS_DIR/novahiz-config.py" "${@:2}"
+        ;;
+    metrics|stats)
+        python3 "$NOVAHIZ_DIR/metrics/metrics.py" "${@:2}"
+        ;;
+    health|check|h)
+        echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+        echo -e "${CYAN}  NOVAHIZ OS — HEALTH CHECK${NC}"
+        echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+        echo ""
+        
+        # Check daemons
+        echo -e "${YELLOW}DAEMONS:${NC}"
+        pgrep -f "novahiz-runtime.py" > /dev/null && echo -e "  ${GREEN}●${NC} Runtime" || echo -e "  ${RED}○${NC} Runtime"
+        pgrep -f "opencode-bridge.py" > /dev/null && echo -e "  ${GREEN}●${NC} Bridge" || echo -e "  ${RED}○${NC} Bridge"
+        pgrep -f "novahiz-mcp-http.py" > /dev/null && echo -e "  ${GREEN}●${NC} MCP HTTP" || echo -e "  ${RED}○${NC} MCP HTTP"
+        pgrep -f "task-processor.py" > /dev/null && echo -e "  ${GREEN}●${NC} Task Processor" || echo -e "  ${RED}○${NC} Task Processor"
+        echo ""
+        
+        # Check HTTP health
+        echo -e "${YELLOW}HTTP SERVER:${NC}"
+        if curl -s http://127.0.0.1:8765/health 2>/dev/null | grep -q '"success": true'; then
+            echo -e "  ${GREEN}●${NC} Health endpoint (port 8765)"
+        else
+            echo -e "  ${RED}○${NC} Health endpoint"
+        fi
+        echo ""
+        
+        # Check API keys
+        echo -e "${YELLOW}API KEYS:${NC}"
+        [ -n "$OPENROUTER_API_KEY" ] && echo -e "  ${GREEN}●${NC} OPENROUTER_API_KEY" || echo -e "  ${RED}○${NC} OPENROUTER_API_KEY"
+        [ -n "$OPENCODE_ZEN_API_KEY" ] && echo -e "  ${GREEN}●${NC} OPENCODE_ZEN_API_KEY" || echo -e "  ${RED}○${NC} OPENCODE_ZEN_API_KEY"
+        echo ""
+        
+        # Check config
+        echo -e "${YELLOW}CONFIGURATION:${NC}"
+        [ -f "$NOVAHIZ_DIR/opencode.json" ] && echo -e "  ${GREEN}●${NC} opencode.json" || echo -e "  ${RED}○${NC} opencode.json"
+        [ -f "$RUNTIME_DIR/config.json" ] && echo -e "  ${GREEN}●${NC} runtime config" || echo -e "  ${RED}○${NC} runtime config"
+        echo ""
+        
+        # Summary
+        echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+        RUNNING=$(pgrep -fc "novahiz-runtime.py|opencode-bridge.py|novahiz-mcp-http.py|task-processor.py" 2>/dev/null || echo "0")
+        echo -e "Services: ${GREEN}$RUNNING/4${NC} running"
+        
+        if [ "$RUNNING" -eq 4 ]; then
+            echo -e "Status: ${GREEN}● All systems operational${NC}"
+        elif [ "$RUNNING" -ge 2 ]; then
+            echo -e "Status: ${YELLOW}● Partial service${NC}"
+        else
+            echo -e "Status: ${RED}● Services down${NC}"
+        fi
+        echo -e "${CYAN}═══════════════════════════════════════════════════════════${NC}"
+        ;;
+    help|--help|-h|"")
+        usage
+        ;;
+    *)
+        echo -e "${RED}Unknown command: $1${NC}"
+        usage
+        exit 1
+        ;;
+esac

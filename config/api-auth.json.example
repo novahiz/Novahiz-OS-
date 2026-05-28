@@ -1,0 +1,9 @@
+# NovaHiz OS - API Authentication Configuration Example
+# Copy this file to api-auth.json and configure
+
+{
+  "enabled": false,
+  "token": "YOUR_SECRET_TOKEN_HERE",
+  "createdAt": null,
+  "expiresAt": null
+}

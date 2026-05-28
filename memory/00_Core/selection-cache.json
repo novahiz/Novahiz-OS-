@@ -1,0 +1,83 @@
+{
+  "v": "1.4",
+  "staticRoutes": [
+    {
+      "task": "browser, devtools, debug browser, inspect browser, e2e, scrap, screenshot, dom, console network, navigate page, click fill form, automation browser",
+      "primary": "ralph-browser",
+      "primaryWeight": 1.0,
+      "adjacent": "ralph-execution",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "build, implement, ship",
+      "primary": "ralph-execution",
+      "primaryWeight": 1.0,
+      "adjacent": "sarah-quality",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "design, ui, ux",
+      "primary": "luna-design",
+      "primaryWeight": 1.0,
+      "adjacent": "arthur-architecture",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "architecture, system",
+      "primary": "arthur-architecture",
+      "primaryWeight": 1.0,
+      "adjacent": "victor-strategy",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "performance, optimize",
+      "primary": "kenzo-performance",
+      "primaryWeight": 1.0,
+      "adjacent": "ralph-execution",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "growth, marketing, launch",
+      "primary": "elias-marketing",
+      "primaryWeight": 1.0,
+      "adjacent": "sarah-quality",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "database, supabase, api",
+      "primary": "malik-database",
+      "primaryWeight": 1.0,
+      "adjacent": "nexus-api",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "bug, fix, quality",
+      "primary": "sarah-quality",
+      "primaryWeight": 1.0,
+      "adjacent": "phoenix-crisis",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "plan, strategy, roadmap",
+      "primary": "victor-strategy",
+      "primaryWeight": 1.0,
+      "adjacent": "arthur-architecture",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "audit, review",
+      "primary": "sarah-quality",
+      "primaryWeight": 1.0,
+      "adjacent": "neo-security",
+      "adjacentWeight": 0.5
+    },
+    {
+      "task": "security, pentest",
+      "primary": "neo-security",
+      "primaryWeight": 1.0,
+      "adjacent": "cipher-crypto",
+      "adjacentWeight": 0.5
+    }
+  ],
+  "lastUpdated": "2026-05-24T00:00:00.000000"
+}
