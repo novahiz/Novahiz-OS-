@@ -1,305 +1,174 @@
-# 🚀 NOVAHIZ OS v6.0
-
-**Long Term Stability Release**  
-**Version:** 6.0.0  
-**Status:** ✅ Production Ready
-
----
-
-## 📋 TABLE DES MATIÈRES
-
-1. [Installation](#installation)
-2. [Configuration](#configuration)
-3. [Usage](#usage)
-4. [Architecture](#architecture)
-5. [Maintenance](#maintenance)
-6. [Troubleshooting](#troubleshooting)
-
----
-
-## 🔧 INSTALLATION
-
-### Prérequis
-
-- Python 3.10+
-- OpenCode (optional, for desktop integration)
-- API keys (OpenRouter, OpenCode Zen)
-
-### Quick Start
-
-```bash
-# 1. Clone/setup
-cd ~/.opencode
-
-# 2. Configure environment
-cp ~/.opencode/.env.example ~/.novahiz/.env
-# Edit ~/.novahiz/.env with your API keys
-
-# 3. Install dependencies (optional)
-pip install -r requirements.txt
-
-# 4. Start services
-./scripts/novahiz-autostart.sh
-
-# 5. Verify
-nv health
-```
+<div align="center">
+  <h1>🚀 Novahiz OS v6.0</h1>
+  <p><strong>Multi-Agent Orchestration System for AI Development</strong></p>
+  <p>
+    <a href="https://github.com/novahiz/Novahiz-OS-">
+      <img src="https://img.shields.io/badge/version-6.0.0-blue?style=flat-square" alt="Version">
+    </a>
+    <a href="https://github.com/novahiz/Novahiz-OS-/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+    </a>
+    <img src="https://img.shields.io/badge/status-production%20ready-success?style=flat-square" alt="Status">
+    <img src="https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey?style=flat-square" alt="Platform">
+    <img src="https://img.shields.io/badge/agents-24-orange?style=flat-square" alt="Agents">
+    <img src="https://img.shields.io/badge/skills-64-purple?style=flat-square" alt="Skills">
+  </p>
+</div>
 
 ---
 
-## ⚙️ CONFIGURATION
-
-### Environment Variables
-
-**File:** `~/.novahiz/.env`
+## ⚡ One-Line Install
 
 ```bash
-# API Keys (required)
-OPENROUTER_API_KEY="sk-or-..."
-OPENCODE_ZEN_API_KEY="sk-..."
-
-# Optional
-NOVAHIZ_LOG_LEVEL="INFO"
-NOVAHIZ_MAX_CONCURRENT="5"
-NOVAHIZ_TIMEOUT="120"
+# Linux / macOS
+curl -fsSL https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.sh | bash
 ```
 
-### Config Files
+```powershell
+# Windows (PowerShell as Administrator)
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Invoke-RestMethod 'https://raw.githubusercontent.com/novahiz/Novahiz-OS-/main/install.ps1'))"
+```
 
-| File | Purpose |
-|------|---------|
-| `~/.novahiz/.env` | Environment variables (secrets) |
-| `~/.opencode/runtime/config.json` | Runtime configuration |
-| `~/.config/opencode/opencode.jsonc` | OpenCode integration |
+> Detects your OS, installs prerequisites (Python 3.10+, Node.js 18+, Git), clones the system, patches paths, and runs the interactive config wizard.
 
 ---
 
-## 💻 USAGE
+## ✨ Overview
 
-### CLI Commands
+Novahiz OS turns **any AI coding agent** into a coordinated multi-agent workforce. It provides 24 specialized agents, 64 skills, and 7 MCP servers that work together — routing tasks to the right expert agent automatically.
 
-```bash
-# Health & Status
-nv health              # System health check
-nv status              # Runtime status
-nv metrics             # Usage statistics
-nv metrics today       # Last 24h
-nv metrics week        # Last 168h
+### What makes it different?
 
-# Execution
-nv run "task"          # Route + execute
-nv agents              # List all agents
-nv search "keyword"    # Search agents
-
-# Configuration
-nv config models       # Model configuration
-nv config providers    # Provider configuration
-
-# Services
-novahiz-autostart.sh   # Start all services
-novahiz-stop.sh        # Stop all services
-```
-
-### OpenCode Desktop
-
-After configuration, use in chat:
-```
-@novahiz_list_agents
-@novahiz_auto task="Build API"
-```
+| Feature | Description |
+|---------|-------------|
+| **Smart Router** | Routes each task to the optimal agent based on domain, complexity, and budget |
+| **24 Specialized Agents** | From architecture (Arthur) to security (Neo) to design (Luna) |
+| **64 Skills** | Reusable capabilities from brainstorming to deployment |
+| **7 MCP Servers** | Chrome DevTools, TradingView, monitoring, bridge, stitch, task processor |
+| **Self-Healing** | Auto-detects and fixes engine errors at runtime |
+| **Cross-Platform** | Linux, macOS, Windows — same experience everywhere |
+| **One Command Install** | `curl | bash` or `iex ((Invoke-RestMethod ...))` |
+| **CI/CD Ready** | GitHub Actions, pre-commit hooks, health checks built in |
 
 ---
 
-## 🏗️ ARCHITECTURE
+## 🧠 Agent Roster (24)
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    OPENCODE DESKTOP                     │
-│              (MCP Client + Plugin UI)                   │
-└─────────────────────────────────────────────────────────┘
-                            │
-                            │ MCP Protocol
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│                   NOVAHIZ SERVICES                      │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
-│  │   Runtime   │  │   Bridge    │  │  MCP HTTP   │     │
-│  │   Daemon    │  │   Daemon    │  │   Server    │     │
-│  └─────────────┘  └─────────────┘  └─────────────┘     │
-│  ┌─────────────┐  ┌─────────────┐                       │
-│  │    Task     │  │   Metrics   │                       │
-│  │  Processor  │  │  Collector  │                       │
-│  └─────────────┘  └─────────────┘                       │
-└─────────────────────────────────────────────────────────┘
-                            │
-                            │ Multi-Provider LLM
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│                   LLM PROVIDERS                         │
-│  • OpenRouter (Primary) — 356+ modèles                  │
-│  • OpenCode Zen (Fallback) — Local server               │
-└─────────────────────────────────────────────────────────┘
-```
-
-### Components
-
-| Component | File | Purpose |
-|-----------|------|---------|
-| Runtime | `runtime/novahiz-runtime.py` | LLM execution with fallbacks |
-| Bridge | `mcp/opencode-bridge.py` | MCP ↔ Runtime bridge |
-| MCP HTTP | `mcp/novahiz-mcp-http.py` | HTTP API server |
-| MCP Server | `mcp/novahiz-mcp.py` | MCP protocol server |
-| Metrics | `metrics/metrics.py` | Usage tracking |
-| CLI | `bin/novahiz` | Command-line interface |
+| Agent | Domain | Model |
+|-------|--------|-------|
+| Arthur | Architecture | Claude 3.5 Sonnet |
+| Athena | Initialization | Claude 3.5 Sonnet |
+| Atlas | Memory | Claude 3.5 Sonnet |
+| Elias | Marketing | Claude 3.5 Sonnet |
+| Kenzo | Performance | Claude 3.5 Sonnet |
+| Luna | Design | Claude 3.5 Sonnet |
+| Malik | Database | Claude 3.5 Sonnet |
+| Neo | Security | Claude 3.5 Sonnet |
+| Ralph | Browser/Execution | Claude 3.5 Sonnet |
+| Sarah | Quality/Testing | Claude 3.5 Sonnet |
+| Victor | Strategy | Claude 3.5 Sonnet |
+| Cipher | Cryptography | Qwen 3.6 Plus |
+| Forge | CI/CD | Qwen 3.5 Plus |
+| Ghost | Stealth | Qwen 3.5 Plus |
+| Nexus | API | Qwen 3.5 Plus |
+| Orion | DevOps | Qwen 3.5 Plus |
+| Phoenix | Crisis | Qwen 3.5 Plus |
+| Pulse | Realtime | Qwen 3.5 Plus |
+| Ryu | Design | Qwen 3.5 Plus |
+| Samuel | Legal | Qwen 3.5 Plus |
+| Simon | Data | Qwen 3.5 Plus |
+| Vega | Legal | Qwen 3.5 Plus |
+| Novahiz | Router (primary) | Claude 3.5 Sonnet |
 
 ---
 
-## 🔧 MAINTENANCE
+## 🛠️ MCP Servers
 
-### Daily Operations
+| Server | Purpose |
+|--------|---------|
+| `novahiz-mcp.py` | Core MCP — agent routing, task execution |
+| `novahiz-mcp-http.py` | HTTP transport layer |
+| `opencode-bridge.py` | OpenCode ↔ Novahiz bridge |
+| `monitoring-mcp.py` | Health monitoring & metrics |
+| `stitch-mcp-wrapper.py` | Google Stitch UI generation |
+| `task-processor.py` | Async task queue |
+| `tradingview-mcp/` | TradingView chart automation |
 
-```bash
-# Check health
-nv health
+---
 
-# View metrics
-nv metrics today
+## 📦 Project Structure
 
-# Check logs
-tail -f ~/.opencode/logs/opencode-bridge.log
 ```
-
-### Weekly Maintenance
-
-```bash
-# Rotate logs
-logrotate -f ~/.opencode/logs/logrotate.conf
-
-# Clear old executions
-find ~/.opencode/executions -name "exec_*.json" -mtime +7 -delete
-
-# Update metrics backup
-cp ~/.opencode/metrics/usage.json ~/.opencode/metrics/usage.json.backup
-```
-
-### Monthly Maintenance
-
-```bash
-# Run full test suite
-cd ~/.opencode/tests && python3 test_novahiz.py && ./run-integration-tests.sh
-
-# Check for updates
-git pull origin main  # If using git
-
-# Review error logs
-grep "ERROR" ~/.opencode/logs/*.log | tail -50
-```
-
-### Systemd Services (Production)
-
-```bash
-# Install services
-sudo cp ~/.opencode/systemd/*.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable novahiz-runtime novahiz-bridge
-sudo systemctl start novahiz-runtime novahiz-bridge
-
-# Check status
-systemctl status novahiz-runtime
-systemctl status novahiz-bridge
-
-# View logs
-journalctl -u novahiz-runtime -f
-journalctl -u novahiz-bridge -f
+~/.opencode/
+├── agents/          # 24 agent YAML configs + markdown docs
+├── bin/             # CLI tools (nv, nv-route, nv-exec, ...)
+├── config/          # model-router.json, agent-registry.json, scoreboard.json
+├── config-wizard/   # Interactive API key + model setup
+├── engine/          # Router, executor, registry, scoring, learning
+├── installers/      # 13 modular component installers
+├── mcp/             # 7 MCP servers + TradingView MCP
+├── memory/          # Context, sessions, agent logs, decisions
+├── plugins/         # Plugin system (novahiz-plugin, auto-executor)
+├── runtime/         # Unified runtime, daemon, rate limiter
+├── scripts/         # 60+ utility scripts
+├── skills/          # 64 reusable skill packages
+├── systemd/         # Service files for Linux
+├── docs/            # Full documentation
+└── install.sh       # Entry point (curl | bash)
 ```
 
 ---
 
-## 🐛 TROUBLESHOOTING
-
-### Services Not Starting
+## 🚦 Quick Start
 
 ```bash
-# Check if running
-ps aux | grep novahiz
-
-# Stop all
-novahiz-stop.sh
-
-# Start all
-novahiz-autostart.sh
-
-# Check logs
-tail -100 ~/.opencode/logs/autostart.log
+# After installation, use the CLI:
+nv route "explore this project"    # Route a task to the right agent
+nv health                          # System health check
+nv agents                          # List all agents
+nv doctor                          # Diagnostics
+opencode                           # Launch OpenCode with Novahiz
 ```
 
-### API Key Issues
+### Configure API Keys
 
 ```bash
-# Verify .env exists
-ls -la ~/.novahiz/.env
+# Interactive wizard:
+nv config
 
-# Source environment
-source ~/.novahiz/.env
-
-# Verify keys loaded
-echo $OPENROUTER_API_KEY | cut -c1-20
-```
-
-### MCP Not Appearing in OpenCode
-
-1. Check config: `cat ~/.config/opencode/opencode.jsonc`
-2. Verify MCP server: `python3 ~/.opencode/mcp/novahiz-mcp.py --mcp`
-3. Restart OpenCode Desktop
-
-### High Memory Usage
-
-```bash
-# Check memory
-ps aux | grep novahiz | awk '{print $6/1024 " MB - " $11}'
-
-# Restart services
-novahiz-stop.sh && novahiz-autostart.sh
-
-# Clear metrics cache
-rm ~/.opencode/metrics/usage.json
+# Or manually:
+nano ~/.novahiz/.env
+# Add: OPENROUTER_API_KEY=sk-or-...
 ```
 
 ---
 
-## 📞 SUPPORT
+## 📚 Documentation
 
-**Documentation:** `~/.opencode/README.md`  
-**Logs:** `~/.opencode/logs/`  
-**Tests:** `~/.opencode/tests/`  
-**Version:** See `~/.opencode/VERSION`
-
----
-
-[Novahiz OS v6.0 — Long Term Stability]
-
----
-
-## 🔧 OPTIONAL: Install Linters
-
-**Note:** Linters are optional for development. Novahiz OS runs without them.
-
-```bash
-# Install pip if missing
-sudo apt-get install -y python3-pip  # Debian/Ubuntu
-
-# Install linters
-pip3 install black flake8 pylint coverage
-
-# Run linters
-cd ~/.opencode
-black mcp/*.py runtime/*.py --check
-flake8 mcp/*.py runtime/*.py
-
-# Run coverage
-cd tests
-./run-coverage.sh
-```
+| Resource | Link |
+|----------|------|
+| Full Documentation | `~/.opencode/docs/INSTALL.md` |
+| Architecture Guide | `~/.opencode/docs/ARCHITECTURE.md` |
+| API Reference | `~/.opencode/docs/API.md` |
+| Deployment Guide | `~/.opencode/docs/DEPLOYMENT.md` |
+| Recovery Guide | `~/.opencode/docs/RECOVERY.md` |
 
 ---
 
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+All contributors must sign the [CLA](./docs/legal/CLA_TEMPLATE.md).
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see [LICENSE](./LICENSE) file for details.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by the Novahiz team</sub>
+</div>
