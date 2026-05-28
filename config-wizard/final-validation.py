@@ -74,8 +74,25 @@ def main():
     env_file = Path(HOME) / ".novahiz" / ".env"
     check("API keys file", env_file.exists() and env_file.stat().st_mode & 0o600 == 0o600)
     if env_file.exists():
-        keys = [l.split("=")[0] for l in env_file.read_text().splitlines() if "=" in l]
+        keys = [l.split("=")[0] for l in env_file.read_text().splitlines() if "=" in l and not l.strip().startswith("#")]
         check(f"Keys configured: {', '.join(keys)}", bool(keys))
+    
+    # Validate model vars if present (warnings only)
+    if env_file.exists():
+        model_vars = {k: v for k, v in [
+            (l.split("=", 1)[0].strip(), l.split("=", 1)[1].strip())
+            for l in env_file.read_text().splitlines()
+            if "=" in l and not l.strip().startswith("#") and "MODEL" in l.split("=")[0]
+        ]}
+        for var, val in model_vars.items():
+            if not val:
+                check(f"  {var}: empty (will use default)", True)
+            elif var.endswith("_FALLBACKS"):
+                check(f"  {var}: {len(val.split(','))} fallback(s)", "/" in val.replace(",", "/"))
+            elif var == "NOVAHIZ_PREMIUM_BUDGET":
+                check(f"  {var}: {val}", val.isdigit())
+            else:
+                check(f"  {var}: {val}", "/" in val)
     print()
 
     # Obsidian vault

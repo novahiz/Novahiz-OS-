@@ -44,6 +44,25 @@ summary() {
 OS="${OS:-unknown}"; ARCH="${ARCH:-$(uname -m)}"
 DISTRO="${DISTRO:-}"; PKG="${PKG:-}"
 
+# ---- Load .env (reusable across scripts) ----
+# Usage: load_env                  # loads all vars from ~/.novahiz/.env
+#        load_env NOVAHIZ_         # loads only NOVAHIZ_* vars
+#        load_env "" /custom/path  # loads from custom path
+load_env() {
+    local prefix="${1:-}"
+    local env_file="${2:-$HOME/.novahiz/.env}"
+    [ -f "$env_file" ] || return 1
+    local key val
+    while IFS='=' read -r key val || [ -n "$key" ]; do
+        key="${key%%[# ]*}"
+        [ -z "$key" ] && continue
+        [ -n "$prefix" ] && [[ "$key" != "$prefix"* ]] && continue
+        val="${val#\"}"; val="${val%\"}"
+        val="${val#\'}"; val="${val%\'}"
+        export "$key=$val"
+    done < "$env_file"
+}
+
 # ---- Ensure we're running from NOVAHIZ_DIR ----
 NOVAHIZ_DIR="${NOVAHIZ_DIR:-$HOME/.opencode}"
 ensure_novahiz_dir() {

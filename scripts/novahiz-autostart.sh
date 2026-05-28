@@ -31,6 +31,12 @@ else
     log "⚠ WARNING: $ENV_FILE not found"
 fi
 
+# Apply model configuration from .env overrides
+if command -v python3 &>/dev/null; then
+    python3 "$NOVAHIZ_DIR/scripts/python/apply-env-models.py" 2>/dev/null || \
+        log "⚠ Model override script skipped (no changes or error)"
+fi
+
 # Verify API keys
 if [ -z "$OPENROUTER_API_KEY" ]; then
     log "❌ ERROR: OPENROUTER_API_KEY not set"
