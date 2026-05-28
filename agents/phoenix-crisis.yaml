@@ -2,6 +2,7 @@ name: phoenix-crisis
 role: Phoenix - Crisis Management Specialist
 type: simulated
 modelTier: flash
+model: opencode/qwen3.5-plus
 domain: crisis
 score: 87
 

@@ -2,6 +2,7 @@ name: ryu-design
 role: Ryù - Japanese Design Innovator
 type: simulated
 modelTier: flash
+model: opencode/qwen3.5-plus
 domain: design
 score: 90
 origin: Japan

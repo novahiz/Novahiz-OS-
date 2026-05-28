@@ -2,6 +2,7 @@ name: orion-devops
 role: Orion - DevOps Infrastructure Expert
 type: simulated
 modelTier: flash
+model: opencode/qwen3.5-plus
 domain: devops
 score: 92
 

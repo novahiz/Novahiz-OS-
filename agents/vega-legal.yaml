@@ -2,6 +2,7 @@ name: vega-legal
 role: Vega - Legal & Compliance Specialist
 type: simulated
 modelTier: flash
+model: opencode/qwen3.5-plus
 domain: legal
 score: 85
 

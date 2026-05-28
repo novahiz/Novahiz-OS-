@@ -5,8 +5,8 @@
     "flash": {
       "primary": "openrouter/qwen/qwen3.5-9b",
       "fallbacks": [
-        "openrouter/stepfun/step-3.5-flash",
-        "openrouter/qwen/qwen3.5-flash-02-23"
+        "openrouter/qwen/qwen3.5-flash-02-23",
+        "openrouter/stepfun/step-3.5-flash"
       ],
       "description": "Fast, cheap — Q&A, formatting, search, syntax",
       "targetRatio": 0.6
@@ -16,24 +16,23 @@
       "fallbacks": [
         "openrouter/qwen/qwen3.6-flash",
         "openrouter/qwen/qwen3.6-35b-a3b",
-        "openrouter/z-ai/glm-5",
         "openrouter/moonshotai/kimi-k2.5"
       ],
-      "description": "Balanced — build, refactor, features, tests",
+      "description": "Simulated agents — build, refactor, features, tests",
       "targetRatio": 0.3
     },
     "premium": {
-      "primary": "openrouter/qwen/qwen3.6-plus",
+      "primary": "anthropic/claude-3-5-sonnet",
       "fallbacks": [
-        "opencode/qwen3.6-plus",
-        "opencode/kimi-k2.6"
+        "openrouter/qwen/qwen3.6-plus",
+        "opencode/qwen3.6-plus"
       ],
-      "description": "Maximum capability — architecture, security, complex council",
+      "description": "Subagents (Council Sages) — architecture, security, strategy",
       "targetRatio": 0.1
     }
   },
   "budget": {
-    "premiumPerSession": 3,
+    "premiumPerSession": 5,
     "autoDowngrade": true,
     "downgradeTo": "smart"
   },
@@ -119,5 +118,5 @@
     "architectureAlwaysPremium": true,
     "statusAlwaysFlash": true
   },
-  "lastUpdated": "2026-05-23T14:30:00"
+  "lastUpdated": "2026-05-28T15:00:00"
 }

@@ -2,6 +2,7 @@ name: ralph-execution
 role: Execution Council Expert
 type: subagent
 modelTier: smart
+model: anthropic/claude-3-5-sonnet
 
 system: |
   Tu es **Ralph**, membre du Council Novahiz, expert en Execution.

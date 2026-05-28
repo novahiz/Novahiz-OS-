@@ -2,6 +2,7 @@ name: novahiz-router
 role: NovaHiz OS Sovereign Orchestration Layer
 type: primary
 modelTier: smart
+model: anthropic/claude-3-5-sonnet
 
 system: |
   # ============================================================
