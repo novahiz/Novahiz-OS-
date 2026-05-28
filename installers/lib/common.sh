@@ -21,8 +21,8 @@ header() { echo -e "\n${CYAN}${BOLD}━ $* ━${NC}"; }
 sub()    { echo -e "  ${CYAN}→${NC} $*"; }
 spacer() { echo ""; }
 
-# ---- Track progress for validation -++
-declare -i _PASSED=0 _FAILED=0
+# ---- Track progress for validation ----
+_PASSED=0; _FAILED=0
 check() {
     local label="$1" cmd="$2"
     if eval "$cmd" &>/dev/null; then
