@@ -248,6 +248,12 @@ find "$NOVAHIZ_DIR/deploy" "$NOVAHIZ_DIR/systemd" -name "*.service" 2>/dev/null 
     sed -i "s/Group=novahiz/Group=$(id -gn)/g" "$file" 2>/dev/null || true
 done
 
+# Patch __NOVAHIZ_DIR__ in template files (logrotate, etc.)
+LOGROTATE_CONF="$NOVAHIZ_DIR/logs/logrotate.conf"
+if [ -f "$LOGROTATE_CONF" ] && grep -q "__NOVAHIZ_DIR__" "$LOGROTATE_CONF" 2>/dev/null; then
+    sed -i "s|__NOVAHIZ_DIR__|$NOVAHIZ_DIR|g" "$LOGROTATE_CONF"
+fi
+
 ok "Paths patched for user $(whoami)"
 
 # ---- Fix permissions ----

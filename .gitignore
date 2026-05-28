@@ -109,8 +109,9 @@ chrome-profile-mcp/
 # memory/00_Core/metrics.json
 # memory/00_Core/nexus.json
 
-# Logs (can be committed for debugging)
-# logs/
+# Logs (runtime data — do NOT commit)
+logs/**
+!logs/logrotate.conf
 
 # Documentation (RECOMMENDED to commit)
 # docs/

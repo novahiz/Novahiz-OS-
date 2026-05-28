@@ -31,7 +31,7 @@ fi
 
 REPO_URL="https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_USER}/${REPO_NAME}.git"
 
-cd /home/novahiz/.opencode
+cd "$(dirname "$0")/.."
 
 # Initialize git if needed
 if [ ! -d ".git" ]; then

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Force push with maximum retries and timeouts
 
-cd /home/novahiz/.opencode
+cd "$(dirname "$0")/.."
 
 echo "🚀 Novahiz OS — GitHub Force Push"
 echo "=================================="

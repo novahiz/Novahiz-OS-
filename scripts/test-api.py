@@ -5,7 +5,9 @@ import json
 import urllib.request
 import sys
 
-CONFIG_FILE = "/home/novahiz/.opencode/runtime/config.json"
+import os
+CONFIG_FILE = os.environ.get("NOVAHIZ_DIR", os.path.join(os.path.expanduser("~"), ".opencode"))
+CONFIG_FILE = os.path.join(CONFIG_FILE, "runtime", "config.json")
 
 def test_provider(provider_id, config):
     api_key = config.get('api_key', '')
